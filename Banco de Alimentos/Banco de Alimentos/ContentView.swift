@@ -10,8 +10,15 @@ import SwiftUI
 
 
 struct ContentView: View {
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenTitle"))]
+    }
     var body: some View{
-        ResetPassword()
+        
+        NavigationView {
+            Login()
+        }
+        
     }
 }
 
@@ -38,47 +45,49 @@ struct Login: View{
                         .cornerRadius(radius: 60.0, corners: [.bottomRight])
                     
                     VStack(alignment : .leading) {
-                        Text("Bienvenido")
-                            .font(.largeTitle)
-                            .foregroundColor(Color("greenTitle"))
-                            .bold()
-                            .padding(.top, 10 )
-                            .padding(.leading, 20)
-                            .padding(.bottom, 10)
-                        
-                        
                         Text("Inicia sesión")
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading, 40)
-                            .padding(.bottom, 40)
+                            .padding(.bottom, 20)
                     }
                 }.padding(.bottom, 20)
-                VStack(alignment: .leading){
-                    VStack(alignment: .leading) {
+                VStack{
                         Text("Email:")
                             .font(.subheadline)
                             .fontWeight(.light)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         TextField("", text: $mail)
                             .padding()
                             .background(Color("squareColors"))
                             .cornerRadius(20)
                             .shadow(color: .black, radius: 0.4, y: 0.2)
+                    
+                        
                         Text("Contraseña:")
                             .font(.subheadline)
                             .fontWeight(.light)
                             .padding(.top)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         
                         SecureField("", text: $password)
                             .padding()
                             .background(Color("squareColors"))
- 
                             .cornerRadius(20)
-                            .padding(.bottom,40)
                             .shadow(color: .black, radius: 0.4, y: 0.2)
-                        
+                        NavigationLink(
+                            destination: ResetPassword(),
+                            label: {
+                                Text("¿Olvidaste tu contraseña?")
+                                    .font(.caption)
+                                    .underline()
+                                    .foregroundColor(.gray)
+                                    .padding(.bottom,20)
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+
+                            })
                         Button(action: {}, label: {
-                            Text("Entrar".uppercased())
+                            Text("Iniciar sesión")
                                 .foregroundColor(.white)
                                 .bold()
                                 .font(.headline)
@@ -88,19 +97,39 @@ struct Login: View{
                                 .cornerRadius(20)
                             
                         })
-                        Button(action: {}, label: {
-                            Text("¿Olvidaste tu contraseña?")
-                                .underline()
-                                .foregroundColor(.gray)
-                                .frame(maxWidth: .infinity)
-                                .padding(.vertical,20)
-                        })
+                        
+                        Text("o")
+                            .frame(maxWidth: .infinity)
+                        
+                    Button(action: {}, label: {
+                        HStack {
+                            Image("facebookLogo")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 30, height: 30)
+                            Text("Continuar con Facebook")
+                                .foregroundColor(.white)
+                                .bold()
+                                .font(.headline)
+                                
+                        }
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .cornerRadius(20)
+                        .frame(maxWidth: .infinity)
+
+
+                        
+                    })
                         
                         
-                        Divider().frame(height: 0.3).background(Color("greenBackground")).padding(.horizontal, 60).padding(.bottom, 20)
                         
-                        Button(action: {}, label: {
-                            Text("Registrate".uppercased())
+                        Divider().frame(height: 0.3).background(Color("greenBackground")).padding(.horizontal, 60).padding(.vertical, 10)
+                    NavigationLink(
+                        destination: SignUp(),
+                        label: {
+                            Text("Registrate")
                                 .foregroundColor(.white)
                                 .bold()
                                 .font(.headline)
@@ -108,17 +137,18 @@ struct Login: View{
                                 .frame(maxWidth: .infinity)
                                 .background(Color(.black))
                                 .cornerRadius(20)
-                            
-                            
+
                         })
                         
-                    }
                     
-                }.padding(.horizontal, 40)
+                        
+                    }.padding(.horizontal, 40)
+                    
+                
                 
             }
             
-        }
+        }.navigationTitle("Bienvenido")
     }
     
 }
@@ -139,7 +169,7 @@ struct ResetPassword: View {
                             .font(.largeTitle)
                             .foregroundColor(Color("greenTitle"))
                             .bold()
-                            .padding(.top, 10 )
+                            .padding(.top, 20)
                             .padding(.leading, 20)
                             .padding(.bottom, 10)
                         
@@ -148,7 +178,7 @@ struct ResetPassword: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading, 40)
-                            .padding(.bottom, 40)
+                            .padding(.bottom, 20)
                     }
                 }.padding(.bottom, 20)
                 VStack(alignment: .leading){
@@ -163,7 +193,7 @@ struct ResetPassword: View {
                             .shadow(color: .black, radius: 0.4, y: 0.2)
                             .padding(.bottom,20)
                         Button(action: {}, label: {
-                            Text("Enviar".uppercased())
+                            Text("Enviar")
                                 .foregroundColor(.white)
                                 .bold()
                                 .font(.headline)
@@ -179,8 +209,7 @@ struct ResetPassword: View {
                 }.padding(.horizontal, 30)
                 
             }
-        }
-        
+        }.navigationBarTitle(Text(""), displayMode: .inline)
     }
 }
 
@@ -198,6 +227,7 @@ struct SignUp: View {
                         .cornerRadius(radius: 60.0, corners: [.bottomRight])
                     
                     VStack(alignment : .leading) {
+
                         Text("¿No tienes cuenta?")
                             .font(.largeTitle)
                             .foregroundColor(Color("greenTitle"))
@@ -251,7 +281,7 @@ struct SignUp: View {
                         .shadow(color: .black, radius: 0.4, y: 0.2)
                     
                     Button(action: {}, label: {
-                        Text("Continuar".uppercased())
+                        Text("Continuar")
                             .foregroundColor(.white)
                             .bold()
                             .font(.headline)
@@ -263,7 +293,7 @@ struct SignUp: View {
                     })
                 }.padding(.horizontal, 40)
             }
-        }
+        }.navigationBarTitle(Text(""), displayMode: .inline)
     }
 }
 
@@ -291,7 +321,7 @@ struct SignUp2: View {
                             .padding(.top, 10 )
                             .padding(.leading, 20)
                             .padding(.bottom, 40)
-                    
+                        
                     }
                 }.padding(.bottom, 20)
                 VStack(alignment: .leading){
@@ -354,7 +384,7 @@ struct SignUp2: View {
                         .shadow(color: .black, radius: 0.4, y: 0.2)
                     
                     Button(action: {}, label: {
-                        Text("Registrarse".uppercased())
+                        Text("Registrarse")
                             .foregroundColor(.white)
                             .bold()
                             .font(.headline)
@@ -367,7 +397,7 @@ struct SignUp2: View {
                     
                 }.padding(.horizontal, 40)
             }
-        }
+        }.navigationBarTitle(Text(""), displayMode: .inline)
     }
 }
 
@@ -397,10 +427,13 @@ extension View {
     }
 }
 
+
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SignUp2()
+            Login()
+            
         }
     }
 }
