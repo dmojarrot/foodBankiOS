@@ -55,8 +55,6 @@ struct Register: View {
                     SecureField("", text: $password)
                         .padding()
                         .background(Color("squareColors"))
-                        .foregroundColor(.black
-                        )
                         .cornerRadius(20)
                         .padding(.bottom,20)
                         .shadow(color: .black, radius: 0.4, y: 0.2)
@@ -68,8 +66,6 @@ struct Register: View {
                     SecureField("", text: $confirmPassword)
                         .padding()
                         .background(Color("squareColors"))
-                        .foregroundColor(.black
-                        )
                         .cornerRadius(20)
                         .padding(.bottom,40)
                         .shadow(color: .black, radius: 0.4, y: 0.2)
