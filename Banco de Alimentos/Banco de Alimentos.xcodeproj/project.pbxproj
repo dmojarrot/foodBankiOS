@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BDBA11C26E0196B00D22A45 /* RegistrationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA11B26E0196B00D22A45 /* RegistrationDetails.swift */; };
+		3BDBA11F26E01B1100D22A45 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA11E26E01B1100D22A45 /* RegistrationService.swift */; };
+		3BDBA12126E025FC00D22A45 /* RegisterViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12026E025FC00D22A45 /* RegisterViews.swift */; };
+		3BDBA12626E0276700D22A45 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12526E0276700D22A45 /* Login.swift */; };
+		3BDBA12A26E027CD00D22A45 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12926E027CD00D22A45 /* ForgotPassword.swift */; };
+		3BDBA12D26E0288400D22A45 /* CertainCornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12C26E0288400D22A45 /* CertainCornerRadius.swift */; };
 		3BE9DDF526DB508A00B078FE /* Banco_de_AlimentosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */; };
 		3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF626DB508A00B078FE /* ContentView.swift */; };
 		3BE9DDF926DB508C00B078FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF826DB508C00B078FE /* Assets.xcassets */; };
@@ -14,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BDBA11B26E0196B00D22A45 /* RegistrationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDetails.swift; sourceTree = "<group>"; };
+		3BDBA11E26E01B1100D22A45 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
+		3BDBA12026E025FC00D22A45 /* RegisterViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViews.swift; sourceTree = "<group>"; };
+		3BDBA12526E0276700D22A45 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		3BDBA12926E027CD00D22A45 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		3BDBA12C26E0288400D22A45 /* CertainCornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertainCornerRadius.swift; sourceTree = "<group>"; };
 		3BE9DDF126DB508A00B078FE /* Banco de Alimentos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Banco de Alimentos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banco_de_AlimentosApp.swift; sourceTree = "<group>"; };
 		3BE9DDF626DB508A00B078FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +45,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BDBA11826E018FD00D22A45 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA11D26E01AFE00D22A45 /* Service */,
+				3BDBA11A26E0193300D22A45 /* View */,
+				3BDBA11926E0191800D22A45 /* Model */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		3BDBA11926E0191800D22A45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA11B26E0196B00D22A45 /* RegistrationDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3BDBA11A26E0193300D22A45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA12026E025FC00D22A45 /* RegisterViews.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BDBA11D26E01AFE00D22A45 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA11E26E01B1100D22A45 /* RegistrationService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3BDBA12326E0270900D22A45 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA12426E0273100D22A45 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3BDBA12426E0273100D22A45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA12526E0276700D22A45 /* Login.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BDBA12726E0278700D22A45 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA12826E027BB00D22A45 /* View */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		3BDBA12826E027BB00D22A45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA12926E027CD00D22A45 /* ForgotPassword.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BDBA12B26E0281700D22A45 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA12C26E0288400D22A45 /* CertainCornerRadius.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		3BDBA12E26E0293B00D22A45 /* LandingPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LandingPage;
+			sourceTree = "<group>";
+		};
 		3BE9DDE826DB508A00B078FE = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +147,11 @@
 			children = (
 				3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */,
 				3BE9DDF626DB508A00B078FE /* ContentView.swift */,
+				3BDBA12E26E0293B00D22A45 /* LandingPage */,
+				3BDBA12326E0270900D22A45 /* Login */,
+				3BDBA12726E0278700D22A45 /* ForgotPassword */,
+				3BDBA11826E018FD00D22A45 /* Register */,
+				3BDBA12B26E0281700D22A45 /* Modifiers */,
 				3BE9DDF826DB508C00B078FE /* Assets.xcassets */,
 				3BE9DDFD26DB508C00B078FE /* Info.plist */,
 				3BE9DDFA26DB508C00B078FE /* Preview Content */,
@@ -138,8 +236,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BDBA11F26E01B1100D22A45 /* RegistrationService.swift in Sources */,
 				3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */,
 				3BE9DDF526DB508A00B078FE /* Banco_de_AlimentosApp.swift in Sources */,
+				3BDBA12D26E0288400D22A45 /* CertainCornerRadius.swift in Sources */,
+				3BDBA12626E0276700D22A45 /* Login.swift in Sources */,
+				3BDBA12A26E027CD00D22A45 /* ForgotPassword.swift in Sources */,
+				3BDBA12126E025FC00D22A45 /* RegisterViews.swift in Sources */,
+				3BDBA11C26E0196B00D22A45 /* RegistrationDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
