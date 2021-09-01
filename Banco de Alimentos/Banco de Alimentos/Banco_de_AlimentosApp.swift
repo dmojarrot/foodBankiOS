@@ -2,7 +2,7 @@
 //  Banco_de_AlimentosApp.swift
 //  Banco de Alimentos
 //
-//  Created by Diego Mojarro on 29/08/21.
+//  Created by Team2 on 29/08/21.
 //
 
 import SwiftUI
