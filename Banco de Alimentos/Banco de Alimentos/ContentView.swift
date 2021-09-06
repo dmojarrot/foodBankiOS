@@ -14,16 +14,19 @@ struct ContentView: View {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenTitle"))]
     }
     var body: some View {
-        NavigationView {
+        NavigationView{
             ZStack {
                 Color("background").edgesIgnoringSafeArea(.bottom)
-                
-                Profile()
+                HiUser()
             }
-            
         }
         
     }
     
 }
 
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}

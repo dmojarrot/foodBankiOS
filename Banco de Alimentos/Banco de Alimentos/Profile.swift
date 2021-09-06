@@ -29,7 +29,7 @@ struct Profile: View {
                                 .cornerRadius(20)
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
                                 .padding(.bottom,20)
-                        }.padding(.top, 20)
+                        }
                         VStack(alignment: .leading){
                             Text("Apellido")
                                 .font(.subheadline)
@@ -41,7 +41,7 @@ struct Profile: View {
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
                                 .padding(.bottom,20)
                         }
-                    }
+                    }.padding(.top, 20)
                     VStack(alignment: .leading){
                     Text("Correo Electronico")
                         .font(.subheadline)
