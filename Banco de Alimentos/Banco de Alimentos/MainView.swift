@@ -30,7 +30,7 @@ struct MainView: View {
             
             Food()
                 .tabItem {
-                    Image(systemName: "square.and.pencil")
+                    Image("restaurant_black_24dp")
                     Text("Food")
                 }
             

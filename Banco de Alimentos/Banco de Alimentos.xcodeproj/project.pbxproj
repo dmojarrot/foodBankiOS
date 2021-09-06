@@ -20,6 +20,7 @@
 		3BE8402126E663EA00B3284C /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402026E663EA00B3284C /* Ads.swift */; };
 		3BE8402326E663F800B3284C /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402226E663F800B3284C /* Food.swift */; };
 		3BE8402526E6640200B3284C /* Donate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402426E6640200B3284C /* Donate.swift */; };
+		3BE8402726E6721C00B3284C /* Acknowledgment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402626E6721C00B3284C /* Acknowledgment.swift */; };
 		3BE9DDF526DB508A00B078FE /* Banco_de_AlimentosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */; };
 		3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF626DB508A00B078FE /* ContentView.swift */; };
 		3BE9DDF926DB508C00B078FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF826DB508C00B078FE /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		3BE8402026E663EA00B3284C /* Ads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
 		3BE8402226E663F800B3284C /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		3BE8402426E6640200B3284C /* Donate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donate.swift; sourceTree = "<group>"; };
+		3BE8402626E6721C00B3284C /* Acknowledgment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acknowledgment.swift; sourceTree = "<group>"; };
 		3BE9DDF126DB508A00B078FE /* Banco de Alimentos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Banco de Alimentos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banco_de_AlimentosApp.swift; sourceTree = "<group>"; };
 		3BE9DDF626DB508A00B078FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				3BE8402026E663EA00B3284C /* Ads.swift */,
 				3BE8402226E663F800B3284C /* Food.swift */,
 				3BE8402426E6640200B3284C /* Donate.swift */,
+				3BE8402626E6721C00B3284C /* Acknowledgment.swift */,
 				3BDBA12E26E0293B00D22A45 /* LandingPage */,
 				3BDBA12326E0270900D22A45 /* Login */,
 				3BDBA12726E0278700D22A45 /* ForgotPassword */,
@@ -267,6 +270,7 @@
 			files = (
 				3BE8402126E663EA00B3284C /* Ads.swift in Sources */,
 				3BDBA11F26E01B1100D22A45 /* RegistrationService.swift in Sources */,
+				3BE8402726E6721C00B3284C /* Acknowledgment.swift in Sources */,
 				3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */,
 				3BE8402526E6640200B3284C /* Donate.swift in Sources */,
 				3BE9DDF526DB508A00B078FE /* Banco_de_AlimentosApp.swift in Sources */,
