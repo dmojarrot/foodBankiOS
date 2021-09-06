@@ -18,7 +18,7 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 Color("background").edgesIgnoringSafeArea(.bottom)
-                Ads()
+                HiUser()
             }
 
 
