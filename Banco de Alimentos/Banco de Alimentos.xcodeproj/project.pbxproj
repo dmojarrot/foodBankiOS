@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D176DA126E6743C00732AB4 /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D176DA026E6743C00732AB4 /* Ads.swift */; };
 		3BDBA11C26E0196B00D22A45 /* RegistrationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA11B26E0196B00D22A45 /* RegistrationDetails.swift */; };
 		3BDBA11F26E01B1100D22A45 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA11E26E01B1100D22A45 /* RegistrationService.swift */; };
 		3BDBA12126E025FC00D22A45 /* RegisterViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12026E025FC00D22A45 /* RegisterViews.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D176DA026E6743C00732AB4 /* Ads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
 		3BDBA11B26E0196B00D22A45 /* RegistrationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDetails.swift; sourceTree = "<group>"; };
 		3BDBA11E26E01B1100D22A45 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 		3BDBA12026E025FC00D22A45 /* RegisterViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViews.swift; sourceTree = "<group>"; };
@@ -63,6 +65,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D176D9A26E673DF00732AB4 /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				0D176D9B26E673FC00732AB4 /* View */,
+			);
+			path = Ads;
+			sourceTree = "<group>";
+		};
+		0D176D9B26E673FC00732AB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D176DA026E6743C00732AB4 /* Ads.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3BDBA11826E018FD00D22A45 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +190,7 @@
 		3BE9DDF326DB508A00B078FE /* Banco de Alimentos */ = {
 			isa = PBXGroup;
 			children = (
+				0D176D9A26E673DF00732AB4 /* Ads */,
 				3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */,
 				3BE9DDF626DB508A00B078FE /* ContentView.swift */,
 				3BE8401726E6584000B3284C /* MainView.swift */,
@@ -272,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE8402126E663EA00B3284C /* Ads.swift in Sources */,
+				0D176DA126E6743C00732AB4 /* Ads.swift in Sources */,
 				3BDBA11F26E01B1100D22A45 /* RegistrationService.swift in Sources */,
 				3BE8402726E6721C00B3284C /* Acknowledgment.swift in Sources */,
 				3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */,
