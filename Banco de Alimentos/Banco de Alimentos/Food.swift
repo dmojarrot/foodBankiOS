@@ -1,5 +1,5 @@
 //
-//  Home.swift
+//  Food.swift
 //  Banco de Alimentos
 //
 //  Created by Diego Mojarro on 06/09/21.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct Home: View {
+struct Food: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct Home_Previews: PreviewProvider {
+struct Food_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        Food()
     }
 }
