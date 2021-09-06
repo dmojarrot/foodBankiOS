@@ -18,7 +18,6 @@
 		3BE8401B26E6625D00B3284C /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8401A26E6625D00B3284C /* LandingPage.swift */; };
 		3BE8401D26E6631100B3284C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8401C26E6631100B3284C /* Profile.swift */; };
 		3BE8401F26E663B000B3284C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8401E26E663AF00B3284C /* Home.swift */; };
-		3BE8402126E663EA00B3284C /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402026E663EA00B3284C /* Ads.swift */; };
 		3BE8402326E663F800B3284C /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402226E663F800B3284C /* Food.swift */; };
 		3BE8402526E6640200B3284C /* Donate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402426E6640200B3284C /* Donate.swift */; };
 		3BE8402726E6721C00B3284C /* Acknowledgment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402626E6721C00B3284C /* Acknowledgment.swift */; };
@@ -40,7 +39,6 @@
 		3BE8401A26E6625D00B3284C /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
 		3BE8401C26E6631100B3284C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		3BE8401E26E663AF00B3284C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		3BE8402026E663EA00B3284C /* Ads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
 		3BE8402226E663F800B3284C /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		3BE8402426E6640200B3284C /* Donate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donate.swift; sourceTree = "<group>"; };
 		3BE8402626E6721C00B3284C /* Acknowledgment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acknowledgment.swift; sourceTree = "<group>"; };
@@ -188,16 +186,15 @@
 		3BE9DDF326DB508A00B078FE /* Banco de Alimentos */ = {
 			isa = PBXGroup;
 			children = (
-				0D176D9A26E673DF00732AB4 /* Ads */,
 				3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */,
 				3BE9DDF626DB508A00B078FE /* ContentView.swift */,
 				3BE8401726E6584000B3284C /* MainView.swift */,
 				3BE8401C26E6631100B3284C /* Profile.swift */,
 				3BE8401E26E663AF00B3284C /* Home.swift */,
-				3BE8402026E663EA00B3284C /* Ads.swift */,
 				3BE8402226E663F800B3284C /* Food.swift */,
 				3BE8402426E6640200B3284C /* Donate.swift */,
 				3BE8402626E6721C00B3284C /* Acknowledgment.swift */,
+				0D176D9A26E673DF00732AB4 /* Ads */,
 				3BDBA12E26E0293B00D22A45 /* LandingPage */,
 				3BDBA12326E0270900D22A45 /* Login */,
 				3BDBA12726E0278700D22A45 /* ForgotPassword */,
@@ -287,7 +284,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BE8402126E663EA00B3284C /* Ads.swift in Sources */,
 				0D176DA126E6743C00732AB4 /* Ads.swift in Sources */,
 				3BDBA11F26E01B1100D22A45 /* RegistrationService.swift in Sources */,
 				3BE8402726E6721C00B3284C /* Acknowledgment.swift in Sources */,

@@ -13,7 +13,7 @@ struct ContentView: View {
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenTitle"))]
     }
-    var body: some View{
+    var body: some View {
         
         NavigationView {
             ZStack {

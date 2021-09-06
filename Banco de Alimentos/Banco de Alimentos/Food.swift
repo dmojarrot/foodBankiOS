@@ -37,7 +37,7 @@ struct Food: View {
                 }.padding(.bottom, 20)
 
                     Button(action: {}, label: {
-                        Text("Donate	")
+                        Text("Donate")
                             .foregroundColor(.white)
                             .bold()
                             .font(.headline)
