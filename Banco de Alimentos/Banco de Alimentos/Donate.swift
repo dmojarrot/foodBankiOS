@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct Donate: View {
     var body: some View {
@@ -13,8 +14,16 @@ struct Donate: View {
     }
 }
 
-struct Donate_Previews: PreviewProvider {
-    static var previews: some View {
-        Donate()
-    }
-}
+//struct SwiftWebView: UIViewRepresentable{
+//    let url: URL?
+//
+//    func makeUIView(context: Context) -> WKWebView {
+//        let prefs =
+//    }
+//}
+//
+//struct Donate_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Donate()
+//    }
+//}
