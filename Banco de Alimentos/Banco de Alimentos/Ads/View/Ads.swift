@@ -8,26 +8,26 @@
 import SwiftUI
 import AVKit
 
-struct ContentView: View {
+struct Ads: View {
     var body: some View {
         
         GeometryReader{geo in
-            player().frame(height: geo.size.height).cornerRadius(20).padding()
+            player().frame(height: geo.size.height / 3).cornerRadius(20).padding()
         }
     }
 }
 
 struct player: UIViewControllerRepresentable{
     
-    func makeUIViewController(context: UIViewControllerRepresentableContext<player>) -> AVPLayerViewController {
+    func makeUIViewController(context: UIViewControllerRepresentableContext<player>) -> AVPlayerViewController {
         
-        let controller = AVPLayerViewController()
-        let player1 = AVPlayer(url: URL(string: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")!)
+        let controller = AVPlayerViewController()
+        let player1 = AVPlayer(url: URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")!)
         controller.player = player1
         return controller
     }
     
-    func updateUIViewController(_ uiViewController: AVPLayerViewController, context: UIViewControllerRepresentableContext<player>){
+    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: UIViewControllerRepresentableContext<player>){
         
     }
     
