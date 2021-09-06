@@ -15,9 +15,8 @@ struct ContentView: View {
     }
     var body: some View{
         
-        NavigationView {
-            Food()
-            
+        NavigationView 
+            Profile()
         }
         
     }
