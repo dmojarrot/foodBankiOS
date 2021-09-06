@@ -16,7 +16,8 @@ struct ContentView: View {
     var body: some View{
         
         NavigationView {
-            Login()
+            Food()
+            
         }
         
     }
