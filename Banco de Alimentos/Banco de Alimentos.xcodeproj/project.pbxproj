@@ -25,6 +25,7 @@
 		3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF626DB508A00B078FE /* ContentView.swift */; };
 		3BE9DDF926DB508C00B078FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF826DB508C00B078FE /* Assets.xcassets */; };
 		3BE9DDFC26DB508C00B078FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9DDFB26DB508C00B078FE /* Preview Assets.xcassets */; };
+		525C559326E680C40055D9D5 /* HiUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C559226E680C40055D9D5 /* HiUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		3BE9DDF826DB508C00B078FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BE9DDFB26DB508C00B078FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3BE9DDFD26DB508C00B078FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		525C559226E680C40055D9D5 /* HiUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				3BE8402226E663F800B3284C /* Food.swift */,
 				3BE8402426E6640200B3284C /* Donate.swift */,
 				3BE8402626E6721C00B3284C /* Acknowledgment.swift */,
+				525C559226E680C40055D9D5 /* HiUser.swift */,
 				3BDBA12E26E0293B00D22A45 /* LandingPage */,
 				3BDBA12326E0270900D22A45 /* Login */,
 				3BDBA12726E0278700D22A45 /* ForgotPassword */,
@@ -273,6 +276,7 @@
 				3BE8402726E6721C00B3284C /* Acknowledgment.swift in Sources */,
 				3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */,
 				3BE8402526E6640200B3284C /* Donate.swift in Sources */,
+				525C559326E680C40055D9D5 /* HiUser.swift in Sources */,
 				3BE9DDF526DB508A00B078FE /* Banco_de_AlimentosApp.swift in Sources */,
 				3BDBA12D26E0288400D22A45 /* CertainCornerRadius.swift in Sources */,
 				3BE8401826E6584000B3284C /* MainView.swift in Sources */,
