@@ -190,3 +190,13 @@ struct Register2: View {
         }.navigationBarTitle(Text(""), displayMode: .inline)
     }
 }
+
+
+
+
+struct Register2_preview: PreviewProvider {
+    static var previews: some View {
+        Register()
+
+    }
+}

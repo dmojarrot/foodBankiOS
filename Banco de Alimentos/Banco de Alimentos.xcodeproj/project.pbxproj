@@ -13,6 +13,8 @@
 		3BDBA12626E0276700D22A45 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12526E0276700D22A45 /* Login.swift */; };
 		3BDBA12A26E027CD00D22A45 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12926E027CD00D22A45 /* ForgotPassword.swift */; };
 		3BDBA12D26E0288400D22A45 /* CertainCornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12C26E0288400D22A45 /* CertainCornerRadius.swift */; };
+		3BE8401826E6584000B3284C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8401726E6584000B3284C /* Home.swift */; };
+		3BE8401B26E6625D00B3284C /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8401A26E6625D00B3284C /* LandingPage.swift */; };
 		3BE9DDF526DB508A00B078FE /* Banco_de_AlimentosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */; };
 		3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF626DB508A00B078FE /* ContentView.swift */; };
 		3BE9DDF926DB508C00B078FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF826DB508C00B078FE /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		3BDBA12526E0276700D22A45 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		3BDBA12926E027CD00D22A45 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		3BDBA12C26E0288400D22A45 /* CertainCornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertainCornerRadius.swift; sourceTree = "<group>"; };
+		3BE8401726E6584000B3284C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		3BE8401A26E6625D00B3284C /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
 		3BE9DDF126DB508A00B078FE /* Banco de Alimentos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Banco de Alimentos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banco_de_AlimentosApp.swift; sourceTree = "<group>"; };
 		3BE9DDF626DB508A00B078FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,8 +126,17 @@
 		3BDBA12E26E0293B00D22A45 /* LandingPage */ = {
 			isa = PBXGroup;
 			children = (
+				3BE8401926E6624F00B3284C /* View */,
 			);
 			path = LandingPage;
+			sourceTree = "<group>";
+		};
+		3BE8401926E6624F00B3284C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BE8401A26E6625D00B3284C /* LandingPage.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3BE9DDE826DB508A00B078FE = {
@@ -147,6 +160,7 @@
 			children = (
 				3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */,
 				3BE9DDF626DB508A00B078FE /* ContentView.swift */,
+				3BE8401726E6584000B3284C /* Home.swift */,
 				3BDBA12E26E0293B00D22A45 /* LandingPage */,
 				3BDBA12326E0270900D22A45 /* Login */,
 				3BDBA12726E0278700D22A45 /* ForgotPassword */,
@@ -240,7 +254,9 @@
 				3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */,
 				3BE9DDF526DB508A00B078FE /* Banco_de_AlimentosApp.swift in Sources */,
 				3BDBA12D26E0288400D22A45 /* CertainCornerRadius.swift in Sources */,
+				3BE8401826E6584000B3284C /* Home.swift in Sources */,
 				3BDBA12626E0276700D22A45 /* Login.swift in Sources */,
+				3BE8401B26E6625D00B3284C /* LandingPage.swift in Sources */,
 				3BDBA12A26E027CD00D22A45 /* ForgotPassword.swift in Sources */,
 				3BDBA12126E025FC00D22A45 /* RegisterViews.swift in Sources */,
 				3BDBA11C26E0196B00D22A45 /* RegistrationDetails.swift in Sources */,

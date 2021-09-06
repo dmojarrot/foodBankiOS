@@ -8,6 +8,7 @@
 import SwiftUI
 
 @main
+
 struct Banco_de_AlimentosApp: App {
     var body: some Scene {
         WindowGroup {
