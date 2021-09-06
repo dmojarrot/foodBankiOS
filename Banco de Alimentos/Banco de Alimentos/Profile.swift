@@ -18,13 +18,6 @@ struct Profile: View {
     var body: some View{
             ScrollView{
                 VStack(alignment: .leading){
-                    Text("My Profile")
-                        .font(.largeTitle)
-                        .foregroundColor(Color("greenTitle"))
-                        .bold()
-                        .padding(.top, 10 )
-                        .padding(.leading, 20)
-                        .padding(.bottom, 40)
                     HStack{
                         VStack(alignment: .leading){
                             Text("Nombre")
@@ -36,7 +29,7 @@ struct Profile: View {
                                 .cornerRadius(20)
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
                                 .padding(.bottom,20)
-                        }
+                        }.padding(.top, 20)
                         VStack(alignment: .leading){
                             Text("Apellido")
                                 .font(.subheadline)
@@ -109,7 +102,7 @@ struct Profile: View {
                     })
                     
                 }.padding(.horizontal, 40)
-            }.navigationBarTitle(Text(""), displayMode: .inline)
+            }.navigationBarTitle("My Profile")
         }
 }
 struct Profile_Previews: PreviewProvider {
