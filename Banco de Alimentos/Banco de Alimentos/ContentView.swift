@@ -16,9 +16,12 @@ struct ContentView: View {
     var body: some View{
         
         NavigationView {
-            Profile()
+            ZStack{
+                Color("background").edgesIgnoringSafeArea(.bottom)
+                Acknowledgment()
+
+            }
         }
         
     }
 }
-

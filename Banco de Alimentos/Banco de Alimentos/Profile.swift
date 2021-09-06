@@ -16,10 +16,7 @@ struct Profile: View {
     @State var email = ""
     
     var body: some View{
-        ZStack{
-            Color("background").edgesIgnoringSafeArea(.bottom)
             ScrollView{
-                
                 VStack(alignment: .leading){
                     Text("My Profile")
                         .font(.largeTitle)
@@ -112,9 +109,8 @@ struct Profile: View {
                     })
                     
                 }.padding(.horizontal, 40)
-            }
-        }.navigationBarTitle(Text(""), displayMode: .inline)
-    }
+            }.navigationBarTitle(Text(""), displayMode: .inline)
+        }
 }
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {
