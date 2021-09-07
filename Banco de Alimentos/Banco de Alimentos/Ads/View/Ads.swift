@@ -13,47 +13,36 @@ struct Ads: View {
     @State var show = false
     
     var body: some View {
-        VStack{
-            GeometryReader{geo in
-                
-                ZStack {
-                    Button (action: {
-                        
-                        self.show.toggle()
-                        self.height = 0
-                        
-                    }) {
-                        
-                        Text("Picture in Play")
-                        
-                        
-                    }
+        ZStack {
+            Color("background").edgesIgnoringSafeArea(.bottom)
+            VStack{
+                GeometryReader{geo in
                     
-                    if self.show {
-                        player().frame(height: geo.size.height / 3).cornerRadius(20).padding().gesture(DragGesture()
-                                                                                                        .onChanged({ (value) in
-                                                                                                            self.height = value.translation.height / 10
-                                                                                                        })
-                                                                                                        
-                                                                                                        .onEnded({ (value) in
-                                                                                                            if self.height > geo.size.height / 2 - 100 {
-                                                                                                                self.height = 1500
-                                                                                                                self.show.toggle()
-                                                                                                            }
-                                                                                                            if -self.height > geo.size.height / 2 - 100 {
-                                                                                                                self.height = -1500
-                                                                                                                self.show.toggle()
-                                                                                                            }
-                                                                                                        })
-                        ).offset(y: self.height)
-                        
-                    }
+                    player().frame(height: geo.size.height / 3).cornerRadius(20).padding().gesture(DragGesture()
+                                                                                                    .onChanged({ (value) in
+                                                                                                        self.height = value.translation.height / 10
+                                                                                                    })
+                                                                                                    
+                                                                                                    .onEnded({ (value) in
+                                                                                                        if self.height > geo.size.height / 2 - 100 {
+                                                                                                            self.height = 1500
+                                                                                                            self.show.toggle()
+                                                                                                        }
+                                                                                                        if -self.height > geo.size.height / 2 - 100 {
+                                                                                                            self.height = -1500
+                                                                                                            self.show.toggle()
+                                                                                                        }
+                                                                                                    })
+                    ).offset(y: self.height)
+                    
+                    
                 }
                 
             }.animation(.spring())
-        }.navigationTitle("Ads")
+        }
     }
 }
+
 
 struct player: UIViewControllerRepresentable{
     

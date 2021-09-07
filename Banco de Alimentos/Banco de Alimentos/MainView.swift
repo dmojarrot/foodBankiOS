@@ -10,7 +10,8 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView{
-            Profile()
+            HiUser()
+                .navigationBarTitle("My Profile")
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Profile")
@@ -30,7 +31,7 @@ struct MainView: View {
             
             Food()
                 .tabItem {
-                    Image("restaurant_black_24dp")
+                    Image("restaurantLogo")
                     Text("Food")
                 }
             
@@ -39,7 +40,7 @@ struct MainView: View {
                     Image(systemName: "dollarsign.circle")
                     Text("Donate")
                 }
-        }
+        }.accentColor(Color("greenBackground"))
     }
 }
 
