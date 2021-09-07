@@ -6,62 +6,111 @@
 //
 
 import SwiftUI
+import AVFoundation
 import AVKit
 
 struct Ads: View {
-    @State var height : CGFloat = 0
-    @State var show = false
     
-    var body: some View {
-        NavigationView {
-            ZStack {
-                Color("background").edgesIgnoringSafeArea(.bottom)
-                VStack{
-                    GeometryReader{geo in
-                        
-                        player().frame(height: geo.size.height / 3).cornerRadius(20).padding().gesture(DragGesture()
-                                                                                                        .onChanged({ (value) in
-                                                                                                            self.height = value.translation.height / 10
-                                                                                                        })
-                                                                                                        
-                                                                                                        .onEnded({ (value) in
-                                                                                                            if self.height > geo.size.height / 2 - 100 {
-                                                                                                                self.height = 1500
-                                                                                                                self.show.toggle()
-                                                                                                            }
-                                                                                                            if -self.height > geo.size.height / 2 - 100 {
-                                                                                                                self.height = -1500
-                                                                                                                self.show.toggle()
-                                                                                                            }
-                                                                                                        })
-                        ).offset(y: self.height)
-                        
-                        
+    @State var maxHeight:CGFloat = 190
+    
+        var body: some View {
+            NavigationView{
+                ScrollView {
+                    VStack {
+                        VideoView(videoURL: URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4")!, previewLength: 60)
+                            .cornerRadius(15)
+                            .frame(width: nil, height: maxHeight, alignment: .center)
+                            .shadow(color: Color.black.opacity(0.7), radius: 30, x: 0, y: 2)
+                            .padding(.horizontal, 20)
+                            .padding(.top, 7)
                     }
                     
-                }.animation(.spring())
-            }.navigationTitle("Ads")
+                    VStack {
+                        Image("anuncioPublicitarioBachoco")
+                            .resizable()
+                            .cornerRadius(15)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: nil, height: maxHeight, alignment: .center)
+                            .shadow(color: Color.black.opacity(0.7), radius: 30, x: 0, y: 2)
+                            .padding(.horizontal, 20)
+                            .padding(.top, 7)
+                    }
+                    
+                    VStack {
+                        Image("uberEatsAds")
+                            .resizable()
+                            .cornerRadius(15)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: nil, height: maxHeight, alignment: .center)
+                            .shadow(color: Color.black.opacity(0.7), radius: 30, x: 0, y: 2)
+                            .padding(.horizontal, 20)
+                            .padding(.top, 7)
+                    }
+                    
+                    Spacer()
+                    
+                }.navigationTitle("Ads")
+                
+                
+                
         }
     }
 }
 
 
-struct player: UIViewControllerRepresentable{
+struct VideoView: UIViewRepresentable {
     
-    func makeUIViewController(context: UIViewControllerRepresentableContext<player>) -> AVPlayerViewController {
-        
-        let controller = AVPlayerViewController()
-        let player1 = AVPlayer(url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")!)
-        controller.player = player1
-        return controller
+    var videoURL:URL
+    var previewLength:Double?
+    
+    func makeUIView(context: Context) -> UIView {
+        return PlayerView(frame: .zero, url: videoURL, previewLength: previewLength ?? 15)
     }
     
-    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: UIViewControllerRepresentableContext<player>){
+    func updateUIView(_ uiView: UIView, context: Context) {
         
+    }
+}
+
+class PlayerView: UIView {
+
+    private let playerLayer = AVPlayerLayer()
+    private var previewTimer:Timer?
+    var previewLength:Double
+    
+    init(frame: CGRect, url: URL, previewLength:Double) {
+        self.previewLength = previewLength
+        super.init(frame: frame)
+        
+        // Create the video player using the URL passed in.
+        let player = AVPlayer(url: url)
+        player.volume = 0 // Will play audio if you don't set to zero
+        player.play() // Set to play once created.
+        
+        // Add the player to our Player Layer
+        playerLayer.player = player
+        playerLayer.videoGravity = .resizeAspectFill // Resizes content to fill whole video layer.
+        playerLayer.backgroundColor = UIColor.black.cgColor
+
+        previewTimer = Timer.scheduledTimer(withTimeInterval: previewLength, repeats: true, block: { (timer) in
+            player.seek(to: CMTime(seconds: 0, preferredTimescale: CMTimeScale(1)))
+        })
+        
+        layer.addSublayer(playerLayer)
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        self.previewLength = 15
+        super.init(coder: coder)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        playerLayer.frame = bounds
     }
     
 }
-
 
 struct Ads_Previews: PreviewProvider {
     static var previews: some View {
