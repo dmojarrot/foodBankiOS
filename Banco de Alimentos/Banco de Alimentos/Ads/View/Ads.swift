@@ -13,32 +13,34 @@ struct Ads: View {
     @State var show = false
     
     var body: some View {
-        ZStack {
-            Color("background").edgesIgnoringSafeArea(.bottom)
-            VStack{
-                GeometryReader{geo in
+        NavigationView {
+            ZStack {
+                Color("background").edgesIgnoringSafeArea(.bottom)
+                VStack{
+                    GeometryReader{geo in
+                        
+                        player().frame(height: geo.size.height / 3).cornerRadius(20).padding().gesture(DragGesture()
+                                                                                                        .onChanged({ (value) in
+                                                                                                            self.height = value.translation.height / 10
+                                                                                                        })
+                                                                                                        
+                                                                                                        .onEnded({ (value) in
+                                                                                                            if self.height > geo.size.height / 2 - 100 {
+                                                                                                                self.height = 1500
+                                                                                                                self.show.toggle()
+                                                                                                            }
+                                                                                                            if -self.height > geo.size.height / 2 - 100 {
+                                                                                                                self.height = -1500
+                                                                                                                self.show.toggle()
+                                                                                                            }
+                                                                                                        })
+                        ).offset(y: self.height)
+                        
+                        
+                    }
                     
-                    player().frame(height: geo.size.height / 3).cornerRadius(20).padding().gesture(DragGesture()
-                                                                                                    .onChanged({ (value) in
-                                                                                                        self.height = value.translation.height / 10
-                                                                                                    })
-                                                                                                    
-                                                                                                    .onEnded({ (value) in
-                                                                                                        if self.height > geo.size.height / 2 - 100 {
-                                                                                                            self.height = 1500
-                                                                                                            self.show.toggle()
-                                                                                                        }
-                                                                                                        if -self.height > geo.size.height / 2 - 100 {
-                                                                                                            self.height = -1500
-                                                                                                            self.show.toggle()
-                                                                                                        }
-                                                                                                    })
-                    ).offset(y: self.height)
-                    
-                    
-                }
-                
-            }.animation(.spring())
+                }.animation(.spring())
+            }.navigationTitle("Ads")
         }
     }
 }

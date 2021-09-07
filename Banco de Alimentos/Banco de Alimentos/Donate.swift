@@ -11,11 +11,13 @@ import WebKit
 struct Donate: View {
     var isSheetPresented: Bool = false
     var body: some View {
-        ZStack {
-            Color("background").edgesIgnoringSafeArea(.bottom)
-            WebView(url: URL(string: "https://donaronline.org/banco-de-alimentos-guadalajara/sin-hambre-manana"), onError: {error in
-                        print("Error: ", error.description)
-            }).navigationTitle("Donar")
+        NavigationView {
+            ZStack {
+                Color("background").edgesIgnoringSafeArea(.bottom)
+                WebView(url: URL(string: "https://donaronline.org/banco-de-alimentos-guadalajara/sin-hambre-manana"), onError: {error in
+                            print("Error: ", error.description)
+                }).navigationTitle("Donar")
+            }
         }
         
     }
