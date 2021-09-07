@@ -38,7 +38,7 @@ struct HiUser: View {
                             .padding(.horizontal, 20)
                         Spacer()
                     }.padding(.top, 30)
-                }.navigationTitle("Hola (Usuario)")
+                }.navigationTitle("Bienvenido!")
             }
         }
     }

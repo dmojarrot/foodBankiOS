@@ -13,46 +13,42 @@ struct Ads: View {
     
     @State var maxHeight:CGFloat = 190
     
-        var body: some View {
-            NavigationView{
+    var body: some View {
+        NavigationView{
+            ZStack{
+                Color("background").edgesIgnoringSafeArea(.bottom)
                 ScrollView {
-                    VStack {
-                        VideoView(videoURL: URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4")!, previewLength: 60)
+                    VStack{
+                        VideoView(videoURL: URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4")!, previewLength: 30)
                             .cornerRadius(15)
                             .frame(width: nil, height: maxHeight, alignment: .center)
                             .shadow(color: Color.black.opacity(0.7), radius: 30, x: 0, y: 2)
-                            .padding(.horizontal, 20)
-                            .padding(.top, 7)
-                    }
-                    
-                    VStack {
+                            .padding(.bottom, 10)
+                        
+                        
                         Image("anuncioPublicitarioBachoco")
                             .resizable()
                             .cornerRadius(15)
                             .aspectRatio(contentMode: .fit)
                             .frame(width: nil, height: maxHeight, alignment: .center)
                             .shadow(color: Color.black.opacity(0.7), radius: 30, x: 0, y: 2)
-                            .padding(.horizontal, 20)
-                            .padding(.top, 7)
-                    }
-                    
-                    VStack {
+                            .padding(.bottom, 10)
+                        
+                        
                         Image("uberEatsAds")
                             .resizable()
                             .cornerRadius(15)
                             .aspectRatio(contentMode: .fit)
                             .frame(width: nil, height: maxHeight, alignment: .center)
                             .shadow(color: Color.black.opacity(0.7), radius: 30, x: 0, y: 2)
-                            .padding(.horizontal, 20)
-                            .padding(.top, 7)
-                    }
+                            .padding(.bottom, 10)
+                        
+                    }.padding(.horizontal, 30).padding(.top, 10)
                     
                     Spacer()
                     
                 }.navigationTitle("Ads")
-                
-                
-                
+            }
         }
     }
 }
@@ -73,7 +69,7 @@ struct VideoView: UIViewRepresentable {
 }
 
 class PlayerView: UIView {
-
+    
     private let playerLayer = AVPlayerLayer()
     private var previewTimer:Timer?
     var previewLength:Double
@@ -90,9 +86,9 @@ class PlayerView: UIView {
         // Add the player to our Player Layer
         playerLayer.player = player
         playerLayer.videoGravity = .resizeAspectFill // Resizes content to fill whole video layer.
-        playerLayer.backgroundColor = UIColor.black.cgColor
-
-        previewTimer = Timer.scheduledTimer(withTimeInterval: previewLength, repeats: true, block: { (timer) in
+        playerLayer.backgroundColor = UIColor.white.cgColor
+        
+        previewTimer = Timer.scheduledTimer(withTimeInterval: previewLength, repeats: false, block: { (timer) in
             player.seek(to: CMTime(seconds: 0, preferredTimescale: CMTimeScale(1)))
         })
         

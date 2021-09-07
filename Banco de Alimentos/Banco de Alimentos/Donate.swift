@@ -16,8 +16,8 @@ struct Donate: View {
                 Color("background").edgesIgnoringSafeArea(.bottom)
                 WebView(url: URL(string: "https://donaronline.org/banco-de-alimentos-guadalajara/sin-hambre-manana"), onError: {error in
                             print("Error: ", error.description)
-                }).navigationTitle("Donar")
-            }
+                })
+            }.navigationTitle("Donar")
         }
         
     }
