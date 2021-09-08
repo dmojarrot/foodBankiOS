@@ -42,8 +42,8 @@ struct Acknowledgment: View {
                         
                         Spacer()
                     }.padding(.horizontal, 20)
-                }
-            }.navigationTitle("Agradecimientos")
+                }.navigationTitle("Agradecimientos")
+            }
             
     }
 }

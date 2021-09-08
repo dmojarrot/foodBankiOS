@@ -14,8 +14,10 @@ struct Home: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color("background").edgesIgnoringSafeArea(.bottom)
+                Image("charity").resizable().edgesIgnoringSafeArea(.all)
+                Rectangle().foregroundColor(.clear).background(LinearGradient(gradient: Gradient(colors: [.clear, Color(red: 2/255, green: 32/255, blue: 32/255)]), startPoint: .center,  endPoint: .top).edgesIgnoringSafeArea(.all))
                 ScrollView{
+                    VStack{
                         ZStack(alignment: .leading) {
                             Rectangle()
                                 .foregroundColor(Color.white)
@@ -68,7 +70,8 @@ struct Home: View {
                                 
                             })
                     }.padding(.horizontal, 20)
-                }.navigationTitle("Home")
+                    }.navigationTitle("Home")
+                }
             
         }
         }

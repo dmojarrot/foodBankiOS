@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Profile: View {
     init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenTitle"))]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color.white)]
     }
     
     @State var name = ""
