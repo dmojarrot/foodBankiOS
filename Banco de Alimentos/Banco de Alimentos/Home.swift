@@ -13,8 +13,6 @@ struct Home: View {
             ZStack {
                 Color("background").edgesIgnoringSafeArea(.bottom)
                 ScrollView{
-                    
-            
                         ZStack(alignment: .leading) {
                             Rectangle()
                                 .foregroundColor(Color.white)
@@ -22,7 +20,9 @@ struct Home: View {
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
                                 
                             VStack(alignment: .leading){
-                                Text("Descripcion").bold().font(.title2)
+                                Text("Descripcion")
+                                    .bold()
+                                    .font(.title2)
                                     .padding(.bottom, 5)
                                     .padding(.horizontal, 10)
                                 .padding(.top, 20)
@@ -31,8 +31,8 @@ struct Home: View {
                                 .padding(.bottom, 30)
                             }
                         }
-                        .padding(.top, 60)
-                        .padding(.bottom, 60)
+                        .padding(.top, 30)
+                        .padding(.bottom, 20)
                     ZStack(alignment: .leading) {
                         Rectangle()
                             .foregroundColor(Color.white)
@@ -48,22 +48,22 @@ struct Home: View {
                                 .padding(.bottom, 30)
                             }
                     }
-                    .padding(.bottom, 60)
+                    .padding(.bottom, 20)
                         
                         NavigationLink(
                             destination: Acknowledgment(),
                             label: {
-                                Label("Agradecimientos", systemImage: "person.crop.circle")
+                                Label("Agradecimientos", systemImage: "face.smiling")
                                     .foregroundColor(.blue)
                                     .padding(20)
                                     .multilineTextAlignment(.leading)
                                     .frame(maxWidth: .infinity)
                                     .background(RoundedRectangle(cornerRadius: 20)
                                                     .fill(Color.white))
-                                    .padding(.horizontal, 20)
+                                    .shadow(color: .black, radius: 0.4, y: 0.2)
+
                                 
                             })
-                        Spacer()
                     }.padding(.horizontal, 20)
                 }.navigationTitle("Home")
             

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct Acknowledgment: View {
     var body: some View {
-        NavigationView {
             ZStack {
                 Color("background").edgesIgnoringSafeArea(.bottom)
                 ScrollView{
@@ -18,8 +17,9 @@ struct Acknowledgment: View {
                         Text("Muchas gracias por formar parte!")
                             .bold()
                             .padding(.top, 10)
-                            .padding(.leading, 30)
-                            .font(.subheadline)
+                            .padding(.leading, 10)
+                            .padding(.bottom)
+                            .font(.title3)
                         Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
                             .padding(30)
                             .multilineTextAlignment(.leading)
@@ -28,7 +28,7 @@ struct Acknowledgment: View {
                                             .fill(Color.white))
                             .shadow(color: .black, radius: 0.4, y: 0.2)
 
-                            .padding(.bottom, 60)
+                            .padding(.bottom, 40)
                         
                         VideoView(videoURL: URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4")!, previewLength: 30)
                             .cornerRadius(15)
@@ -42,7 +42,6 @@ struct Acknowledgment: View {
                 }
             }.navigationTitle("Agradecimientos")
             
-        }
     }
 }
 
