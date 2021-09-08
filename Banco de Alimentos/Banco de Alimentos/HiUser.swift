@@ -17,7 +17,7 @@ struct HiUser: View {
                         NavigationLink(
                             destination: Profile(),
                             label: {
-                                Label("Your account", systemImage: "person.crop.circle")
+                                Label("Tu cuenta", systemImage: "person.crop.circle")
                                     .foregroundColor(.blue)
                                     .padding(20)
                                     .multilineTextAlignment(.leading)
@@ -28,7 +28,7 @@ struct HiUser: View {
                                 
                             })
                         
-                        Label("Help", systemImage: "questionmark.circle")
+                        Label("Ayuda", systemImage: "questionmark.circle")
                             .foregroundColor(.blue)
                             .padding(20)
                             .multilineTextAlignment(.leading)
