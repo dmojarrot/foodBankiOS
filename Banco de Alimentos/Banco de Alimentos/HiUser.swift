@@ -18,6 +18,7 @@ struct HiUser: View {
                 Image("charity").resizable().edgesIgnoringSafeArea(.all)
                 Rectangle().foregroundColor(.clear).background(LinearGradient(gradient: Gradient(colors: [.clear, .black]), startPoint: .bottom,  endPoint: .top).edgesIgnoringSafeArea(.all))
                 ScrollView{
+<<<<<<< HEAD
                     VStack {
                         
                         ZStack(alignment: .leading) {
@@ -31,6 +32,19 @@ struct HiUser: View {
                                     .bold()
                                     .font(.title2)
                                     .padding(.bottom, 5)
+=======
+                    VStack(alignment: .leading){
+                        NavigationLink(
+                            destination: Profile(),
+                            label: {
+                                Label("Tu cuenta", systemImage: "person.crop.circle")
+                                    .foregroundColor(.blue)
+                                    .padding(20)
+                                    .multilineTextAlignment(.leading)
+                                    .frame(maxWidth: .infinity)
+                                    .background(RoundedRectangle(cornerRadius: 20)
+                                                    .fill(Color.white))
+>>>>>>> e520d34921a6b6c6c20eabdadb98f4d057f3c803
                                     .padding(.horizontal, 20)
                                 .padding(.top, 20)
                                 Text("En esta aplicacion podras ser capaz de donar tanto comida como dinero al banco de comidas de guadalajara. Con tu apoyo podremos llegar mas comidas a los mas necesitados:)")
@@ -68,6 +82,17 @@ struct HiUser: View {
                     
                     VStack (alignment: .leading) {
                         
+<<<<<<< HEAD
+=======
+                        Label("Ayuda", systemImage: "questionmark.circle")
+                            .foregroundColor(.blue)
+                            .padding(20)
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity)
+                            .background(RoundedRectangle(cornerRadius: 20)
+                                            .fill(Color.white))
+                            .padding(.horizontal, 20)
+>>>>>>> e520d34921a6b6c6c20eabdadb98f4d057f3c803
                         Spacer()
                         VStack {
                             VStack{
