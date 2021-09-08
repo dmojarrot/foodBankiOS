@@ -14,34 +14,6 @@ struct Food: View {
     @State var city: String =  ""
     @State var section: String =  ""
     
-    var fillInfo: some View {
-        Group {
-            Text("Street Number")
-                .font(.subheadline)
-                .fontWeight(.bold)
-                .padding(.top, 15)
-                .padding(.bottom, 5)
-            TextField("Enter Street and Number", text: $streetNumber)
-                .padding(.vertical, 10)
-            
-            Text("City")
-                .font(.subheadline)
-                .fontWeight(.bold)
-                .padding(.top, 15)
-                .padding(.bottom, 5)
-            TextField("Enter City", text: $city)
-                .padding(.vertical, 10)
-            
-            Text("Section")
-                .font(.subheadline)
-                .fontWeight(.bold)
-                .padding(.top, 15)
-                .padding(.bottom, 5)
-            TextField("Enter Section", text: $city)
-                .padding(.vertical, 10)
-        }
-    }
-    
     var body: some View{
         NavigationView {
             ZStack {
@@ -57,6 +29,8 @@ struct Food: View {
                             Rectangle()
                                 .foregroundColor(Color.white)
                                 .cornerRadius(20.0)
+                                .shadow(color: .black, radius: 0.4, y: 0.2)
+
                             VStack(alignment : .leading) {
                                 HStack(alignment: .center) {
                                     Spacer()
@@ -103,12 +77,14 @@ struct Food: View {
                         Text("What type of food is it?")
                             .font(.subheadline)
                             .fontWeight(.bold)
-                            .padding(.top, 15)
+                            .padding(.top, 10)
                             .padding(.bottom, 5)
                         ZStack(alignment: .leading) {
                             Rectangle()
                                 .foregroundColor(Color.white)
                                 .cornerRadius(20.0)
+                                .shadow(color: .black, radius: 0.4, y: 0.2)
+
                             VStack(alignment : .leading) {
                                 HStack(alignment: .center) {
                                     Spacer()
@@ -158,7 +134,44 @@ struct Food: View {
                             }
                         }
                         
-                        fillInfo
+                        VStack(alignment: .leading) {
+                            Text("Street Number")
+                                .font(.subheadline)
+                                .fontWeight(.bold)
+                                .padding(.top, 10)
+                                .padding(.bottom, 5)
+                            TextField("Enter Street and Number", text: $streetNumber)
+                                .padding()
+                                .background(Color("squareColors"))
+                                .cornerRadius(20)
+                                .shadow(color: .black, radius: 0.4, y: 0.2)
+
+                            
+                            Text("City")
+                                .font(.subheadline)
+                                .fontWeight(.bold)
+                                .padding(.top, 10)
+                                .padding(.bottom, 5)
+                            TextField("Enter City", text: $city)
+                                .padding()
+                                .background(Color("squareColors"))
+                                .cornerRadius(20)
+                                .shadow(color: .black, radius: 0.4, y: 0.2)
+
+                            
+                            Text("Section")
+                                .font(.subheadline)
+                                .fontWeight(.bold)
+                                .padding(.top, 10)
+                                .padding(.bottom, 5)
+                            TextField("Enter Section", text: $section)
+                                .padding()
+                                .background(Color("squareColors"))
+                                .cornerRadius(20)
+                                .shadow(color: .black, radius: 0.4, y: 0.2)
+                                .padding(.bottom, 20)
+
+                        }
                         
                         Button(action: {}, label: {
                             Text("Donate")

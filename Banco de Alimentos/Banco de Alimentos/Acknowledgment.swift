@@ -26,12 +26,14 @@ struct Acknowledgment: View {
                             .frame(maxWidth: .infinity)
                             .background(RoundedRectangle(cornerRadius: 20)
                                             .fill(Color.white))
+                            .shadow(color: .black, radius: 0.4, y: 0.2)
+
                             .padding(.bottom, 60)
                         
                         VideoView(videoURL: URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4")!, previewLength: 30)
                             .cornerRadius(15)
                             .frame(width: nil, height: 250, alignment: .center)
-                            .shadow(color: Color.black.opacity(0.1), radius: 60, x: 0, y: 2)
+                            .shadow(color: .black, radius: 0.4, y: 0.2)
                             .padding(.bottom, 10)
                         
                         
