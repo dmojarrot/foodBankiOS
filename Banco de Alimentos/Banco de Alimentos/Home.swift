@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Home: View {
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenTitle"))]
+    }
     var body: some View {
         NavigationView {
             ZStack {
@@ -41,7 +44,7 @@ struct Home: View {
                         VStack(alignment: .leading){
                                 Text("Donar").bold().font(.title2)
                                     .padding(.bottom, 5)
-                                    .padding(.horizontal, 10)
+                                    .padding(.horizontal, 20)
                                 .padding(.top, 20)
                                 Text(" Puedes donar tanta comida como desees y tanto dinero como gustes, incluso si no tienes recursos para donar puedes simplemente ver los ADS y de esta manera donar directamente a nuestra causa")
                                     .padding(.horizontal, 20)

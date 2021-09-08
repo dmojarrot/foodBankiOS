@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Acknowledgment: View {
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenTitle"))]
+    }
     var body: some View {
             ZStack {
                 Color("background").edgesIgnoringSafeArea(.bottom)

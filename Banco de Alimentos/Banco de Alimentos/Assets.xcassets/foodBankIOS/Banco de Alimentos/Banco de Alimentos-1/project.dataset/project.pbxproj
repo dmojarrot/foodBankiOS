@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D176DA126E6743C00732AB4 /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D176DA026E6743C00732AB4 /* Ads.swift */; };
+		3BDBA11C26E0196B00D22A45 /* RegistrationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA11B26E0196B00D22A45 /* RegistrationDetails.swift */; };
+		3BDBA11F26E01B1100D22A45 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA11E26E01B1100D22A45 /* RegistrationService.swift */; };
+		3BDBA12126E025FC00D22A45 /* RegisterViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12026E025FC00D22A45 /* RegisterViews.swift */; };
+		3BDBA12626E0276700D22A45 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12526E0276700D22A45 /* Login.swift */; };
+		3BDBA12A26E027CD00D22A45 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12926E027CD00D22A45 /* ForgotPassword.swift */; };
+		3BDBA12D26E0288400D22A45 /* CertainCornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12C26E0288400D22A45 /* CertainCornerRadius.swift */; };
+		3BE8401826E6584000B3284C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8401726E6584000B3284C /* MainView.swift */; };
+		3BE8401B26E6625D00B3284C /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8401A26E6625D00B3284C /* LandingPage.swift */; };
+		3BE8401D26E6631100B3284C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8401C26E6631100B3284C /* Profile.swift */; };
+		3BE8401F26E663B000B3284C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8401E26E663AF00B3284C /* Home.swift */; };
+		3BE8402326E663F800B3284C /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402226E663F800B3284C /* Food.swift */; };
+		3BE8402526E6640200B3284C /* Donate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402426E6640200B3284C /* Donate.swift */; };
+		3BE8402726E6721C00B3284C /* Acknowledgment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402626E6721C00B3284C /* Acknowledgment.swift */; };
+		3BE8402926E688F400B3284C /* HiUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402826E688F400B3284C /* HiUser.swift */; };
+		3BE9DDF526DB508A00B078FE /* Banco_de_AlimentosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */; };
+		3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF626DB508A00B078FE /* ContentView.swift */; };
+		3BE9DDF926DB508C00B078FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF826DB508C00B078FE /* Assets.xcassets */; };
+		3BE9DDFC26DB508C00B078FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9DDFB26DB508C00B078FE /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D176DA026E6743C00732AB4 /* Ads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
+		3BDBA11B26E0196B00D22A45 /* RegistrationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDetails.swift; sourceTree = "<group>"; };
+		3BDBA11E26E01B1100D22A45 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
+		3BDBA12026E025FC00D22A45 /* RegisterViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViews.swift; sourceTree = "<group>"; };
+		3BDBA12526E0276700D22A45 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		3BDBA12926E027CD00D22A45 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		3BDBA12C26E0288400D22A45 /* CertainCornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertainCornerRadius.swift; sourceTree = "<group>"; };
+		3BE8401726E6584000B3284C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3BE8401A26E6625D00B3284C /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
+		3BE8401C26E6631100B3284C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		3BE8401E26E663AF00B3284C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		3BE8402226E663F800B3284C /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		3BE8402426E6640200B3284C /* Donate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donate.swift; sourceTree = "<group>"; };
+		3BE8402626E6721C00B3284C /* Acknowledgment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acknowledgment.swift; sourceTree = "<group>"; };
+		3BE8402826E688F400B3284C /* HiUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiUser.swift; sourceTree = "<group>"; };
+		3BE9DDF126DB508A00B078FE /* Banco de Alimentos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Banco de Alimentos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banco_de_AlimentosApp.swift; sourceTree = "<group>"; };
+		3BE9DDF626DB508A00B078FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3BE9DDF826DB508C00B078FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BE9DDFB26DB508C00B078FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3BE9DDFD26DB508C00B078FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BE9DDEE26DB508A00B078FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D176D9A26E673DF00732AB4 /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				0D176D9B26E673FC00732AB4 /* View */,
+			);
+			path = Ads;
+			sourceTree = "<group>";
+		};
+		0D176D9B26E673FC00732AB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D176DA026E6743C00732AB4 /* Ads.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BDBA11826E018FD00D22A45 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA11D26E01AFE00D22A45 /* Service */,
+				3BDBA11A26E0193300D22A45 /* View */,
+				3BDBA11926E0191800D22A45 /* Model */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		3BDBA11926E0191800D22A45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA11B26E0196B00D22A45 /* RegistrationDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3BDBA11A26E0193300D22A45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA12026E025FC00D22A45 /* RegisterViews.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BDBA11D26E01AFE00D22A45 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA11E26E01B1100D22A45 /* RegistrationService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3BDBA12326E0270900D22A45 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA12426E0273100D22A45 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3BDBA12426E0273100D22A45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA12526E0276700D22A45 /* Login.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BDBA12726E0278700D22A45 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA12826E027BB00D22A45 /* View */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		3BDBA12826E027BB00D22A45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA12926E027CD00D22A45 /* ForgotPassword.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BDBA12B26E0281700D22A45 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA12C26E0288400D22A45 /* CertainCornerRadius.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		3BDBA12E26E0293B00D22A45 /* LandingPage */ = {
+			isa = PBXGroup;
+			children = (
+				3BE8401926E6624F00B3284C /* View */,
+			);
+			path = LandingPage;
+			sourceTree = "<group>";
+		};
+		3BE8401926E6624F00B3284C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BE8401A26E6625D00B3284C /* LandingPage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BE9DDE826DB508A00B078FE = {
+			isa = PBXGroup;
+			children = (
+				3BE9DDF326DB508A00B078FE /* Banco de Alimentos */,
+				3BE9DDF226DB508A00B078FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BE9DDF226DB508A00B078FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BE9DDF126DB508A00B078FE /* Banco de Alimentos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BE9DDF326DB508A00B078FE /* Banco de Alimentos */ = {
+			isa = PBXGroup;
+			children = (
+				3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */,
+				3BE9DDF626DB508A00B078FE /* ContentView.swift */,
+				3BE8401726E6584000B3284C /* MainView.swift */,
+				3BE8401C26E6631100B3284C /* Profile.swift */,
+				3BE8401E26E663AF00B3284C /* Home.swift */,
+				3BE8402226E663F800B3284C /* Food.swift */,
+				3BE8402426E6640200B3284C /* Donate.swift */,
+				3BE8402626E6721C00B3284C /* Acknowledgment.swift */,
+				3BE8402826E688F400B3284C /* HiUser.swift */,
+				0D176D9A26E673DF00732AB4 /* Ads */,
+				3BDBA12E26E0293B00D22A45 /* LandingPage */,
+				3BDBA12326E0270900D22A45 /* Login */,
+				3BDBA12726E0278700D22A45 /* ForgotPassword */,
+				3BDBA11826E018FD00D22A45 /* Register */,
+				3BDBA12B26E0281700D22A45 /* Modifiers */,
+				3BE9DDF826DB508C00B078FE /* Assets.xcassets */,
+				3BE9DDFD26DB508C00B078FE /* Info.plist */,
+				3BE9DDFA26DB508C00B078FE /* Preview Content */,
+			);
+			path = "Banco de Alimentos";
+			sourceTree = "<group>";
+		};
+		3BE9DDFA26DB508C00B078FE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3BE9DDFB26DB508C00B078FE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BE9DDF026DB508A00B078FE /* Banco de Alimentos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BE9DE0026DB508C00B078FE /* Build configuration list for PBXNativeTarget "Banco de Alimentos" */;
+			buildPhases = (
+				3BE9DDED26DB508A00B078FE /* Sources */,
+				3BE9DDEE26DB508A00B078FE /* Frameworks */,
+				3BE9DDEF26DB508A00B078FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Banco de Alimentos";
+			productName = "Banco de Alimentos";
+			productReference = 3BE9DDF126DB508A00B078FE /* Banco de Alimentos.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BE9DDE926DB508A00B078FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					3BE9DDF026DB508A00B078FE = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 3BE9DDEC26DB508A00B078FE /* Build configuration list for PBXProject "Banco de Alimentos" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BE9DDE826DB508A00B078FE;
+			productRefGroup = 3BE9DDF226DB508A00B078FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BE9DDF026DB508A00B078FE /* Banco de Alimentos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BE9DDEF26DB508A00B078FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BE9DDFC26DB508C00B078FE /* Preview Assets.xcassets in Resources */,
+				3BE9DDF926DB508C00B078FE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BE9DDED26DB508A00B078FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D176DA126E6743C00732AB4 /* Ads.swift in Sources */,
+				3BDBA11F26E01B1100D22A45 /* RegistrationService.swift in Sources */,
+				3BE8402726E6721C00B3284C /* Acknowledgment.swift in Sources */,
+				3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */,
+				3BE8402526E6640200B3284C /* Donate.swift in Sources */,
+				3BE8402926E688F400B3284C /* HiUser.swift in Sources */,
+				3BE9DDF526DB508A00B078FE /* Banco_de_AlimentosApp.swift in Sources */,
+				3BDBA12D26E0288400D22A45 /* CertainCornerRadius.swift in Sources */,
+				3BE8401826E6584000B3284C /* MainView.swift in Sources */,
+				3BDBA12626E0276700D22A45 /* Login.swift in Sources */,
+				3BE8402326E663F800B3284C /* Food.swift in Sources */,
+				3BE8401B26E6625D00B3284C /* LandingPage.swift in Sources */,
+				3BDBA12A26E027CD00D22A45 /* ForgotPassword.swift in Sources */,
+				3BE8401D26E6631100B3284C /* Profile.swift in Sources */,
+				3BDBA12126E025FC00D22A45 /* RegisterViews.swift in Sources */,
+				3BE8401F26E663B000B3284C /* Home.swift in Sources */,
+				3BDBA11C26E0196B00D22A45 /* RegistrationDetails.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3BE9DDFE26DB508C00B078FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3BE9DDFF26DB508C00B078FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BE9DE0126DB508C00B078FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Banco de Alimentos/Preview Content\"";
+				DEVELOPMENT_TEAM = LZ79D4T7YB;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Banco de Alimentos/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Banco-de-Alimentos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BE9DE0226DB508C00B078FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Banco de Alimentos/Preview Content\"";
+				DEVELOPMENT_TEAM = LZ79D4T7YB;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Banco de Alimentos/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Banco-de-Alimentos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BE9DDEC26DB508A00B078FE /* Build configuration list for PBXProject "Banco de Alimentos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BE9DDFE26DB508C00B078FE /* Debug */,
+				3BE9DDFF26DB508C00B078FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BE9DE0026DB508C00B078FE /* Build configuration list for PBXNativeTarget "Banco de Alimentos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BE9DE0126DB508C00B078FE /* Debug */,
+				3BE9DE0226DB508C00B078FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BE9DDE926DB508A00B078FE /* Project object */;
+}

@@ -9,6 +9,9 @@ import SwiftUI
 import WebKit
 
 struct Donate: View {
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenTitle"))]
+    }
     var isSheetPresented: Bool = false
     var body: some View {
         NavigationView {
