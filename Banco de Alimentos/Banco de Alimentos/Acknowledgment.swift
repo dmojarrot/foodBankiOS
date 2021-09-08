@@ -14,6 +14,7 @@ struct Acknowledgment: View {
     var body: some View {
             ZStack {
                 Color("background").edgesIgnoringSafeArea(.bottom)
+                Rectangle().foregroundColor(.clear).background(LinearGradient(gradient: Gradient(colors: [.clear, Color(red: 2/255, green: 32/255, blue: 32/255)]), startPoint: .center,  endPoint: .top).edgesIgnoringSafeArea(.all))
                 ScrollView{
                     
                     VStack(alignment: .leading){

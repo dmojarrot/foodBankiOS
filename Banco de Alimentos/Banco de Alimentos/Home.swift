@@ -14,7 +14,7 @@ struct Home: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Image("charity").resizable().edgesIgnoringSafeArea(.all)
+                Color("background").edgesIgnoringSafeArea(.bottom)
                 Rectangle().foregroundColor(.clear).background(LinearGradient(gradient: Gradient(colors: [.clear, Color(red: 2/255, green: 32/255, blue: 32/255)]), startPoint: .center,  endPoint: .top).edgesIgnoringSafeArea(.all))
                 ScrollView{
                     VStack{
@@ -31,7 +31,7 @@ struct Home: View {
                                     .padding(.bottom, 5)
                                     .padding(.horizontal, 10)
                                 .padding(.top, 20)
-                                Text(" En esta aplicacion podras ser capaz de donar tanto comida como dinero al banco de comidas de guadalajara. Con tu apoyo podremos llegar mas comidas a los mas necesitados:)")
+                                Text("En esta aplicacion podras ser capaz de donar tanto comida como dinero al banco de comidas de guadalajara. Con tu apoyo podremos llegar mas comidas a los mas necesitados:)")
                                     .padding(.horizontal, 20)
                                 .padding(.bottom, 30)
                             }
@@ -48,7 +48,7 @@ struct Home: View {
                                     .padding(.bottom, 5)
                                     .padding(.horizontal, 20)
                                 .padding(.top, 20)
-                                Text(" Puedes donar tanta comida como desees y tanto dinero como gustes, incluso si no tienes recursos para donar puedes simplemente ver los ADS y de esta manera donar directamente a nuestra causa")
+                                Text("Puedes donar tanta comida como desees y tanto dinero como gustes, incluso si no tienes recursos para donar puedes simplemente ver los ADS y de esta manera donar directamente a nuestra causa")
                                     .padding(.horizontal, 20)
                                 .padding(.bottom, 30)
                             }

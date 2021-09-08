@@ -7,11 +7,7 @@
 
 import SwiftUI
 
-struct Profile: View {
-    init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color.white)]
-    }
-    
+struct Profile: View {    
     @State var name = ""
     @State var lastName = ""
     @State var cellphone = ""
@@ -22,6 +18,7 @@ struct Profile: View {
     var body: some View{
         ZStack {
             Color("background").edgesIgnoringSafeArea(.bottom)
+            Rectangle().foregroundColor(.clear).background(LinearGradient(gradient: Gradient(colors: [.clear, Color(red: 2/255, green: 32/255, blue: 32/255)]), startPoint: .center,  endPoint: .top).edgesIgnoringSafeArea(.all))
             ScrollView{
                     VStack(alignment: .leading){
                         HStack{
