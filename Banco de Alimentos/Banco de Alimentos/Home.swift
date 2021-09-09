@@ -9,13 +9,12 @@ import SwiftUI
 
 struct Home: View {
     init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenTitle"))]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color.white)]
     }
     var body: some View {
         NavigationView {
             ZStack {
-                Color("background").edgesIgnoringSafeArea(.bottom)
-                Rectangle().foregroundColor(.clear).background(LinearGradient(gradient: Gradient(colors: [.clear, Color(red: 2/255, green: 32/255, blue: 32/255)]), startPoint: .center,  endPoint: .top).edgesIgnoringSafeArea(.all))
+                Rectangle().foregroundColor(.clear).background(LinearGradient(gradient: Gradient(colors: [.white, Color.gray]), startPoint: .bottom,  endPoint: .top).edgesIgnoringSafeArea(.all))
                 ScrollView{
                     VStack{
                         ZStack(alignment: .leading) {

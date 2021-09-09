@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct MainView: View {
-    
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color.white)]
+    }
     @State private var selection = 2
     var body: some View {
         TabView(selection: $selection){
