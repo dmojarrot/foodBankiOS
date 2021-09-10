@@ -18,12 +18,12 @@ struct HiUser: View {
                             destination: Profile(),
                             label: {
                                 Label("Mi perfil", systemImage: "person.crop.circle")
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .padding(10)
                                     .multilineTextAlignment(.leading)
                                     .frame(maxWidth: .infinity)
                                     .background(RoundedRectangle(cornerRadius: 20)
-                                                    .fill(Color.white))
+                                                    .fill(Color("greenBackground")))
                                 
                                 
                             }).padding(.top, 30).padding(.horizontal, 90)

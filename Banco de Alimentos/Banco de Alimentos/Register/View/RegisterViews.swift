@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct Register: View {
+    
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenTitle"))]        
+    }
     @State var mail = ""
     @State var password = ""
     @State var confirmPassword = ""
@@ -69,8 +73,6 @@ struct Register: View {
                         .cornerRadius(20)
                         .padding(.bottom,40)
                         .shadow(color: .black, radius: 0.4, y: 0.2)
-                    
-                    
                     NavigationLink(
                         destination: Register2(mail: mail, password: password),
                         label: {
@@ -83,13 +85,14 @@ struct Register: View {
                                 .background(Color("greenBackground"))
                                 .cornerRadius(20)
                         })
-                    
+ 
                     
 
                 }.padding(.horizontal, 40)
             }
         }.navigationBarTitle(Text(""), displayMode: .inline)
     }
+
 }
 
 struct Register2: View {

@@ -10,6 +10,8 @@ import SwiftUI
 struct Home: View {
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color.white)]
+        UINavigationBar.appearance().tintColor = UIColor.init(Color.white)
+
     }
     var body: some View {
         NavigationView {
@@ -58,13 +60,12 @@ struct Home: View {
                             destination: Acknowledgment(),
                             label: {
                                 Label("Agradecimientos", systemImage: "face.smiling")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(.white)
                                     .padding(20)
                                     .multilineTextAlignment(.leading)
                                     .frame(maxWidth: .infinity)
                                     .background(RoundedRectangle(cornerRadius: 20)
-                                                    .fill(Color.white))
-                                    .shadow(color: .black, radius: 0.4, y: 0.2)
+                                                    .fill(Color("greenBackground")))
 
                                 
                             })
