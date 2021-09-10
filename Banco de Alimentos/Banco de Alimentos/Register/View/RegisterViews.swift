@@ -70,17 +70,22 @@ struct Register: View {
                         .padding(.bottom,40)
                         .shadow(color: .black, radius: 0.4, y: 0.2)
                     
-                    Button(action: {}, label: {
-                        Text("Continuar")
-                            .foregroundColor(.white)
-                            .bold()
-                            .font(.headline)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color("greenBackground"))
-                            .cornerRadius(20)
-                        
-                    })
+                    
+                    NavigationLink(
+                        destination: Register2(mail: mail, password: password),
+                        label: {
+                            Text("Continuar")
+                                .foregroundColor(.white)
+                                .bold()
+                                .font(.headline)
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .background(Color("greenBackground"))
+                                .cornerRadius(20)
+                        })
+                    
+                    
+
                 }.padding(.horizontal, 40)
             }
         }.navigationBarTitle(Text(""), displayMode: .inline)
@@ -88,6 +93,8 @@ struct Register: View {
 }
 
 struct Register2: View {
+    @State var mail: String
+    @State var password: String
     @State var name = ""
     @State var lastName = ""
     @State var cellphone = ""
@@ -95,7 +102,6 @@ struct Register2: View {
     @State var birthDate = ""
     
     var body: some View{
-        NavigationView {
             ZStack{
                 Color("background").edgesIgnoringSafeArea(.bottom)
                 ScrollView{
@@ -189,7 +195,6 @@ struct Register2: View {
                     }.padding(.horizontal, 40)
                 }
             }.navigationBarTitle(Text(""), displayMode: .inline)
-        }
     }
 }
 
