@@ -2,7 +2,7 @@
 //  Profile.swift
 //  Banco de Alimentos
 //
-//  Created by Diego Mojarro on 06/09/21.
+//  Created by Team2 on 06/09/21.
 //
 
 import SwiftUI

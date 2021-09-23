@@ -2,7 +2,7 @@
 //  HiUser.swift
 //  Banco de Alimentos
 //
-//  Created by user195826 on 9/6/21.
+//  Created by Team2 on 9/6/21.
 //
 
 import SwiftUI

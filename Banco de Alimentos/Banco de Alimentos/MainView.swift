@@ -2,7 +2,7 @@
 //  Home.swift
 //  Banco de Alimentos
 //
-//  Created by Diego Mojarro on 06/09/21.
+//  Created by Team2 on 06/09/21.
 //
 
 import SwiftUI
@@ -18,7 +18,7 @@ struct MainView: View {
                 .navigationBarTitle("My Profile")
                 .tabItem {
                     Image(systemName: "person.crop.circle")
-                    Text("Profile")
+                    Text("Perfil")
                 }
                 .tag(1)
             
@@ -39,14 +39,14 @@ struct MainView: View {
             Food()
                 .tabItem {
                     Image("restaurantLogo")
-                    Text("Food")
+                    Text("Comida")
                 }
                 .tag(4)
             
             Donate()
                 .tabItem {
                     Image(systemName: "dollarsign.circle")
-                    Text("Donate")
+                    Text("Donar")
                 }
                 .tag(4)
         }.accentColor(Color("greenBackground"))
