@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D176DA126E6743C00732AB4 /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D176DA026E6743C00732AB4 /* Ads.swift */; };
+		3B59057B2705FD7C00DB40D0 /* FoodSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B59057A2705FD7C00DB40D0 /* FoodSelector.swift */; };
 		3BDBA11C26E0196B00D22A45 /* RegistrationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA11B26E0196B00D22A45 /* RegistrationDetails.swift */; };
 		3BDBA11F26E01B1100D22A45 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA11E26E01B1100D22A45 /* RegistrationService.swift */; };
 		3BDBA12126E025FC00D22A45 /* RegisterViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12026E025FC00D22A45 /* RegisterViews.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		0D176DA026E6743C00732AB4 /* Ads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
+		3B59057A2705FD7C00DB40D0 /* FoodSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelector.swift; sourceTree = "<group>"; };
 		3BDBA11B26E0196B00D22A45 /* RegistrationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDetails.swift; sourceTree = "<group>"; };
 		3BDBA11E26E01B1100D22A45 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 		3BDBA12026E025FC00D22A45 /* RegisterViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViews.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				3BE8401C26E6631100B3284C /* Profile.swift */,
 				3BE8401E26E663AF00B3284C /* Home.swift */,
 				3BE8402226E663F800B3284C /* Food.swift */,
+				3B59057A2705FD7C00DB40D0 /* FoodSelector.swift */,
 				3BE8402426E6640200B3284C /* Donate.swift */,
 				3BE8402626E6721C00B3284C /* Acknowledgment.swift */,
 				3BE8402826E688F400B3284C /* HiUser.swift */,
@@ -290,6 +293,7 @@
 			files = (
 				0D176DA126E6743C00732AB4 /* Ads.swift in Sources */,
 				3BDBA11F26E01B1100D22A45 /* RegistrationService.swift in Sources */,
+				3B59057B2705FD7C00DB40D0 /* FoodSelector.swift in Sources */,
 				3BE8402726E6721C00B3284C /* Acknowledgment.swift in Sources */,
 				3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */,
 				3BE8402526E6640200B3284C /* Donate.swift in Sources */,

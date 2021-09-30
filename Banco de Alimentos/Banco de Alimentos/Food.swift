@@ -10,6 +10,10 @@ import SwiftUI
 	
 
 struct Food: View {
+    
+    
+    @State var other: String = ""
+    
     @State var streetNumber: String =  ""
     @State var city: String =  ""
     @State var section: String =  ""
@@ -20,7 +24,7 @@ struct Food: View {
                 Rectangle().foregroundColor(.clear).background(LinearGradient(gradient: Gradient(colors: [.white, Color.gray]), startPoint: .bottom,  endPoint: .top).edgesIgnoringSafeArea(.all))
                 ScrollView{
                     VStack(alignment : .leading) {
-                        Text("¿Cuanta cantidad decomida quieres donar?")
+                        Text("¿Cuanta cantidad de comida quieres donar?")
                             .font(.subheadline)
                             .fontWeight(.bold)
                             .padding(.top, 10)
@@ -67,6 +71,8 @@ struct Food: View {
                                         .padding(10)
                                         .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
                                         .padding(.horizontal, 20)
+                                    
+                                    
                                     Text("Otra cantidad")
                                         .foregroundColor(.white)
                                         .font(.body)
@@ -91,56 +97,57 @@ struct Food: View {
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
 
                             VStack(alignment : .leading) {
-                                HStack(alignment: .center) {
-                                    Spacer()
-                                    Text("Frutas")
-                                        .foregroundColor(.white)
-                                        .font(.body)
-                                        .fontWeight(.bold)
-                                        .padding(.vertical, 10)
-                                        .padding(.horizontal, 3)
-                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
-                                        .padding(.horizontal)
-                                    Spacer()
-                                    Text("Verduras")
-                                        .foregroundColor(.white)
-                                        .font(.body)
-                                        .fontWeight(.bold)
-                                        .padding(.vertical,10)
-                                        .padding(.horizontal, 1)
-                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
-                                        .padding(.horizontal)
-                                    Spacer()
-                                    Text("Cereales")
-                                        .foregroundColor(.white)
-                                        .font(.body)
-                                        .fontWeight(.bold)
-                                        .padding(.vertical, 10)
-                                        .padding(.horizontal, 2)
-                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
-                                        .padding(.horizontal)
-                                    Spacer()
-                                        
-                                }.padding(10)
-                                HStack(alignment: .center) {
-                                    Spacer()
-                                    Text("Red Meat")
-                                        .foregroundColor(.white)
-                                        .font(.body)
-                                        .fontWeight(.bold)
-                                        .padding(10)
-                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
-                                        .padding(.horizontal)
-                                    
-                                    Text("Otra tipo")
-                                        .foregroundColor(.white)
-                                        .font(.body)
-                                        .fontWeight(.bold)
-                                        .padding(10)
-                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
-                                        .padding(.horizontal)
-                                    Spacer()
-                                }.padding(10)
+                                FoodSelector()
+//                                HStack(alignment: .center) {
+//                                    Spacer()
+//                                    Text("Frutas")
+//                                        .foregroundColor(.white)
+//                                        .font(.body)
+//                                        .fontWeight(.bold)
+//                                        .padding(.vertical, 10)
+//                                        .padding(.horizontal, 3)
+//                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
+//                                        .padding(.horizontal)
+//                                    Spacer()
+//                                    Text("Verduras")
+//                                        .foregroundColor(.white)
+//                                        .font(.body)
+//                                        .fontWeight(.bold)
+//                                        .padding(.vertical,10)
+//                                        .padding(.horizontal, 1)
+//                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
+//                                        .padding(.horizontal)
+//                                    Spacer()
+//                                    Text("Cereales")
+//                                        .foregroundColor(.white)
+//                                        .font(.body)
+//                                        .fontWeight(.bold)
+//                                        .padding(.vertical, 10)
+//                                        .padding(.horizontal, 2)
+//                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
+//                                        .padding(.horizontal)
+//                                    Spacer()
+//
+//                                }.padding(10)
+//                                HStack(alignment: .center) {
+//                                    Spacer()
+//                                    Text("Red Meat")
+//                                        .foregroundColor(.white)
+//                                        .font(.body)
+//                                        .fontWeight(.bold)
+//                                        .padding(10)
+//                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
+//                                        .padding(.horizontal)
+//
+//                                    Text("Otra tipo")
+//                                        .foregroundColor(.white)
+//                                        .font(.body)
+//                                        .fontWeight(.bold)
+//                                        .padding(10)
+//                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
+//                                        .padding(.horizontal)
+//                                    Spacer()
+//                                }.padding(10)
                             }
                         }
                         
@@ -195,7 +202,7 @@ struct Food: View {
                             
                         }).padding(.bottom)
                     }.padding(.horizontal)
-                }.navigationBarTitle("Food")
+                }.navigationBarTitle("Comida")
             }
         }
     }
