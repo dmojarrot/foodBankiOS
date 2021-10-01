@@ -7,11 +7,9 @@
 
 import SwiftUI
 
-	
+
 
 struct Food: View {
-    
-    
     @State var other: String = ""
     
     @State var streetNumber: String =  ""
@@ -34,7 +32,7 @@ struct Food: View {
                                 .foregroundColor(Color.white)
                                 .cornerRadius(20.0)
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
-
+                            
                             VStack(alignment : .leading) {
                                 HStack(alignment: .center) {
                                     Spacer()
@@ -60,7 +58,7 @@ struct Food: View {
                                         .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
                                         .padding(.horizontal, 10)
                                     Spacer()
-                                        
+                                    
                                 }.padding(10)
                                 HStack(alignment: .center) {
                                     Spacer()
@@ -90,66 +88,8 @@ struct Food: View {
                             .fontWeight(.bold)
                             .padding(.top, 10)
                             .padding(.bottom, 5)
-                        ZStack(alignment: .leading) {
-                            Rectangle()
-                                .foregroundColor(Color.white)
-                                .cornerRadius(20.0)
-                                .shadow(color: .black, radius: 0.4, y: 0.2)
-
-                            VStack(alignment : .leading) {
-                                FoodSelector()
-//                                HStack(alignment: .center) {
-//                                    Spacer()
-//                                    Text("Frutas")
-//                                        .foregroundColor(.white)
-//                                        .font(.body)
-//                                        .fontWeight(.bold)
-//                                        .padding(.vertical, 10)
-//                                        .padding(.horizontal, 3)
-//                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
-//                                        .padding(.horizontal)
-//                                    Spacer()
-//                                    Text("Verduras")
-//                                        .foregroundColor(.white)
-//                                        .font(.body)
-//                                        .fontWeight(.bold)
-//                                        .padding(.vertical,10)
-//                                        .padding(.horizontal, 1)
-//                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
-//                                        .padding(.horizontal)
-//                                    Spacer()
-//                                    Text("Cereales")
-//                                        .foregroundColor(.white)
-//                                        .font(.body)
-//                                        .fontWeight(.bold)
-//                                        .padding(.vertical, 10)
-//                                        .padding(.horizontal, 2)
-//                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
-//                                        .padding(.horizontal)
-//                                    Spacer()
-//
-//                                }.padding(10)
-//                                HStack(alignment: .center) {
-//                                    Spacer()
-//                                    Text("Red Meat")
-//                                        .foregroundColor(.white)
-//                                        .font(.body)
-//                                        .fontWeight(.bold)
-//                                        .padding(10)
-//                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
-//                                        .padding(.horizontal)
-//
-//                                    Text("Otra tipo")
-//                                        .foregroundColor(.white)
-//                                        .font(.body)
-//                                        .fontWeight(.bold)
-//                                        .padding(10)
-//                                        .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.gray))
-//                                        .padding(.horizontal)
-//                                    Spacer()
-//                                }.padding(10)
-                            }
-                        }
+                        
+                        FoodSelector()
                         
                         VStack(alignment: .leading) {
                             Text("Calle")
@@ -162,7 +102,7 @@ struct Food: View {
                                 .background(Color("squareColors"))
                                 .cornerRadius(20)
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
-
+                            
                             
                             Text("Ciudad")
                                 .font(.subheadline)
@@ -174,7 +114,7 @@ struct Food: View {
                                 .background(Color("squareColors"))
                                 .cornerRadius(20)
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
-
+                            
                             
                             Text("Colonia")
                                 .font(.subheadline)
@@ -187,7 +127,7 @@ struct Food: View {
                                 .cornerRadius(20)
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
                                 .padding(.bottom, 20)
-
+                            
                         }
                         
                         Button(action: {}, label: {

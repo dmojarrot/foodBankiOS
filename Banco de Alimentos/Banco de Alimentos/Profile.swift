@@ -105,7 +105,7 @@ struct Profile: View {
                         })
                         
                     }.padding(.horizontal, 40)
-            }.navigationBarTitle("My Profile")
+            }.navigationBarTitle("Editar perfil")
         }
         }
 }

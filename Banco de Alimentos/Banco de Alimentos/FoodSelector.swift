@@ -58,13 +58,11 @@ struct MultiSelectRow: View {
 }
 
 struct FoodSelector: View {
-    var foodItemss = FoodItems.dummyData()
+    var foodItems = FoodItems.dummyData()
     @State var selectedRows = Set<UUID>()
     var body: some View{
-        VStack {
-            List(foodItemss, selection: $selectedRows) { foodItems in
-                MultiSelectRow(foodItems: foodItems, selectedItems: $selectedRows)
-            }
+        List(foodItems, selection: $selectedRows) { foodItems in
+            MultiSelectRow(foodItems: foodItems, selectedItems: $selectedRows)
         }
     }
 }
