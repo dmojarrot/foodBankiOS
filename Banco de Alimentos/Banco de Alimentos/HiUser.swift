@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HiUser: View {
     @State var profilePicture:UIImage = UIImage(named: "profileExample")!
-
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -23,17 +23,21 @@ struct HiUser: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 118.0, height: 118.0)
                                 .clipShape(Circle())
-
+                            
+                            Text("Mark Zuckerberg")
+                                .bold()
+                                .foregroundColor(.white).font(.title2)
+                            
                             
                         }.padding(EdgeInsets(top: 16, leading: 0, bottom: 32, trailing: 0))
                         
-//                        Text("Ajustes")
-//                            .font(.title)
-//                            .fontWeight(.bold)
-//                            .foregroundColor(.black)
-//                            .frame(minWidth : 0, idealWidth: 100, maxWidth: .infinity, alignment: .leading).padding(.leading, 18)
+                        //                        Text("Ajustes")
+                        //                            .font(.title)
+                        //                            .fontWeight(.bold)
+                        //                            .foregroundColor(.black)
+                        //                            .frame(minWidth : 0, idealWidth: 100, maxWidth: .infinity, alignment: .leading).padding(.leading, 18)
                         ModuloAjustes()
-                    
+                        
                     }
                     
                     
@@ -48,13 +52,13 @@ struct HiUser: View {
 struct ModuloAjustes:View{
     @State var isToggleOn = true
     @State var isEditProfileViewActive = false
-
+    
     
     var body: some View{
         VStack(spacing : 3) {
             Button(action: {}, label: {
                 HStack {
-
+                    
                     Text("Cuenta").foregroundColor(.black).font(.title3).fontWeight(.light)
                     
                     Spacer()
@@ -63,9 +67,9 @@ struct ModuloAjustes:View{
                     
                 }.padding()
             }).background(Color.white)
-            .clipShape(RoundedRectangle(cornerRadius: 1.0))
+                .clipShape(RoundedRectangle(cornerRadius: 1.0))
             
-            Button(action: {}, label: {
+            Button(action: {isToggleOn.toggle()}, label: {
                 HStack {
                     
                     
@@ -78,7 +82,7 @@ struct ModuloAjustes:View{
                     
                 }.padding()
             }).background(Color.white)
-            .clipShape(RoundedRectangle(cornerRadius: 1.0))
+                .clipShape(RoundedRectangle(cornerRadius: 1.0))
             
             Button(action: {isEditProfileViewActive = true}, label: {
                 HStack {
@@ -91,7 +95,7 @@ struct ModuloAjustes:View{
                     
                 }.padding()
             }).background(Color.white)
-            .clipShape(RoundedRectangle(cornerRadius: 1.0))
+                .clipShape(RoundedRectangle(cornerRadius: 1.0))
             
             Button(action: {}, label: {
                 HStack {
@@ -104,7 +108,7 @@ struct ModuloAjustes:View{
                     
                 }.padding()
             }).background(Color.white)
-            .clipShape(RoundedRectangle(cornerRadius: 1.0))
+                .clipShape(RoundedRectangle(cornerRadius: 1.0))
             
             NavigationLink(
                 destination: Profile(),
@@ -114,7 +118,7 @@ struct ModuloAjustes:View{
                 })
             
             
-        }
+        }.cornerRadius(20).padding()
     }
 }
 
