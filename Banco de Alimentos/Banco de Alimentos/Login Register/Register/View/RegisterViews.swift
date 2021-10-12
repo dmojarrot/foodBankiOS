@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct Register: View {
-    
-    init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenTitle"))]        
-    }
     @State var mail = ""
     @State var password = ""
     @State var confirmPassword = ""
@@ -28,7 +24,7 @@ struct Register: View {
                         
                         Text("¿No tienes cuenta?")
                             .font(.largeTitle)
-                            .foregroundColor(Color("greenTitle"))
+                            .foregroundColor(Color("grayTitle"))
                             .bold()
                             .padding(.top, 10 )
                             .padding(.leading, 20)
@@ -96,6 +92,7 @@ struct Register: View {
 }
 
 struct Register2: View {
+    @EnvironmentObject var viewModel: LoginRegisterViewModel
     @State var mail: String
     @State var password: String
     @State var name = ""
@@ -116,7 +113,7 @@ struct Register2: View {
                         VStack(alignment : .leading) {
                             Text("Finaliza tu               cuenta")
                                 .font(.largeTitle)
-                                .foregroundColor(Color("greenTitle"))
+                                .foregroundColor(Color("grayTitle"))
                                 .bold()
                                 .padding(.top, 10 )
                                 .padding(.leading, 20)
@@ -183,7 +180,12 @@ struct Register2: View {
                             .padding(.bottom,40)
                             .shadow(color: .black, radius: 0.4, y: 0.2)
                         
-                        Button(action: {}, label: {
+                        Button(action: {
+                            guard !name.isEmpty, !lastName.isEmpty, !cellphone.isEmpty, !genre.isEmpty, !birthDate.isEmpty else{
+                                return
+                            }
+                            viewModel.signUp(email: mail, password: password)
+                        }, label: {
                             Text("Registrarse")
                                 .foregroundColor(.white)
                                 .bold()
@@ -194,9 +196,9 @@ struct Register2: View {
                                 .cornerRadius(20)
                             
                         })
-                        
+                                                
                     }.padding(.horizontal, 40)
-                }
+                }.accentColor(Color("greenBackground"))
             }.navigationBarTitle(Text(""), displayMode: .inline)
     }
 }

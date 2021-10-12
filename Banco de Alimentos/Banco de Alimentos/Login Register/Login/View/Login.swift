@@ -6,11 +6,44 @@
 //
 
 import SwiftUI
+import FBSDKLoginKit
 
 struct Login: View{
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("grayTitle"))]
+        
+    }
+    @EnvironmentObject var viewModel: LoginRegisterViewModel
+    
+    var body: some View{
+        VStack {
+            if viewModel.signedIn{
+                MainView()
+            }else{
+                SignInView()
+            }
+          
+        }
+        .onAppear {
+            viewModel.signedIn = viewModel.isSignedIn
+        }
+    }
+    
+}
+
+struct SignInView: View{
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("grayTitle"))]
+    }
     @State var mail = ""
     @State var password = ""
+    @AppStorage("logged") var logged = false
+    @State var manager = LoginManager()
+    @EnvironmentObject var viewModel: LoginRegisterViewModel
+
     var body: some View{
+        
+        
         NavigationView {
             ZStack{
                 Color("background").edgesIgnoringSafeArea(.bottom)
@@ -62,7 +95,15 @@ struct Login: View{
     //                                    .frame(maxWidth: .infinity, alignment: .trailing)
 
                                 })
-                            Button(action: {}, label: {
+                            Button(action: {
+                                guard !mail.isEmpty, !password.isEmpty else{
+                                    return
+                                }
+                                
+                                viewModel.signIn(email: mail, password: password)
+                                
+                                
+                            }, label: {
                                 Text("Iniciar sesión")
                                     .foregroundColor(.white)
                                     .bold()
@@ -77,7 +118,37 @@ struct Login: View{
                             Text("o")
                                 .frame(maxWidth: .infinity)
                             
-                        Button(action: {}, label: {
+                        Button(action: {
+                            
+                            if logged{
+                                manager.logOut()
+                                mail = ""
+                                logged = false
+                            }else{
+                                manager.logIn(permissions: ["public_profile", "email"], from: nil) { (result, err) in
+                                    if err != nil{
+                                        print(err!.localizedDescription)
+                                        return
+                                    }
+                                    
+                                    if !result!.isCancelled{
+                                        logged = true
+                                        
+                                        let request = GraphRequest(graphPath: "me", parameters: ["fields" : "email"])
+                                        
+                                        request.start{ (_, res, _) in
+                                            guard let profileData = res as? [String: Any] else{return}
+                                            
+                                            mail = profileData["email"] as! String
+                                        }
+                                    }
+                                    
+
+                                
+                                }
+                            }
+                            
+                        }, label: {
                             HStack {
                                 Image("facebookLogo")
                                     .resizable()
@@ -125,10 +196,11 @@ struct Login: View{
                 }
                 
             }.navigationTitle("Bienvenido")
-        }
+        }.accentColor(Color("greenBackground"))
+        
     }
-    
 }
+
 
 
 struct Login_Previews: PreviewProvider {

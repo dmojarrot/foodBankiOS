@@ -15,7 +15,6 @@ struct MainView: View {
     var body: some View {
         TabView(selection: $selection){
             HiUser()
-                .navigationBarTitle("My Profile")
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Perfil")

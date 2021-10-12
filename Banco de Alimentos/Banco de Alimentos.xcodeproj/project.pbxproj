@@ -3,14 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0D176DA126E6743C00732AB4 /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D176DA026E6743C00732AB4 /* Ads.swift */; };
+		3B5023DB271525940093D4C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B5023DA271525940093D4C2 /* GoogleService-Info.plist */; };
+		3B5023DE271526350093D4C2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5023DD271526350093D4C2 /* FirebaseAuth */; };
+		3B5023E0271526350093D4C2 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5023DF271526350093D4C2 /* FirebaseFirestore */; };
+		3B5023E2271526350093D4C2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5023E1271526350093D4C2 /* FirebaseStorage */; };
+		3B5023E7271546250093D4C2 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5023E6271546250093D4C2 /* FacebookCore */; };
+		3B5023E9271546250093D4C2 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5023E8271546250093D4C2 /* FacebookLogin */; };
 		3B59057B2705FD7C00DB40D0 /* FoodSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B59057A2705FD7C00DB40D0 /* FoodSelector.swift */; };
-		3BDBA11C26E0196B00D22A45 /* RegistrationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA11B26E0196B00D22A45 /* RegistrationDetails.swift */; };
-		3BDBA11F26E01B1100D22A45 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA11E26E01B1100D22A45 /* RegistrationService.swift */; };
+		3BDBA11C26E0196B00D22A45 /* LoginRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA11B26E0196B00D22A45 /* LoginRegisterViewModel.swift */; };
 		3BDBA12126E025FC00D22A45 /* RegisterViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12026E025FC00D22A45 /* RegisterViews.swift */; };
 		3BDBA12626E0276700D22A45 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12526E0276700D22A45 /* Login.swift */; };
 		3BDBA12A26E027CD00D22A45 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12926E027CD00D22A45 /* ForgotPassword.swift */; };
@@ -31,9 +36,9 @@
 
 /* Begin PBXFileReference section */
 		0D176DA026E6743C00732AB4 /* Ads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
+		3B5023DA271525940093D4C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B59057A2705FD7C00DB40D0 /* FoodSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelector.swift; sourceTree = "<group>"; };
-		3BDBA11B26E0196B00D22A45 /* RegistrationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDetails.swift; sourceTree = "<group>"; };
-		3BDBA11E26E01B1100D22A45 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
+		3BDBA11B26E0196B00D22A45 /* LoginRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewModel.swift; sourceTree = "<group>"; };
 		3BDBA12026E025FC00D22A45 /* RegisterViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViews.swift; sourceTree = "<group>"; };
 		3BDBA12526E0276700D22A45 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		3BDBA12926E027CD00D22A45 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
@@ -59,6 +64,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5023E9271546250093D4C2 /* FacebookLogin in Frameworks */,
+				3B5023DE271526350093D4C2 /* FirebaseAuth in Frameworks */,
+				3B5023E0271526350093D4C2 /* FirebaseFirestore in Frameworks */,
+				3B5023E2271526350093D4C2 /* FirebaseStorage in Frameworks */,
+				3B5023E7271546250093D4C2 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,12 +91,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3B5023E4271527230093D4C2 /* Login Register */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA11926E0191800D22A45 /* Model */,
+				3BDBA12726E0278700D22A45 /* ForgotPassword */,
+				3BDBA11826E018FD00D22A45 /* Register */,
+				3BDBA12326E0270900D22A45 /* Login */,
+			);
+			path = "Login Register";
+			sourceTree = "<group>";
+		};
 		3BDBA11826E018FD00D22A45 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				3BDBA11D26E01AFE00D22A45 /* Service */,
 				3BDBA11A26E0193300D22A45 /* View */,
-				3BDBA11926E0191800D22A45 /* Model */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -94,7 +113,7 @@
 		3BDBA11926E0191800D22A45 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3BDBA11B26E0196B00D22A45 /* RegistrationDetails.swift */,
+				3BDBA11B26E0196B00D22A45 /* LoginRegisterViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,14 +124,6 @@
 				3BDBA12026E025FC00D22A45 /* RegisterViews.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		3BDBA11D26E01AFE00D22A45 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				3BDBA11E26E01B1100D22A45 /* RegistrationService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		3BDBA12326E0270900D22A45 /* Login */ = {
@@ -190,6 +201,7 @@
 		3BE9DDF326DB508A00B078FE /* Banco de Alimentos */ = {
 			isa = PBXGroup;
 			children = (
+				3B5023E4271527230093D4C2 /* Login Register */,
 				3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */,
 				3BE9DDF626DB508A00B078FE /* ContentView.swift */,
 				3BE8401726E6584000B3284C /* MainView.swift */,
@@ -202,12 +214,10 @@
 				3BE8402826E688F400B3284C /* HiUser.swift */,
 				0D176D9A26E673DF00732AB4 /* Ads */,
 				3BDBA12E26E0293B00D22A45 /* LandingPage */,
-				3BDBA12326E0270900D22A45 /* Login */,
-				3BDBA12726E0278700D22A45 /* ForgotPassword */,
-				3BDBA11826E018FD00D22A45 /* Register */,
 				3BDBA12B26E0281700D22A45 /* Modifiers */,
 				3BE9DDF826DB508C00B078FE /* Assets.xcassets */,
 				3BE9DDFD26DB508C00B078FE /* Info.plist */,
+				3B5023DA271525940093D4C2 /* GoogleService-Info.plist */,
 				3BE9DDFA26DB508C00B078FE /* Preview Content */,
 			);
 			path = "Banco de Alimentos";
@@ -237,6 +247,13 @@
 			dependencies = (
 			);
 			name = "Banco de Alimentos";
+			packageProductDependencies = (
+				3B5023DD271526350093D4C2 /* FirebaseAuth */,
+				3B5023DF271526350093D4C2 /* FirebaseFirestore */,
+				3B5023E1271526350093D4C2 /* FirebaseStorage */,
+				3B5023E6271546250093D4C2 /* FacebookCore */,
+				3B5023E8271546250093D4C2 /* FacebookLogin */,
+			);
 			productName = "Banco de Alimentos";
 			productReference = 3BE9DDF126DB508A00B078FE /* Banco de Alimentos.app */;
 			productType = "com.apple.product-type.application";
@@ -264,6 +281,10 @@
 				Base,
 			);
 			mainGroup = 3BE9DDE826DB508A00B078FE;
+			packageReferences = (
+				3B5023DC271526350093D4C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3B5023E5271546250093D4C2 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 3BE9DDF226DB508A00B078FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -281,6 +302,7 @@
 				3BDD3C9D26EB056800D653D7 /* LandingPage.storyboard in Resources */,
 				3BE9DDFC26DB508C00B078FE /* Preview Assets.xcassets in Resources */,
 				3BE9DDF926DB508C00B078FE /* Assets.xcassets in Resources */,
+				3B5023DB271525940093D4C2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +314,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D176DA126E6743C00732AB4 /* Ads.swift in Sources */,
-				3BDBA11F26E01B1100D22A45 /* RegistrationService.swift in Sources */,
 				3B59057B2705FD7C00DB40D0 /* FoodSelector.swift in Sources */,
 				3BE8402726E6721C00B3284C /* Acknowledgment.swift in Sources */,
 				3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */,
@@ -307,7 +328,7 @@
 				3BE8401D26E6631100B3284C /* Profile.swift in Sources */,
 				3BDBA12126E025FC00D22A45 /* RegisterViews.swift in Sources */,
 				3BE8401F26E663B000B3284C /* Home.swift in Sources */,
-				3BDBA11C26E0196B00D22A45 /* RegistrationDetails.swift in Sources */,
+				3BDBA11C26E0196B00D22A45 /* LoginRegisterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +466,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Banco-de-Alimentos";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tec.bda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,7 +488,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Banco-de-Alimentos";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tec.bda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -496,6 +517,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B5023DC271526350093D4C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3B5023E5271546250093D4C2 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B5023DD271526350093D4C2 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B5023DC271526350093D4C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3B5023DF271526350093D4C2 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B5023DC271526350093D4C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		3B5023E1271526350093D4C2 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B5023DC271526350093D4C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		3B5023E6271546250093D4C2 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B5023E5271546250093D4C2 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		3B5023E8271546250093D4C2 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B5023E5271546250093D4C2 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3BE9DDE926DB508A00B078FE /* Project object */;
 }

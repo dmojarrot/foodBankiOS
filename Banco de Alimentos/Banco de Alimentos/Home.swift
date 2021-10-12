@@ -10,7 +10,7 @@ import SwiftUI
 struct Home: View {
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color.white)]
-        UINavigationBar.appearance().tintColor = UIColor.init(Color.white)
+        UINavigationBar.appearance().tintColor = UIColor.init(Color("greenBackground"))
 
     }
     var body: some View {

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HiUser: View {
+    
     @State var profilePicture:UIImage = UIImage(named: "profileExample")!
     
     var body: some View {
@@ -52,7 +53,8 @@ struct HiUser: View {
 struct ModuloAjustes:View{
     @State var isToggleOn = true
     @State var isEditProfileViewActive = false
-    
+    @EnvironmentObject var viewModel: LoginRegisterViewModel
+
     
     var body: some View{
         VStack(spacing : 3) {
@@ -97,10 +99,12 @@ struct ModuloAjustes:View{
             }).background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 1.0))
             
-            Button(action: {}, label: {
+            Button(action: {
+                viewModel.signOut()
+            }, label: {
                 HStack {
                     
-                    Text("Califica esta aplicación").foregroundColor(.black).font(.title3).fontWeight(.light)
+                    Text("Cerrar Sesión").foregroundColor(.black).font(.title3).fontWeight(.light)
                     
                     Spacer()
                     
