@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Profile: View {    
+struct EditProfile: View {    
     @State var name = ""
     @State var lastName = ""
     @State var cellphone = ""
@@ -111,6 +111,6 @@ struct Profile: View {
 }
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {
-        Profile()
+        EditProfile()
     }
 }

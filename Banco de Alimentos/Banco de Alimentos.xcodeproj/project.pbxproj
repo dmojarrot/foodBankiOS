@@ -15,19 +15,19 @@
 		3B5023E7271546250093D4C2 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5023E6271546250093D4C2 /* FacebookCore */; };
 		3B5023E9271546250093D4C2 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5023E8271546250093D4C2 /* FacebookLogin */; };
 		3B59057B2705FD7C00DB40D0 /* FoodSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B59057A2705FD7C00DB40D0 /* FoodSelector.swift */; };
-		3BDBA11C26E0196B00D22A45 /* LoginRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA11B26E0196B00D22A45 /* LoginRegisterViewModel.swift */; };
+		3BDBA11C26E0196B00D22A45 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA11B26E0196B00D22A45 /* FirebaseAuth.swift */; };
 		3BDBA12126E025FC00D22A45 /* RegisterViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12026E025FC00D22A45 /* RegisterViews.swift */; };
 		3BDBA12626E0276700D22A45 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12526E0276700D22A45 /* Login.swift */; };
 		3BDBA12A26E027CD00D22A45 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12926E027CD00D22A45 /* ForgotPassword.swift */; };
 		3BDBA12D26E0288400D22A45 /* CertainCornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBA12C26E0288400D22A45 /* CertainCornerRadius.swift */; };
 		3BDD3C9D26EB056800D653D7 /* LandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDD3C9C26EB056800D653D7 /* LandingPage.storyboard */; };
 		3BE8401826E6584000B3284C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8401726E6584000B3284C /* MainView.swift */; };
-		3BE8401D26E6631100B3284C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8401C26E6631100B3284C /* Profile.swift */; };
+		3BE8401D26E6631100B3284C /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8401C26E6631100B3284C /* EditProfile.swift */; };
 		3BE8401F26E663B000B3284C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8401E26E663AF00B3284C /* Home.swift */; };
 		3BE8402326E663F800B3284C /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402226E663F800B3284C /* Food.swift */; };
 		3BE8402526E6640200B3284C /* Donate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402426E6640200B3284C /* Donate.swift */; };
 		3BE8402726E6721C00B3284C /* Acknowledgment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402626E6721C00B3284C /* Acknowledgment.swift */; };
-		3BE8402926E688F400B3284C /* HiUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402826E688F400B3284C /* HiUser.swift */; };
+		3BE8402926E688F400B3284C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8402826E688F400B3284C /* Profile.swift */; };
 		3BE9DDF526DB508A00B078FE /* Banco_de_AlimentosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */; };
 		3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF626DB508A00B078FE /* ContentView.swift */; };
 		3BE9DDF926DB508C00B078FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE9DDF826DB508C00B078FE /* Assets.xcassets */; };
@@ -38,19 +38,19 @@
 		0D176DA026E6743C00732AB4 /* Ads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
 		3B5023DA271525940093D4C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B59057A2705FD7C00DB40D0 /* FoodSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelector.swift; sourceTree = "<group>"; };
-		3BDBA11B26E0196B00D22A45 /* LoginRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewModel.swift; sourceTree = "<group>"; };
+		3BDBA11B26E0196B00D22A45 /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
 		3BDBA12026E025FC00D22A45 /* RegisterViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViews.swift; sourceTree = "<group>"; };
 		3BDBA12526E0276700D22A45 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		3BDBA12926E027CD00D22A45 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		3BDBA12C26E0288400D22A45 /* CertainCornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertainCornerRadius.swift; sourceTree = "<group>"; };
 		3BDD3C9C26EB056800D653D7 /* LandingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LandingPage.storyboard; sourceTree = "<group>"; };
 		3BE8401726E6584000B3284C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		3BE8401C26E6631100B3284C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		3BE8401C26E6631100B3284C /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
 		3BE8401E26E663AF00B3284C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		3BE8402226E663F800B3284C /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		3BE8402426E6640200B3284C /* Donate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donate.swift; sourceTree = "<group>"; };
 		3BE8402626E6721C00B3284C /* Acknowledgment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acknowledgment.swift; sourceTree = "<group>"; };
-		3BE8402826E688F400B3284C /* HiUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiUser.swift; sourceTree = "<group>"; };
+		3BE8402826E688F400B3284C /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		3BE9DDF126DB508A00B078FE /* Banco de Alimentos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Banco de Alimentos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banco_de_AlimentosApp.swift; sourceTree = "<group>"; };
 		3BE9DDF626DB508A00B078FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,23 +78,15 @@
 		0D176D9A26E673DF00732AB4 /* Ads */ = {
 			isa = PBXGroup;
 			children = (
-				0D176D9B26E673FC00732AB4 /* View */,
-			);
-			path = Ads;
-			sourceTree = "<group>";
-		};
-		0D176D9B26E673FC00732AB4 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				0D176DA026E6743C00732AB4 /* Ads.swift */,
 			);
-			path = View;
+			path = Ads;
 			sourceTree = "<group>";
 		};
 		3B5023E4271527230093D4C2 /* Login Register */ = {
 			isa = PBXGroup;
 			children = (
-				3BDBA11926E0191800D22A45 /* Model */,
+				3BDBA11926E0191800D22A45 /* FirebaseViewModel */,
 				3BDBA12726E0278700D22A45 /* ForgotPassword */,
 				3BDBA11826E018FD00D22A45 /* Register */,
 				3BDBA12326E0270900D22A45 /* Login */,
@@ -102,60 +94,71 @@
 			path = "Login Register";
 			sourceTree = "<group>";
 		};
+		3B69CC632715E2E500BFAF87 /* Donate */ = {
+			isa = PBXGroup;
+			children = (
+				3BE8402426E6640200B3284C /* Donate.swift */,
+			);
+			path = Donate;
+			sourceTree = "<group>";
+		};
+		3B69CC642715E57B00BFAF87 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3BE8402826E688F400B3284C /* Profile.swift */,
+				3BE8401C26E6631100B3284C /* EditProfile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3B69CC652715E59000BFAF87 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				3B59057A2705FD7C00DB40D0 /* FoodSelector.swift */,
+				3BE8402226E663F800B3284C /* Food.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		3B69CC662715E5D100BFAF87 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3BE8401E26E663AF00B3284C /* Home.swift */,
+				3BE8402626E6721C00B3284C /* Acknowledgment.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		3BDBA11826E018FD00D22A45 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				3BDBA11A26E0193300D22A45 /* View */,
-			);
-			path = Register;
-			sourceTree = "<group>";
-		};
-		3BDBA11926E0191800D22A45 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				3BDBA11B26E0196B00D22A45 /* LoginRegisterViewModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		3BDBA11A26E0193300D22A45 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				3BDBA12026E025FC00D22A45 /* RegisterViews.swift */,
 			);
-			path = View;
+			path = Register;
+			sourceTree = "<group>";
+		};
+		3BDBA11926E0191800D22A45 /* FirebaseViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBA11B26E0196B00D22A45 /* FirebaseAuth.swift */,
+			);
+			path = FirebaseViewModel;
 			sourceTree = "<group>";
 		};
 		3BDBA12326E0270900D22A45 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				3BDBA12426E0273100D22A45 /* View */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		3BDBA12426E0273100D22A45 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				3BDBA12526E0276700D22A45 /* Login.swift */,
 			);
-			path = View;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		3BDBA12726E0278700D22A45 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
-				3BDBA12826E027BB00D22A45 /* View */,
-			);
-			path = ForgotPassword;
-			sourceTree = "<group>";
-		};
-		3BDBA12826E027BB00D22A45 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				3BDBA12926E027CD00D22A45 /* ForgotPassword.swift */,
 			);
-			path = View;
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		3BDBA12B26E0281700D22A45 /* Modifiers */ = {
@@ -169,17 +172,9 @@
 		3BDBA12E26E0293B00D22A45 /* LandingPage */ = {
 			isa = PBXGroup;
 			children = (
-				3BE8401926E6624F00B3284C /* View */,
-			);
-			path = LandingPage;
-			sourceTree = "<group>";
-		};
-		3BE8401926E6624F00B3284C /* View */ = {
-			isa = PBXGroup;
-			children = (
 				3BDD3C9C26EB056800D653D7 /* LandingPage.storyboard */,
 			);
-			path = View;
+			path = LandingPage;
 			sourceTree = "<group>";
 		};
 		3BE9DDE826DB508A00B078FE = {
@@ -201,24 +196,21 @@
 		3BE9DDF326DB508A00B078FE /* Banco de Alimentos */ = {
 			isa = PBXGroup;
 			children = (
-				3B5023E4271527230093D4C2 /* Login Register */,
 				3BE9DDF426DB508A00B078FE /* Banco_de_AlimentosApp.swift */,
 				3BE9DDF626DB508A00B078FE /* ContentView.swift */,
 				3BE8401726E6584000B3284C /* MainView.swift */,
-				3BE8401C26E6631100B3284C /* Profile.swift */,
-				3BE8401E26E663AF00B3284C /* Home.swift */,
-				3BE8402226E663F800B3284C /* Food.swift */,
-				3B59057A2705FD7C00DB40D0 /* FoodSelector.swift */,
-				3BE8402426E6640200B3284C /* Donate.swift */,
-				3BE8402626E6721C00B3284C /* Acknowledgment.swift */,
-				3BE8402826E688F400B3284C /* HiUser.swift */,
+				3B5023E4271527230093D4C2 /* Login Register */,
+				3B69CC662715E5D100BFAF87 /* Home */,
+				3B69CC652715E59000BFAF87 /* Food */,
+				3B69CC642715E57B00BFAF87 /* Profile */,
+				3B69CC632715E2E500BFAF87 /* Donate */,
 				0D176D9A26E673DF00732AB4 /* Ads */,
 				3BDBA12E26E0293B00D22A45 /* LandingPage */,
 				3BDBA12B26E0281700D22A45 /* Modifiers */,
+				3BE9DDFA26DB508C00B078FE /* Preview Content */,
 				3BE9DDF826DB508C00B078FE /* Assets.xcassets */,
 				3BE9DDFD26DB508C00B078FE /* Info.plist */,
 				3B5023DA271525940093D4C2 /* GoogleService-Info.plist */,
-				3BE9DDFA26DB508C00B078FE /* Preview Content */,
 			);
 			path = "Banco de Alimentos";
 			sourceTree = "<group>";
@@ -318,17 +310,17 @@
 				3BE8402726E6721C00B3284C /* Acknowledgment.swift in Sources */,
 				3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */,
 				3BE8402526E6640200B3284C /* Donate.swift in Sources */,
-				3BE8402926E688F400B3284C /* HiUser.swift in Sources */,
+				3BE8402926E688F400B3284C /* Profile.swift in Sources */,
 				3BE9DDF526DB508A00B078FE /* Banco_de_AlimentosApp.swift in Sources */,
 				3BDBA12D26E0288400D22A45 /* CertainCornerRadius.swift in Sources */,
 				3BE8401826E6584000B3284C /* MainView.swift in Sources */,
 				3BDBA12626E0276700D22A45 /* Login.swift in Sources */,
 				3BE8402326E663F800B3284C /* Food.swift in Sources */,
 				3BDBA12A26E027CD00D22A45 /* ForgotPassword.swift in Sources */,
-				3BE8401D26E6631100B3284C /* Profile.swift in Sources */,
+				3BE8401D26E6631100B3284C /* EditProfile.swift in Sources */,
 				3BDBA12126E025FC00D22A45 /* RegisterViews.swift in Sources */,
 				3BE8401F26E663B000B3284C /* Home.swift in Sources */,
-				3BDBA11C26E0196B00D22A45 /* LoginRegisterViewModel.swift in Sources */,
+				3BDBA11C26E0196B00D22A45 /* FirebaseAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

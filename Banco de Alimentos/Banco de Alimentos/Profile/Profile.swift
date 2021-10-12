@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HiUser: View {
+struct Profile: View {
     
     @State var profilePicture:UIImage = UIImage(named: "profileExample")!
     
@@ -53,7 +53,7 @@ struct HiUser: View {
 struct ModuloAjustes:View{
     @State var isToggleOn = true
     @State var isEditProfileViewActive = false
-    @EnvironmentObject var viewModel: LoginRegisterViewModel
+    @EnvironmentObject var viewModel: FirebaseAuth
 
     
     var body: some View{
@@ -115,7 +115,7 @@ struct ModuloAjustes:View{
                 .clipShape(RoundedRectangle(cornerRadius: 1.0))
             
             NavigationLink(
-                destination: Profile(),
+                destination: EditProfile(),
                 isActive: $isEditProfileViewActive,
                 label: {
                     EmptyView()
@@ -131,7 +131,7 @@ struct ModuloAjustes:View{
 
 struct HiUser_Previews: PreviewProvider {
     static var previews: some View {
-        HiUser()
+        Profile()
     }
 }
 

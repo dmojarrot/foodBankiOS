@@ -92,7 +92,7 @@ struct Register: View {
 }
 
 struct Register2: View {
-    @EnvironmentObject var viewModel: LoginRegisterViewModel
+    @EnvironmentObject var viewModel: FirebaseAuth
     @State var mail: String
     @State var password: String
     @State var name = ""

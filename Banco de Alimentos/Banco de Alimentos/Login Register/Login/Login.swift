@@ -13,7 +13,7 @@ struct Login: View{
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("grayTitle"))]
         
     }
-    @EnvironmentObject var viewModel: LoginRegisterViewModel
+    @EnvironmentObject var viewModel: FirebaseAuth
     
     var body: some View{
         VStack {
@@ -39,7 +39,7 @@ struct SignInView: View{
     @State var password = ""
     @AppStorage("logged") var logged = false
     @State var manager = LoginManager()
-    @EnvironmentObject var viewModel: LoginRegisterViewModel
+    @EnvironmentObject var viewModel: FirebaseAuth
 
     var body: some View{
         

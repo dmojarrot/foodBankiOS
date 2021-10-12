@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseAuth
 
-class LoginRegisterViewModel: ObservableObject{
+class FirebaseAuth: ObservableObject{
     let auth = Auth.auth()
     
     @Published var signedIn = false
