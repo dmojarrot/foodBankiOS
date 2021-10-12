@@ -14,28 +14,42 @@ struct Acknowledgment: View {
             Rectangle().foregroundColor(.clear).background(LinearGradient(gradient: Gradient(colors: [.white, Color.gray]), startPoint: .bottom,  endPoint: .top).edgesIgnoringSafeArea(.all))
             ScrollView{
                 
-                VStack(alignment: .leading){
-                    Text("Muchas gracias por formar parte!")
-                        .bold()
-                        .padding(.top, 10)
-                        .padding(.leading, 10)
-                        .padding(.bottom)
-                        .font(.title3)
-                    Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
-                        .padding(30)
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity)
-                        .background(RoundedRectangle(cornerRadius: 20)
-                                        .fill(Color.white))
-                    
-                    
-                        .padding(.bottom, 40)
+                VStack{
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color.white)
+                            .cornerRadius(20.0)
+                            .shadow(color: .black, radius: 0.4, y: 0.2)
+                        
+                        VStack{
+                            Text("Muchas gracias por formar parte!")
+                                .fontWeight(.bold)
+                                .foregroundColor(Color( red: 219/255, green: 81/255, blue: 86/255))
+                                .bold()
+                                .font(.title3)
+                                .padding(.bottom, 5)
+                                .padding(.horizontal, 10)
+                                .padding(.top, 20)
+                            Text("Gracias a tu donación hemos podido ayudar a 3 familias completas de 4 integrantes, las cuales te agradecen de mucho corazón el apoyo que les has brindado para una causa buena en nuestra sociedad!")
+                                .multilineTextAlignment(.center)
+                                
+                                .padding(.horizontal, 20)
+                                .padding(.bottom, 30)
+                        }
+                    }
+                    .padding(.top, 20)
+                    .padding(.bottom, 20)
+
                     
                     VideoView(videoURL: URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4")!, previewLength: 30)
                         .cornerRadius(15)
                         .frame(width: nil, height: 250, alignment: .center)
                         .shadow(color: .black, radius: 0.4, y: 0.2)
-                        .padding(.bottom, 10)
+                    
+                    Image("logoApple")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 80, height: 80)
                     
                     
                     Spacer()

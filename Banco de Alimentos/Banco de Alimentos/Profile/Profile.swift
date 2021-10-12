@@ -42,7 +42,7 @@ struct Profile: View {
                     }
                     
                     
-                }.navigationTitle("Bienvenido")
+                }.navigationTitle("Perfil")
             }
             
         }
