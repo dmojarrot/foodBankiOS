@@ -168,30 +168,37 @@ struct Register2: View {
                         .font(.subheadline)
                         .fontWeight(.light)
                     
-                    Picker(
-                        selection: $selection,
-                        label:
-                            HStack{
-                                Text("Genre: ")
-                                Text(selection)
-                            }
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding()
-                            .padding(.horizontal)
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                            .shadow(color: Color.blue.opacity(0.3), radius: 10, x: 0, y: 10)
-                        ,
-                        content: {
-                            ForEach(filterOptions, id: \.self) { option in
-                                HStack{
-                                    Text(option)
-                                }
-                                .tag(option)
-                            }
-                            
-                        })
+                    TextField("", text: $genre)
+                        .padding()
+                        .background(Color("squareColors"))
+                        .cornerRadius(20)
+                        .padding(.bottom,40)
+                        .shadow(color: .black, radius: 0.4, y: 0.2)
+                    
+//                    Picker(
+//                        selection: $selection,
+//                        label:
+//                            HStack{
+//                                Text("Genre: ")
+//                                Text(selection)
+//                            }
+//                            .font(.headline)
+//                            .foregroundColor(.white)
+//                            .padding()
+//                            .padding(.horizontal)
+//                            .background(Color.blue)
+//                            .cornerRadius(10)
+//                            .shadow(color: Color.blue.opacity(0.3), radius: 10, x: 0, y: 10)
+//                        ,
+//                        content: {
+//                            ForEach(filterOptions, id: \.self) { option in
+//                                HStack{
+//                                    Text(option)
+//                                }
+//                                .tag(option)
+//                            }
+//
+//                        })
                     
                     
                     
@@ -210,7 +217,9 @@ struct Register2: View {
                         guard !name.isEmpty, !lastName.isEmpty, !cellphone.isEmpty, !genre.isEmpty, !birthDate.isEmpty else{
                             return
                         }
+                        self.AddInfo(name: self.name, lastName: self.lastName, cellphone: self.cellphone, genre: self.genre, birthDate: self.birthDate)
                         viewModel.signUp(email: mail, password: password)
+                        
                     }, label: {
                         Text("Registrarse")
                             .foregroundColor(.white)
@@ -230,7 +239,7 @@ struct Register2: View {
     
     func AddInfo(name: String, lastName: String, cellphone: String, genre: String, birthDate: String){
         let db = Firestore.firestore()
-        db.collection("users").document().setData(["Name": name, "lastName": lastName, "cellphone": cellphone, "genre": genre, "birthdate": birthDate])
+        db.collection("users").document().setData(["Name": self.name, "LastName": self.lastName, "Cellphone": self.cellphone, "Genre": self.genre, "Birthdate": self.birthDate])
         
     }
     

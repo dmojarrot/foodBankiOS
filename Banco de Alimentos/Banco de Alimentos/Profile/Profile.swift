@@ -10,6 +10,7 @@ import SwiftUI
 struct Profile: View {
     
     @State var profilePicture:UIImage = UIImage(named: "profileExample")!
+    @ObservedObject private var viewModel = UserDataViewModel()
     
     var body: some View {
         NavigationView {
@@ -43,7 +44,9 @@ struct Profile: View {
                     
                     
                 }.navigationTitle("Perfil")
-            }
+            }//.onAppear(){
+//                self.viewModel.fetchData()
+//            }
             
         }
         
