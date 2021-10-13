@@ -10,7 +10,7 @@ import SwiftUI
 struct Home: View {
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color.white)]
-        UINavigationBar.appearance().tintColor = UIColor.init(Color("greenBackground"))
+        UINavigationBar.appearance().tintColor = UIColor.init(Color.black)
         
     }
     var body: some View {
@@ -36,7 +36,7 @@ struct Home: View {
                                 Text("Puedes donar tanta comida como desees y tanto dinero como gustes, incluso si no tienes recursos para donar puedes simplemente ver los ADS y de esta manera donar directamente a nuestra causa")
                                     .multilineTextAlignment(.center)
                                     .padding(.horizontal, 20)
-                                    .padding(.bottom, 30)
+                                    .padding(.bottom, 20)
                             }
                         }
                         .padding(.top, 20)

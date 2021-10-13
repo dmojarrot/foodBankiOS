@@ -25,7 +25,7 @@ struct Profile: View {
                                 .frame(width: 118.0, height: 118.0)
                                 .clipShape(Circle())
                             
-                            Text("Mark Zuckerberg")
+                            Text("Ken Bauer Favel")
                                 .bold()
                                 .foregroundColor(.white).font(.title2)
                             

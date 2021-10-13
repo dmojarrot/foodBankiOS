@@ -34,6 +34,7 @@ struct Login: View{
 struct SignInView: View{
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("grayTitle"))]
+        UINavigationBar.appearance().tintColor = UIColor.init(Color.black)
     }
     @State var mail = ""
     @State var password = ""

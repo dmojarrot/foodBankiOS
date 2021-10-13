@@ -41,15 +41,44 @@ struct Acknowledgment: View {
                     .padding(.bottom, 20)
 
                     
-                    VideoView(videoURL: URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4")!, previewLength: 30)
-                        .cornerRadius(15)
-                        .frame(width: nil, height: 250, alignment: .center)
-                        .shadow(color: .black, radius: 0.4, y: 0.2)
                     
-                    Image("logoApple")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 80, height: 80)
+                    ScrollView(.horizontal, showsIndicators: true){
+                        HStack{
+                            Image("galeria-1")
+                                .resizable()
+                                .scaledToFit()
+                                .cornerRadius(40)
+                                .frame(width: 300, height: 300)
+                                
+
+ 
+                            Image("galeria-2")
+                                .resizable()
+                                .scaledToFit()
+                                .cornerRadius(40)
+                                .frame(width: 300, height: 300)
+
+                            Image("galeria-3")
+                                .resizable()
+                                .scaledToFit()
+                                .cornerRadius(40)
+                                .frame(width: 300, height: 300)
+                            
+                            Image("galeria-4")
+                                .resizable()
+                                .scaledToFit()
+                                .cornerRadius(40)
+                                .frame(width: 300, height: 300)
+                            
+
+                        }.padding(.bottom)
+                    }
+                    
+                    
+//                    Image("logoApple")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: 80, height: 80)
                     
                     
                     Spacer()

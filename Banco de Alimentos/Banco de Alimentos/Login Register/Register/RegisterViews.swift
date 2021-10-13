@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Firebase
+import CoreMIDI
 
 struct Register: View {
     @State var mail = ""
@@ -81,14 +83,14 @@ struct Register: View {
                                 .background(Color("greenBackground"))
                                 .cornerRadius(20)
                         })
- 
                     
-
+                    
+                    
                 }.padding(.horizontal, 40)
             }
         }.navigationBarTitle(Text(""), displayMode: .inline)
     }
-
+    
 }
 
 struct Register2: View {
@@ -101,114 +103,146 @@ struct Register2: View {
     @State var genre = ""
     @State var birthDate = ""
     
+    @State var selection: String = "Genero"
+    let filterOptions: [String] = ["Masculino", "Femenino", "Otro"]
+    
     var body: some View{
-            ZStack{
-                Color("background").edgesIgnoringSafeArea(.bottom)
-                ScrollView{
-                    ZStack(alignment: .leading) {
-                        Rectangle()
-                            .foregroundColor(Color("squareColors"))
-                            .cornerRadius(radius: 60.0, corners: [.bottomRight])
+        ZStack{
+            Color("background").edgesIgnoringSafeArea(.bottom)
+            ScrollView{
+                ZStack(alignment: .leading) {
+                    Rectangle()
+                        .foregroundColor(Color("squareColors"))
+                        .cornerRadius(radius: 60.0, corners: [.bottomRight])
+                    
+                    VStack(alignment : .leading) {
+                        Text("Finaliza tu                cuenta")
+                            .font(.largeTitle)
+                            .foregroundColor(Color("grayTitle"))
+                            .bold()
+                            .padding(.top, 10 )
+                            .padding(.leading, 20)
+                            .padding(.bottom, 40)
                         
-                        VStack(alignment : .leading) {
-                            Text("Finaliza tu               cuenta")
-                                .font(.largeTitle)
-                                .foregroundColor(Color("grayTitle"))
-                                .bold()
-                                .padding(.top, 10 )
-                                .padding(.leading, 20)
-                                .padding(.bottom, 40)
-                            
-                        }
-                    }.padding(.bottom, 20)
-                    VStack(alignment: .leading){
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("Nombre")
-                                    .font(.subheadline)
-                                    .fontWeight(.light)
-                                TextField("", text: $name)
-                                    .padding()
-                                    .background(Color("squareColors"))
-                                    .cornerRadius(20)
-                                    .shadow(color: .black, radius: 0.4, y: 0.2)
-                                    .padding(.bottom,20)
-                            }
-                            VStack(alignment: .leading){
-                                Text("Apellido")
-                                    .font(.subheadline)
-                                    .fontWeight(.light)
-                                TextField("", text: $lastName)
-                                    .padding()
-                                    .background(Color("squareColors"))
-                                    .cornerRadius(20)
-                                    .shadow(color: .black, radius: 0.4, y: 0.2)
-                                    .padding(.bottom,20)
-                            }
-                        }
-                        
-                        Text("Celular")
-                            .font(.subheadline)
-                            .fontWeight(.light)
-                        
-                        TextField("", text: $cellphone)
-                            .padding()
-                            .background(Color("squareColors"))
-                            .cornerRadius(20)
-                            .padding(.bottom,20)
-                            .shadow(color: .black, radius: 0.4, y: 0.2)
-                        
-                        Text("Genero")
-                            .font(.subheadline)
-                            .fontWeight(.light)
-                        
-                        TextField("", text: $genre)
-                            .padding()
-                            .background(Color("squareColors"))
-                            .cornerRadius(20)
-                            .padding(.bottom,20)
-                            .shadow(color: .black, radius: 0.4, y: 0.2)
-                        
-                        Text("Fecha de Nacimiento")
-                            .font(.subheadline)
-                            .fontWeight(.light)
-                        
-                        TextField("", text: $birthDate)
-                            .padding()
-                            .background(Color("squareColors"))
-                            .cornerRadius(20)
-                            .padding(.bottom,40)
-                            .shadow(color: .black, radius: 0.4, y: 0.2)
-                        
-                        Button(action: {
-                            guard !name.isEmpty, !lastName.isEmpty, !cellphone.isEmpty, !genre.isEmpty, !birthDate.isEmpty else{
-                                return
-                            }
-                            viewModel.signUp(email: mail, password: password)
-                        }, label: {
-                            Text("Registrarse")
-                                .foregroundColor(.white)
-                                .bold()
-                                .font(.headline)
+                    }
+                }.padding(.bottom, 20)
+                VStack(alignment: .leading){
+                    HStack{
+                        VStack(alignment: .leading){
+                            Text("Nombre")
+                                .font(.subheadline)
+                                .fontWeight(.light)
+                            TextField("", text: $name)
                                 .padding()
-                                .frame(maxWidth: .infinity)
-                                .background(Color("greenBackground"))
+                                .background(Color("squareColors"))
                                 .cornerRadius(20)
+                                .shadow(color: .black, radius: 0.4, y: 0.2)
+                                .padding(.bottom,20)
+                        }
+                        VStack(alignment: .leading){
+                            Text("Apellido")
+                                .font(.subheadline)
+                                .fontWeight(.light)
+                            TextField("", text: $lastName)
+                                .padding()
+                                .background(Color("squareColors"))
+                                .cornerRadius(20)
+                                .shadow(color: .black, radius: 0.4, y: 0.2)
+                                .padding(.bottom,20)
+                        }
+                    }
+                    
+                    Text("Celular")
+                        .font(.subheadline)
+                        .fontWeight(.light)
+                    
+                    TextField("", text: $cellphone)
+                        .padding()
+                        .background(Color("squareColors"))
+                        .cornerRadius(20)
+                        .padding(.bottom,20)
+                        .shadow(color: .black, radius: 0.4, y: 0.2)
+                    
+                    
+                    Text("Genero")
+                        .font(.subheadline)
+                        .fontWeight(.light)
+                    
+                    Picker(
+                        selection: $selection,
+                        label:
+                            HStack{
+                                Text("Genre: ")
+                                Text(selection)
+                            }
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .padding(.horizontal)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                            .shadow(color: Color.blue.opacity(0.3), radius: 10, x: 0, y: 10)
+                        ,
+                        content: {
+                            ForEach(filterOptions, id: \.self) { option in
+                                HStack{
+                                    Text(option)
+                                }
+                                .tag(option)
+                            }
                             
                         })
-                                                
-                    }.padding(.horizontal, 40)
-                }.accentColor(Color("greenBackground"))
-            }.navigationBarTitle(Text(""), displayMode: .inline)
+                    
+                    
+                    
+                    Text("Fecha de Nacimiento")
+                        .font(.subheadline)
+                        .fontWeight(.light)
+                    
+                    TextField("", text: $birthDate)
+                        .padding()
+                        .background(Color("squareColors"))
+                        .cornerRadius(20)
+                        .padding(.bottom,40)
+                        .shadow(color: .black, radius: 0.4, y: 0.2)
+                    
+                    Button(action: {
+                        guard !name.isEmpty, !lastName.isEmpty, !cellphone.isEmpty, !genre.isEmpty, !birthDate.isEmpty else{
+                            return
+                        }
+                        viewModel.signUp(email: mail, password: password)
+                    }, label: {
+                        Text("Registrarse")
+                            .foregroundColor(.white)
+                            .bold()
+                            .font(.headline)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color("greenBackground"))
+                            .cornerRadius(20)
+                        
+                    })
+                    
+                }.padding(.horizontal, 40)
+            }.accentColor(Color("greenBackground"))
+        }.navigationBarTitle(Text(""), displayMode: .inline)
     }
+    
+    func AddInfo(name: String, lastName: String, cellphone: String, genre: String, birthDate: String){
+        let db = Firestore.firestore()
+        db.collection("users").document().setData(["Name": name, "lastName": lastName, "cellphone": cellphone, "genre": genre, "birthdate": birthDate])
+        
+    }
+    
 }
+
 
 
 
 
 struct Register2_preview: PreviewProvider {
     static var previews: some View {
-        Register()
+        Register2(mail: "", password: "")
         
     }
 }
