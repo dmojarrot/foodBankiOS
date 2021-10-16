@@ -15,7 +15,7 @@ struct Profile: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Rectangle().foregroundColor(.clear).background(LinearGradient(gradient: Gradient(colors: [.white, Color.gray]), startPoint: .bottom,  endPoint: .top).edgesIgnoringSafeArea(.all))
+                Color("background").edgesIgnoringSafeArea(.all)
                 ScrollView{
                     VStack{
                         VStack{
@@ -28,16 +28,16 @@ struct Profile: View {
                             
                             Text("Ken Bauer Favel")
                                 .bold()
-                                .foregroundColor(.white).font(.title2)
+                                .foregroundColor(.gray).font(.title2)
                             
                             
                         }.padding(EdgeInsets(top: 16, leading: 0, bottom: 32, trailing: 0))
                         
-                        //                        Text("Ajustes")
-                        //                            .font(.title)
-                        //                            .fontWeight(.bold)
-                        //                            .foregroundColor(.black)
-                        //                            .frame(minWidth : 0, idealWidth: 100, maxWidth: .infinity, alignment: .leading).padding(.leading, 18)
+                        Text("Ajustes")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("redColor"))
+                            .frame(minWidth : 0, idealWidth: 100, maxWidth: .infinity, alignment: .leading).padding(.leading, 18)
                         ModuloAjustes()
                         
                     }
@@ -45,8 +45,8 @@ struct Profile: View {
                     
                 }.navigationTitle("Perfil")
             }//.onAppear(){
-//                self.viewModel.fetchData()
-//            }
+            //self.viewModel.fetchData()
+            //}
             
         }
         
@@ -57,14 +57,14 @@ struct ModuloAjustes:View{
     @State var isToggleOn = true
     @State var isEditProfileViewActive = false
     @EnvironmentObject var viewModel: FirebaseAuth
-
+    
     
     var body: some View{
         VStack(spacing : 3) {
-            Button(action: {}, label: {
+            Button(action: {isEditProfileViewActive = true}, label: {
                 HStack {
                     
-                    Text("Cuenta").foregroundColor(.black).font(.title3).fontWeight(.light)
+                    Text("Editar Perfil").foregroundColor(.black).font(.title3).fontWeight(.light)
                     
                     Spacer()
                     
@@ -89,10 +89,10 @@ struct ModuloAjustes:View{
             }).background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 1.0))
             
-            Button(action: {isEditProfileViewActive = true}, label: {
+            Button(action: {}, label: {
                 HStack {
                     
-                    Text("Editar Perfil").foregroundColor(.black).font(.title3).fontWeight(.light)
+                    Text("Calificar esta aplicación").foregroundColor(.black).font(.title3).fontWeight(.light)
                     
                     Spacer()
                     
@@ -125,7 +125,7 @@ struct ModuloAjustes:View{
                 })
             
             
-        }.cornerRadius(20).padding()
+        }.cornerRadius(20).padding(.horizontal)
     }
 }
 

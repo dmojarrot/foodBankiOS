@@ -10,7 +10,7 @@ import FBSDKLoginKit
 
 struct Login: View{
     init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("grayTitle"))]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenBackground"))]
         
     }
     @EnvironmentObject var viewModel: FirebaseAuth
@@ -33,7 +33,7 @@ struct Login: View{
 
 struct SignInView: View{
     init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("grayTitle"))]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenBackground"))]
         UINavigationBar.appearance().tintColor = UIColor.init(Color.black)
     }
     @State var mail = ""
@@ -55,6 +55,7 @@ struct SignInView: View{
                             .cornerRadius(radius: 60.0, corners: [.bottomRight])
                         
                         VStack(alignment : .leading) {
+                            
                             Text("Inicia sesión")
                                 .font(.title2)
                                 .fontWeight(.bold)

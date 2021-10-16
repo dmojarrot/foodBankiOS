@@ -9,14 +9,14 @@ import SwiftUI
 
 struct Home: View {
     init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color.white)]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenBackground"))]
         UINavigationBar.appearance().tintColor = UIColor.init(Color.black)
         
     }
     var body: some View {
         NavigationView {
             ZStack {
-                Rectangle().foregroundColor(.clear).background(LinearGradient(gradient: Gradient(colors: [.white, Color.gray]), startPoint: .bottom,  endPoint: .top).edgesIgnoringSafeArea(.all))
+                Color("background").edgesIgnoringSafeArea(.all)
                 ScrollView{
                     VStack{
                         ZStack(alignment: .leading) {
@@ -30,6 +30,7 @@ struct Home: View {
                                     .foregroundColor(Color( red: 219/255, green: 81/255, blue: 86/255))
                                     .bold()
                                     .font(.title2)
+                                    .fontWeight(.thin)
                                     .padding(.bottom, 5)
                                     .padding(.horizontal, 10)
                                     .padding(.top, 20)
@@ -37,11 +38,21 @@ struct Home: View {
                                     .multilineTextAlignment(.center)
                                     .padding(.horizontal, 20)
                                     .padding(.bottom, 20)
+                                NavigationLink(
+                                    destination: WhoWeAre(),
+                                    label: {
+                                        Text("¿Quienes Somos?")
+                                            .font(.callout)
+                                            .underline()
+                                            .foregroundColor(Color("greenBackground"))
+                                            .padding(.bottom,20)
+
+                                    })
                             }
                         }
                         .padding(.top, 20)
                         .padding(.bottom, 20)
-                        
+
                         ZStack{
                             Rectangle()
                                 .foregroundColor(Color.white)
@@ -53,6 +64,7 @@ struct Home: View {
                                         Image("familias")
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)
+                                            .foregroundColor(Color("greenBackground"))
                                             .frame(width: 50, height: 50)
                                         Text("33,568")
                                             .font(.title3)
@@ -99,24 +111,16 @@ struct Home: View {
                                     }
                                 }
                             }.padding()
-                            //                        VStack(alignment: .leading){
-                            //                                Text("Donar").bold().font(.title2)
-                            //                                    .padding(.bottom, 5)
-                            //                                    .padding(.horizontal, 20)
-                            //                                .padding(.top, 20)
-                            //                                Text("Puedes donar tanta comida como desees y tanto dinero como gustes, incluso si no tienes recursos para donar puedes simplemente ver los ADS y de esta manera donar directamente a nuestra causa")
-                            //                                    .padding(.horizontal, 20)
-                            //                                .padding(.bottom, 30)
-                            //                            }
                         }
                         .padding(.bottom, 20)
-                        
+                        HStack{
                         NavigationLink(
                             destination: Acknowledgment(),
                             label: {
-                                Label("Agradecimientos", systemImage: "face.smiling")
+                                Text("Agradecimientos")
                                     .foregroundColor(.white)
                                     .padding(20)
+                                    .font(.headline)
                                     .multilineTextAlignment(.leading)
                                     .frame(maxWidth: .infinity)
                                     .background(RoundedRectangle(cornerRadius: 20)
@@ -124,6 +128,7 @@ struct Home: View {
                                 
                                 
                             })
+                        }
                     }.padding(.horizontal, 20)
                 }.navigationTitle("Home")
             }

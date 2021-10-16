@@ -19,7 +19,7 @@ struct Food: View {
     var body: some View{
         NavigationView {
             ZStack {
-                Rectangle().foregroundColor(.clear).background(LinearGradient(gradient: Gradient(colors: [.white, Color.gray]), startPoint: .bottom,  endPoint: .top).edgesIgnoringSafeArea(.all))
+                Color("background").edgesIgnoringSafeArea(.all)
                 ScrollView{
                     VStack(alignment : .leading) {
                         Text("¿Cuanta cantidad de comida quieres donar?")

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color.white)]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenBackground"))]
     }
     @State private var selection = 2
     var body: some View {

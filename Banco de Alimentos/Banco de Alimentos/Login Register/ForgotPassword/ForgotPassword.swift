@@ -21,7 +21,7 @@ struct ForgotPassword: View {
                     VStack(alignment : .leading) {
                         Text("¿Olvidaste tu contraseña?")
                             .font(.largeTitle)
-                            .foregroundColor(Color("grayTitle"))
+                            .foregroundColor(Color("greenBackground"))
                             .bold()
                             .padding(.top, 20)
                             .padding(.leading, 20)

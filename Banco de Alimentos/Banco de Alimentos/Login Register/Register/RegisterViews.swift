@@ -26,7 +26,7 @@ struct Register: View {
                         
                         Text("¿No tienes cuenta?")
                             .font(.largeTitle)
-                            .foregroundColor(Color("grayTitle"))
+                            .foregroundColor(Color("greenBackground"))
                             .bold()
                             .padding(.top, 10 )
                             .padding(.leading, 20)
@@ -118,7 +118,7 @@ struct Register2: View {
                     VStack(alignment : .leading) {
                         Text("Finaliza tu                cuenta")
                             .font(.largeTitle)
-                            .foregroundColor(Color("grayTitle"))
+                            .foregroundColor(Color("greenBackground"))
                             .bold()
                             .padding(.top, 10 )
                             .padding(.leading, 20)

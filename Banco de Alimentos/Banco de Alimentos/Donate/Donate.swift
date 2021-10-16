@@ -14,7 +14,7 @@ struct Donate: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Rectangle().foregroundColor(.clear).background(LinearGradient(gradient: Gradient(colors: [.white, Color.gray]), startPoint: .bottom,  endPoint: .top).edgesIgnoringSafeArea(.all))
+                Color("background").edgesIgnoringSafeArea(.all)
                 WebView(url: URL(string: "https://donaronline.org/banco-de-alimentos-guadalajara/sin-hambre-manana"), onError: {error in
                             print("Error: ", error.description)
                 })

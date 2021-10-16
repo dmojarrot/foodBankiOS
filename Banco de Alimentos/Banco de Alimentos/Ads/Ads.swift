@@ -16,7 +16,7 @@ struct Ads: View {
     var body: some View {
         NavigationView{
             ZStack{
-                Rectangle().foregroundColor(.clear).background(LinearGradient(gradient: Gradient(colors: [.white, Color.gray]), startPoint: .bottom,  endPoint: .top).edgesIgnoringSafeArea(.all))
+                Color("background").edgesIgnoringSafeArea(.all)
                 ScrollView {
                     VStack{
 //                        VideoView(videoURL: URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4")!, previewLength: 30)
