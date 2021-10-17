@@ -27,7 +27,7 @@ struct Home: View {
                             
                             VStack(alignment: .center){
                                 Text("Bienvenido")
-                                    .foregroundColor(Color( red: 219/255, green: 81/255, blue: 86/255))
+                                    .foregroundColor(Color.black)
                                     .bold()
                                     .font(.title2)
                                     .fontWeight(.thin)

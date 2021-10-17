@@ -14,7 +14,7 @@ struct ForgotPassword: View {
     @State var errString: String?
     @State var messageAlert: String?
     @EnvironmentObject var viewModel: FirebaseAuth
-
+    
     var body: some View{
         ZStack{
             Color("background").edgesIgnoringSafeArea(.bottom)

@@ -116,14 +116,21 @@ struct Register2: View {
                         .cornerRadius(radius: 60.0, corners: [.bottomRight])
                     
                     VStack(alignment : .leading) {
+                        
                         Text("Finaliza tu                cuenta")
                             .font(.largeTitle)
                             .foregroundColor(Color("greenBackground"))
                             .bold()
                             .padding(.top, 10 )
                             .padding(.leading, 20)
-                            .padding(.bottom, 40)
+                            .padding(.bottom, 10)
                         
+                        
+                        Text("Estas a solo un paso")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .padding(.leading, 40)
+                            .padding(.bottom, 40)
                     }
                 }.padding(.bottom, 20)
                 VStack(alignment: .leading){
@@ -175,30 +182,30 @@ struct Register2: View {
                         .padding(.bottom,40)
                         .shadow(color: .black, radius: 0.4, y: 0.2)
                     
-//                    Picker(
-//                        selection: $selection,
-//                        label:
-//                            HStack{
-//                                Text("Genre: ")
-//                                Text(selection)
-//                            }
-//                            .font(.headline)
-//                            .foregroundColor(.white)
-//                            .padding()
-//                            .padding(.horizontal)
-//                            .background(Color.blue)
-//                            .cornerRadius(10)
-//                            .shadow(color: Color.blue.opacity(0.3), radius: 10, x: 0, y: 10)
-//                        ,
-//                        content: {
-//                            ForEach(filterOptions, id: \.self) { option in
-//                                HStack{
-//                                    Text(option)
-//                                }
-//                                .tag(option)
-//                            }
-//
-//                        })
+                    //                    Picker(
+                    //                        selection: $selection,
+                    //                        label:
+                    //                            HStack{
+                    //                                Text("Genre: ")
+                    //                                Text(selection)
+                    //                            }
+                    //                            .font(.headline)
+                    //                            .foregroundColor(.white)
+                    //                            .padding()
+                    //                            .padding(.horizontal)
+                    //                            .background(Color.blue)
+                    //                            .cornerRadius(10)
+                    //                            .shadow(color: Color.blue.opacity(0.3), radius: 10, x: 0, y: 10)
+                    //                        ,
+                    //                        content: {
+                    //                            ForEach(filterOptions, id: \.self) { option in
+                    //                                HStack{
+                    //                                    Text(option)
+                    //                                }
+                    //                                .tag(option)
+                    //                            }
+                    //
+                    //                        })
                     
                     
                     

@@ -36,7 +36,7 @@ struct Profile: View {
                         Text("Ajustes")
                             .font(.title2)
                             .fontWeight(.bold)
-                            .foregroundColor(Color("redColor"))
+                            .foregroundColor(Color.black)
                             .frame(minWidth : 0, idealWidth: 100, maxWidth: .infinity, alignment: .leading).padding(.leading, 18)
                         ModuloAjustes()
                         
