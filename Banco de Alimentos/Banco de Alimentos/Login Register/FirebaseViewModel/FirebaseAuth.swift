@@ -48,4 +48,14 @@ class FirebaseAuth: ObservableObject{
         
         self.signedIn = false
     }
+    
+    func resetPassword(email: String, resetCompletion:@escaping (Result<Bool,Error>) -> Void){
+        auth.sendPasswordReset(withEmail: email) { (error) in
+            if let error = error {
+                resetCompletion(.failure(error))
+            } else{
+                resetCompletion(.success(true))
+            }
+        }
+    }
 }

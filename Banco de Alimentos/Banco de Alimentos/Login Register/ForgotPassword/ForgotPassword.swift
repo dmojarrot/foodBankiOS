@@ -6,9 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ForgotPassword: View {
     @State var mail = ""
+    @State var showAlert = false
+    @State var errString: String?
+    @State var messageAlert: String?
+    @EnvironmentObject var viewModel: FirebaseAuth
+
     var body: some View{
         ZStack{
             Color("background").edgesIgnoringSafeArea(.bottom)
@@ -46,7 +52,20 @@ struct ForgotPassword: View {
                             .cornerRadius(20)
                             .shadow(color: .black, radius: 0.4, y: 0.2)
                             .padding(.bottom,20)
-                        Button(action: {}, label: {
+                        Button(action: {
+                            viewModel.resetPassword(email: self.mail) { (result) in
+                                switch result{
+                                case .failure(_):
+                                    self.errString = "Correo no reconocido, intente de nuevo."
+                                    self.messageAlert = "Hemos encontrado un error"
+                                case .success( _):
+                                    self.errString = "Hemos enviado un enlace a su correo para que pueda cambiar su contraseña. "
+                                    self.messageAlert = "Correo enviado"
+                                    break
+                                }
+                                self.showAlert = true
+                            }
+                        }, label: {
                             Text("Enviar")
                                 .foregroundColor(.white)
                                 .bold()
@@ -62,8 +81,13 @@ struct ForgotPassword: View {
                     
                 }.padding(.horizontal, 30)
                 
-            }
-        }.navigationBarTitle(Text(""), displayMode: .inline)
+            }.navigationBarTitle(Text(""), displayMode: .inline)
+        }.alert(isPresented: self.$showAlert){
+            Alert(title: Text(self.messageAlert!),
+                  message: Text(self.errString ?? "Error"), dismissButton: .default(Text("OK")){
+            })
+            
+        }
     }
 }
 
