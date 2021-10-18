@@ -46,7 +46,7 @@ struct EditProfile: View {
                             }
                         }.padding(.top, 20)
                         VStack(alignment: .leading){
-                        Text("Correo Electronico")
+                        Text("Correo electrónico")
                             .font(.subheadline)
                             .fontWeight(.light)
                         
@@ -81,7 +81,7 @@ struct EditProfile: View {
                             .padding(.bottom,20)
                             .shadow(color: .black, radius: 0.4, y: 0.2)
                         
-                        Text("Confirmar Contraseña")
+                        Text("Confirmar contraseña")
                             .font(.subheadline)
                             .fontWeight(.light)
                         
@@ -93,7 +93,7 @@ struct EditProfile: View {
                             .shadow(color: .black, radius: 0.4, y: 0.2)
                         
                         Button(action: {}, label: {
-                            Text("Guardar Cambios")
+                            Text("Guardar cambios")
                                 .foregroundColor(.white)
                                 .bold()
                                 .font(.headline)

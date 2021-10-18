@@ -22,7 +22,7 @@ struct Acknowledgment: View {
                             .shadow(color: .black, radius: 0.4, y: 0.2)
                         
                         VStack{
-                            Text("Muchas gracias por formar parte!")
+                            Text("¡Muchas gracias por formar parte!")
                                 .fontWeight(.bold)
                                 .foregroundColor(Color( red: 219/255, green: 81/255, blue: 86/255))
                                 .bold()
@@ -30,7 +30,7 @@ struct Acknowledgment: View {
                                 .padding(.bottom, 5)
                                 .padding(.horizontal, 10)
                                 .padding(.top, 20)
-                            Text("Gracias a tu donación hemos podido ayudar a 3 familias completas de 4 integrantes, las cuales te agradecen de mucho corazón el apoyo que les has brindado para una causa buena en nuestra sociedad!")
+                            Text("Gracias a tu donación hemos podido ayudar a 3 familias completas de 4 integrantes, las cuales te agradecen de corazón el apoyo que les has brindado para una causa buena en nuestra sociedad")
                                 .multilineTextAlignment(.center)
                                 
                                 .padding(.horizontal, 20)

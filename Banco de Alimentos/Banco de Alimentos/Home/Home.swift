@@ -41,7 +41,7 @@ struct Home: View {
                                 NavigationLink(
                                     destination: WhoWeAre(),
                                     label: {
-                                        Text("¿Quienes Somos?")
+                                        Text("¿Quiénes somos?")
                                             .font(.callout)
                                             .underline()
                                             .foregroundColor(Color("greenBackground"))
@@ -69,7 +69,7 @@ struct Home: View {
                                         Text("33,568")
                                             .font(.title3)
                                             .bold()
-                                        Text("Familias Atendidas")
+                                        Text("Familias atendidas")
                                             .font(.caption)
                                     }
                                     VStack{
@@ -80,7 +80,7 @@ struct Home: View {
                                         Text("157,768")
                                             .font(.title3)
                                             .bold()
-                                        Text("Personas Atendidas")
+                                        Text("Personas atendidas")
                                             .font(.caption)
                                     }
                                 }

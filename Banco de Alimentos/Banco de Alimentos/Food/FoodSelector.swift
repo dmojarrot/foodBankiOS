@@ -14,7 +14,7 @@ struct FoodItems: Identifiable {
 
 extension FoodItems {
     static func dummyData() -> [FoodItems] {
-        let items = ["Frutas","Verduras", "Cereales","Carne roja", "Otra tipo"]
+        let items = ["Frutas","Verduras", "Cereales","Carnes rojas", "Otro tipo"]
         
         var array = [FoodItems]()
         

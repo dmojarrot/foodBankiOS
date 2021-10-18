@@ -30,7 +30,7 @@ enum MyURLError: Error{
     var description: String{
         switch self{
         case .invalidURL:
-            return "Your URL is trash. Fix it"
+            return "URL doesn't work:("
         }
     }
 }

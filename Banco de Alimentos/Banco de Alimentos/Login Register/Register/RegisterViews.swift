@@ -41,7 +41,7 @@ struct Register: View {
                     }
                 }.padding(.bottom, 20)
                 VStack(alignment: .leading) {
-                    Text("Email")
+                    Text("Correo electrónico")
                         .font(.subheadline)
                         .fontWeight(.light)
                     TextField("", text: $mail)
@@ -61,7 +61,7 @@ struct Register: View {
                         .padding(.bottom,20)
                         .shadow(color: .black, radius: 0.4, y: 0.2)
                     
-                    Text("Confirmar Contraseña")
+                    Text("Confirmar contraseña")
                         .font(.subheadline)
                         .fontWeight(.light)
                     
@@ -126,7 +126,7 @@ struct Register2: View {
                             .padding(.bottom, 10)
                         
                         
-                        Text("Estas a solo un paso")
+                        Text("Estás a solo un paso")
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading, 40)
@@ -171,7 +171,7 @@ struct Register2: View {
                         .shadow(color: .black, radius: 0.4, y: 0.2)
                     
                     
-                    Text("Genero")
+                    Text("Género")
                         .font(.subheadline)
                         .fontWeight(.light)
                     

@@ -43,7 +43,7 @@ struct ForgotPassword: View {
                 }.padding(.bottom, 20)
                 VStack(alignment: .leading){
                     VStack(alignment: .leading) {
-                        Text("Email")
+                        Text("Correo electrónico")
                             .font(.subheadline)
                             .fontWeight(.light)
                         TextField("", text: $mail)

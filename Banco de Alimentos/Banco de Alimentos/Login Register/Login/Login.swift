@@ -64,7 +64,7 @@ struct SignInView: View{
                         }
                     }.padding(.bottom, 20)
                     VStack{
-                            Text("Email:")
+                            Text("Correo electrónico:")
                                 .font(.subheadline)
                                 .fontWeight(.light)
                                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -178,7 +178,7 @@ struct SignInView: View{
                         NavigationLink(
                             destination: Register(),
                             label: {
-                                Text("Registrate")
+                                Text("Regístrate")
                                     .foregroundColor(.white)
                                     .bold()
                                     .font(.headline)
