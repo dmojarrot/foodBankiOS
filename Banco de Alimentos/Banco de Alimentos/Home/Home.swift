@@ -34,10 +34,12 @@ struct Home: View {
                                     .padding(.bottom, 5)
                                     .padding(.horizontal, 10)
                                     .padding(.top, 20)
-                                Text("Puedes donar tanta comida como desees y tanto dinero como gustes, incluso si no tienes recursos para donar puedes simplemente ver los ADS y de esta manera donar directamente a nuestra causa")
+                                Text("Puedes donar tanta comida como desees y tanto dinero como gustes, incluso si no tienes recursos para       donar puedes simplemente ver los    ADS y de esta manera donar directamente a nuestra causa")
+                                    .lineLimit(nil)
+                                    .padding(.horizontal, 10)
                                     .multilineTextAlignment(.center)
-                                    .padding(.horizontal, 20)
-                                    .padding(.bottom, 20)
+                                    .padding(.horizontal, 10)
+                                    .padding(.bottom, 10)
                                 NavigationLink(
                                     destination: WhoWeAre(),
                                     label: {
@@ -45,13 +47,13 @@ struct Home: View {
                                             .font(.callout)
                                             .underline()
                                             .foregroundColor(Color("greenBackground"))
-                                            .padding(.bottom,20)
+                                            .padding(.bottom,10)
 
                                     })
                             }
                         }
-                        .padding(.top, 20)
-                        .padding(.bottom, 20)
+                        .padding(.top, 5)
+                        .padding(.bottom, 15)
 
                         ZStack{
                             Rectangle()
@@ -112,7 +114,7 @@ struct Home: View {
                                 }
                             }.padding()
                         }
-                        .padding(.bottom, 20)
+                        .padding(.bottom, 15)
                         HStack{
                         NavigationLink(
                             destination: Acknowledgment(),

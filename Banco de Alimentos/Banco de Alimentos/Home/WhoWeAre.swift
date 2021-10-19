@@ -18,7 +18,7 @@ struct WhoWeAre: View {
             WebView(url: URL(string: "https://bdalimentos.org/nosotros/"), onError: {error in
                 print("Error: ", error.description)
             })
-        }.navigationTitle("¿Quienes somos?")
+        }.navigationTitle("¿Quiénes somos?")
         
     }
 }
