@@ -14,8 +14,6 @@
 		3B5023E2271526350093D4C2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5023E1271526350093D4C2 /* FirebaseStorage */; };
 		3B5023E7271546250093D4C2 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5023E6271546250093D4C2 /* FacebookCore */; };
 		3B5023E9271546250093D4C2 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5023E8271546250093D4C2 /* FacebookLogin */; };
-		3B59057B2705FD7C00DB40D0 /* FoodSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B59057A2705FD7C00DB40D0 /* FoodSelector.swift */; };
-		3B98347E271B7DDA00DE0E8A /* Navigations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B98347D271B7DDA00DE0E8A /* Navigations.swift */; };
 		3B983480271B809800DE0E8A /* WhoWeAre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B98347F271B809800DE0E8A /* WhoWeAre.swift */; };
 		3BC528AE27172D930028DBA1 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC528AD27172D930028DBA1 /* VideoView.swift */; };
 		3BC528B127175F720028DBA1 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC528B027175F720028DBA1 /* UserData.swift */; };
@@ -42,8 +40,6 @@
 /* Begin PBXFileReference section */
 		0D176DA026E6743C00732AB4 /* Ads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
 		3B5023DA271525940093D4C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3B59057A2705FD7C00DB40D0 /* FoodSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelector.swift; sourceTree = "<group>"; };
-		3B98347D271B7DDA00DE0E8A /* Navigations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigations.swift; sourceTree = "<group>"; };
 		3B98347F271B809800DE0E8A /* WhoWeAre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoWeAre.swift; sourceTree = "<group>"; };
 		3BC528AD27172D930028DBA1 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		3BC528B027175F720028DBA1 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -124,9 +120,7 @@
 		3B69CC652715E59000BFAF87 /* Food */ = {
 			isa = PBXGroup;
 			children = (
-				3B59057A2705FD7C00DB40D0 /* FoodSelector.swift */,
 				3BE8402226E663F800B3284C /* Food.swift */,
-				3B98347D271B7DDA00DE0E8A /* Navigations.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -338,8 +332,6 @@
 			files = (
 				0D176DA126E6743C00732AB4 /* Ads.swift in Sources */,
 				3BC528B327175F800028DBA1 /* UserDataViewModel.swift in Sources */,
-				3B59057B2705FD7C00DB40D0 /* FoodSelector.swift in Sources */,
-				3B98347E271B7DDA00DE0E8A /* Navigations.swift in Sources */,
 				3BE8402726E6721C00B3284C /* Acknowledgment.swift in Sources */,
 				3BE9DDF726DB508A00B078FE /* ContentView.swift in Sources */,
 				3BE8402526E6640200B3284C /* Donate.swift in Sources */,
