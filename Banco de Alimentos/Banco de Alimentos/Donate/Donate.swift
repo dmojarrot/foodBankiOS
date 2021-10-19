@@ -9,18 +9,30 @@ import SwiftUI
 import WebKit
 
 struct Donate: View {
-
-    var isSheetPresented: Bool = false
+    
+    @State var isLoading: Bool = true
     var body: some View {
         NavigationView {
             ZStack {
                 Color("background").edgesIgnoringSafeArea(.all)
                 WebView(url: URL(string: "https://donaronline.org/banco-de-alimentos-guadalajara/sin-hambre-manana"), onError: {error in
-                            print("Error: ", error.description)
+                    print("Error: ", error.description)
                 })
+                if isLoading{
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: Color("greenBackground"))).scaleEffect(2)
+                }
             }.navigationTitle("Donar")
-        }
+        }.onAppear{loadingBarTimer()}
         
+    }
+    
+    func loadingBarTimer(){
+        if isLoading{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2){
+                isLoading = false
+            }
+        }
     }
 }
 

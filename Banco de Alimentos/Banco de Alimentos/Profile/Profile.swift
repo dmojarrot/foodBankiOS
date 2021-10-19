@@ -57,7 +57,8 @@ struct ModuloAjustes:View{
     @State var isToggleOn = true
     @State var isEditProfileViewActive = false
     @EnvironmentObject var viewModel: FirebaseAuth
-    
+    @State var showAlert: Bool = false
+
     
     var body: some View{
         VStack(spacing : 3) {
@@ -103,7 +104,7 @@ struct ModuloAjustes:View{
                 .clipShape(RoundedRectangle(cornerRadius: 1.0))
             
             Button(action: {
-                viewModel.signOut()
+                showAlert = true
             }, label: {
                 HStack {
                     
@@ -126,7 +127,26 @@ struct ModuloAjustes:View{
             
             
         }.cornerRadius(20).padding(.horizontal)
+            .alert(isPresented: self.$showAlert){
+                Alert(
+                    title: Text("¿Deseas cerrar sesión?"),
+                    primaryButton: .destructive(Text("Cerrar sesión"), action: {
+                        signOut()
+                        
+                    }),
+                    secondaryButton: .cancel(Text("Cancelar"), action: { // 1
+
+                        
+                    })
+                )
+                
+            }
     }
+    
+    func signOut(){
+        viewModel.signOut()
+    }
+    
 }
 
 
