@@ -34,7 +34,6 @@ struct Login: View{
 struct SignInView: View{
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenBackground"))]
-        UINavigationBar.appearance().tintColor = UIColor.init(Color.black)
     }
     @State var mail = ""
     @State var password = ""
@@ -51,7 +50,7 @@ struct SignInView: View{
                 ScrollView{
                     ZStack(alignment: .leading) {
                         Rectangle()
-                            .foregroundColor(Color("squareColors"))
+                            .foregroundColor(Color(UIColor.systemBackground))
                             .cornerRadius(radius: 60.0, corners: [.bottomRight])
                         
                         VStack(alignment : .leading) {
@@ -70,7 +69,7 @@ struct SignInView: View{
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             TextField("", text: $mail)
                                 .padding()
-                                .background(Color("squareColors"))
+                                .background(Color(UIColor.systemBackground))
                                 .cornerRadius(20)
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
                         
@@ -83,7 +82,7 @@ struct SignInView: View{
                             
                             SecureField("", text: $password)
                                 .padding()
-                                .background(Color("squareColors"))
+                                .background(Color(UIColor.systemBackground))
                                 .cornerRadius(20)
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
                             NavigationLink(

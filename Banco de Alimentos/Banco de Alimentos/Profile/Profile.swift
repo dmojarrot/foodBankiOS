@@ -36,7 +36,6 @@ struct Profile: View {
                         Text("Ajustes")
                             .font(.title2)
                             .fontWeight(.bold)
-                            .foregroundColor(Color.black)
                             .frame(minWidth : 0, idealWidth: 100, maxWidth: .infinity, alignment: .leading).padding(.leading, 18)
                         ModuloAjustes()
                         
@@ -58,21 +57,21 @@ struct ModuloAjustes:View{
     @State var isEditProfileViewActive = false
     @EnvironmentObject var viewModel: FirebaseAuth
     @State var showAlert: Bool = false
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
 
-    
     var body: some View{
         VStack(spacing : 3) {
             Button(action: {isEditProfileViewActive = true}, label: {
                 HStack {
                     
-                    Text("Editar Perfil").foregroundColor(.black).font(.title3).fontWeight(.light)
+                    Text("Editar Perfil").foregroundColor(colorScheme == .dark ? Color.white : Color.black).font(.title3).fontWeight(.light)
                     
                     Spacer()
                     
                     Image(systemName: "chevron.right").foregroundColor(Color("greenBackground"))
                     
                 }.padding()
-            }).background(Color.white)
+            }).background((Color(UIColor.systemBackground)))
                 .clipShape(RoundedRectangle(cornerRadius: 1.0))
             
             Button(action: {isToggleOn.toggle()}, label: {
@@ -80,27 +79,27 @@ struct ModuloAjustes:View{
                     
                     
                     
-                    Text("Notificaciónes").foregroundColor(.black).font(.title3).fontWeight(.light)
+                    Text("Notificaciónes").foregroundColor(colorScheme == .dark ? Color.white : Color.black).font(.title3).fontWeight(.light)
                     
                     Spacer()
                     
                     Toggle("", isOn: $isToggleOn)
                     
                 }.padding()
-            }).background(Color.white)
+            }).background(Color(UIColor.systemBackground))
                 .clipShape(RoundedRectangle(cornerRadius: 1.0))
             
             Button(action: {}, label: {
                 HStack {
                     
-                    Text("Calificar esta aplicación").foregroundColor(.black).font(.title3).fontWeight(.light)
+                    Text("Calificar esta aplicación").foregroundColor(colorScheme == .dark ? Color.white : Color.black).font(.title3).fontWeight(.light)
                     
                     Spacer()
                     
                     Image(systemName: "chevron.right").foregroundColor(Color("greenBackground"))
                     
                 }.padding()
-            }).background(Color.white)
+            }).background(Color(UIColor.systemBackground))
                 .clipShape(RoundedRectangle(cornerRadius: 1.0))
             
             Button(action: {
@@ -108,14 +107,14 @@ struct ModuloAjustes:View{
             }, label: {
                 HStack {
                     
-                    Text("Cerrar Sesión").foregroundColor(.black).font(.title3).fontWeight(.light)
+                    Text("Cerrar Sesión").foregroundColor(colorScheme == .dark ? Color.white : Color.black).font(.title3).fontWeight(.light)
                     
                     Spacer()
                     
                     Image(systemName: "chevron.right").foregroundColor(Color("greenBackground"))
                     
                 }.padding()
-            }).background(Color.white)
+            }).background(Color(UIColor.systemBackground))
                 .clipShape(RoundedRectangle(cornerRadius: 1.0))
             
             NavigationLink(

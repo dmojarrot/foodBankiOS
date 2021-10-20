@@ -10,7 +10,6 @@ import SwiftUI
 struct Home: View {
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenBackground"))]
-        UINavigationBar.appearance().tintColor = UIColor.init(Color.black)
         
     }
     var body: some View {
@@ -21,20 +20,21 @@ struct Home: View {
                     VStack{
                         ZStack(alignment: .leading) {
                             Rectangle()
-                                .foregroundColor(Color.white)
+                                .foregroundColor(Color(UIColor.systemBackground))
                                 .cornerRadius(20.0)
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
                             
                             VStack(alignment: .center){
                                 Text("Bienvenido")
-                                    .foregroundColor(Color.black)
+                                    .foregroundColor(Color("redColor"))
                                     .bold()
                                     .font(.title2)
                                     .fontWeight(.thin)
                                     .padding(.bottom, 5)
                                     .padding(.horizontal, 10)
                                     .padding(.top, 20)
-                                Text("Puedes donar tanta comida como desees y tanto dinero como gustes, incluso si no tienes recursos para       donar puedes simplemente ver los    ADS y de esta manera donar directamente a nuestra causa")
+                                Text("Con tu donativo, combatiremos el hambre y la desnutrición que padecen millones de personas en México. Si buscas otra manera de apoyar ve los anuncios y asi donaras indirectamente a nuestra causa")
+                                    .font(.body)
                                     .lineLimit(nil)
                                     .padding(.horizontal, 10)
                                     .multilineTextAlignment(.center)
@@ -57,7 +57,7 @@ struct Home: View {
 
                         ZStack{
                             Rectangle()
-                                .foregroundColor(Color.white)
+                                .foregroundColor(Color(UIColor.systemBackground))
                                 .cornerRadius(20.0)
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
                             VStack(spacing: 20){

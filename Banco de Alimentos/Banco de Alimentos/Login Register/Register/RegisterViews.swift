@@ -13,13 +13,17 @@ struct Register: View {
     @State var mail = ""
     @State var password = ""
     @State var confirmPassword = ""
+    @State var showAlert = false
+    @State var isFieldsOk = false
+    @State var errString: String?
+    @State var messageAlert: String?
     var body: some View{
         ZStack{
             Color("background").edgesIgnoringSafeArea(.bottom)
             ScrollView{
                 ZStack(alignment: .leading) {
                     Rectangle()
-                        .foregroundColor(Color("squareColors"))
+                        .foregroundColor(Color(UIColor.systemBackground))
                         .cornerRadius(radius: 60.0, corners: [.bottomRight])
                     
                     VStack(alignment : .leading) {
@@ -46,7 +50,7 @@ struct Register: View {
                         .fontWeight(.light)
                     TextField("", text: $mail)
                         .padding()
-                        .background(Color("squareColors"))
+                        .background(Color(UIColor.systemBackground))
                         .cornerRadius(20)
                         .shadow(color: .black, radius: 0.4, y: 0.2)
                         .padding(.bottom,20)
@@ -56,7 +60,7 @@ struct Register: View {
                     
                     SecureField("", text: $password)
                         .padding()
-                        .background(Color("squareColors"))
+                        .background(Color(UIColor.systemBackground))
                         .cornerRadius(20)
                         .padding(.bottom,20)
                         .shadow(color: .black, radius: 0.4, y: 0.2)
@@ -67,31 +71,92 @@ struct Register: View {
                     
                     SecureField("", text: $confirmPassword)
                         .padding()
-                        .background(Color("squareColors"))
+                        .background(Color(UIColor.systemBackground))
                         .cornerRadius(20)
                         .padding(.bottom,40)
                         .shadow(color: .black, radius: 0.4, y: 0.2)
-                    NavigationLink(
-                        destination: Register2(mail: mail, password: password),
-                        label: {
-                            Text("Continuar")
-                                .foregroundColor(.white)
-                                .bold()
-                                .font(.headline)
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                                .background(Color("greenBackground"))
-                                .cornerRadius(20)
-                        })
-                    
-                    
+                    Button {
+                        pass2Register(email: mail, password: password, confirmPassword: confirmPassword)
+                    } label: {
+                        Text("Continuar")
+                            .foregroundColor(.white)
+                            .bold()
+                            .font(.headline)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color("greenBackground"))
+                            .cornerRadius(20)
+                    }
+                                        
                     
                 }.padding(.horizontal, 40)
             }
-        }.navigationBarTitle(Text(""), displayMode: .inline)
+            NavigationLink(
+                destination: Register2(mail: mail, password: password),
+                isActive: $isFieldsOk) {
+                    EmptyView()
+                }
+            
+        }.navigationBarTitle(Text(""), displayMode: .inline).alert(isPresented: self.$showAlert){
+            Alert(title: Text(self.messageAlert!),
+                  message: Text(self.errString ?? "Error"), dismissButton: .default(Text("OK")){
+            })
+            
+        }
+    }
+    
+    func pass2Register(email: String, password: String, confirmPassword: String){
+        var isPassword = false
+        
+        if isValidEmailAddress(emailAddressString: email){
+            if password == confirmPassword {
+                isPassword = true
+            }else{
+                showAlert = true
+                errString = "Las contraseñas no son las mismas, intente de nuevo"
+                messageAlert = "Error"
+                return
+            }
+            if password.count >= 6 && isPassword{
+                isFieldsOk = true
+            }else{
+                showAlert = true
+                errString = "La contraseña debe tener como minimo 6 caracteres"
+                messageAlert = "Error"
+            }
+
+        }else{
+            showAlert = true
+            errString = "Correo no valido, intente de nuevo"
+            messageAlert = "Error"
+        }
+    }
+    
+    func isValidEmailAddress(emailAddressString: String) -> Bool {
+        
+        var returnValue = true
+        let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+        
+        do {
+            let regex = try NSRegularExpression(pattern: emailRegEx)
+            let nsString = emailAddressString as NSString
+            let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+            
+            if results.count == 0
+            {
+                returnValue = false
+            }
+            
+        } catch let error as NSError {
+            print("invalid regex: \(error.localizedDescription)")
+            returnValue = false
+        }
+        
+        return  returnValue
     }
     
 }
+
 
 struct Register2: View {
     @EnvironmentObject var viewModel: FirebaseAuth
@@ -112,7 +177,7 @@ struct Register2: View {
             ScrollView{
                 ZStack(alignment: .leading) {
                     Rectangle()
-                        .foregroundColor(Color("squareColors"))
+                        .foregroundColor(Color(UIColor.systemBackground))
                         .cornerRadius(radius: 60.0, corners: [.bottomRight])
                     
                     VStack(alignment : .leading) {
@@ -141,7 +206,7 @@ struct Register2: View {
                                 .fontWeight(.light)
                             TextField("", text: $name)
                                 .padding()
-                                .background(Color("squareColors"))
+                                .background(Color(UIColor.systemBackground))
                                 .cornerRadius(20)
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
                                 .padding(.bottom,20)
@@ -152,7 +217,7 @@ struct Register2: View {
                                 .fontWeight(.light)
                             TextField("", text: $lastName)
                                 .padding()
-                                .background(Color("squareColors"))
+                                .background(Color(UIColor.systemBackground))
                                 .cornerRadius(20)
                                 .shadow(color: .black, radius: 0.4, y: 0.2)
                                 .padding(.bottom,20)
@@ -165,7 +230,7 @@ struct Register2: View {
                     
                     TextField("", text: $cellphone)
                         .padding()
-                        .background(Color("squareColors"))
+                        .background(Color(UIColor.systemBackground))
                         .cornerRadius(20)
                         .padding(.bottom,20)
                         .shadow(color: .black, radius: 0.4, y: 0.2)
@@ -177,7 +242,7 @@ struct Register2: View {
                     
                     TextField("", text: $genre)
                         .padding()
-                        .background(Color("squareColors"))
+                        .background(Color(UIColor.systemBackground))
                         .cornerRadius(20)
                         .padding(.bottom,40)
                         .shadow(color: .black, radius: 0.4, y: 0.2)
@@ -215,7 +280,7 @@ struct Register2: View {
                     
                     TextField("", text: $birthDate)
                         .padding()
-                        .background(Color("squareColors"))
+                        .background(Color(UIColor.systemBackground))
                         .cornerRadius(20)
                         .padding(.bottom,40)
                         .shadow(color: .black, radius: 0.4, y: 0.2)

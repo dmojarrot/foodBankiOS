@@ -12,7 +12,8 @@ import AVKit
 struct Ads: View {
     
     @State var maxHeight:CGFloat = 190
-    
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+
     var body: some View {
         NavigationView{
             ZStack{
@@ -31,7 +32,7 @@ struct Ads: View {
                             .cornerRadius(15)
                             .aspectRatio(contentMode: .fit)
                             .frame(width: nil, height: 211, alignment: .center)
-                            .shadow(color: Color.black.opacity(0.7), radius: 30, x: 0, y: 2)
+                            .shadow(color: (colorScheme == .dark ? Color.white : Color.black).opacity(0.7), radius: 30, x: 0, y: 2)
                             .padding(.bottom, 10)
                         
                         
@@ -40,7 +41,7 @@ struct Ads: View {
                             .cornerRadius(15)
                             .aspectRatio(contentMode: .fit)
                             .frame(width: nil, height: maxHeight, alignment: .center)
-                            .shadow(color: Color.black.opacity(0.7), radius: 30, x: 0, y: 2)
+                            .shadow(color: (colorScheme == .dark ? Color.white : Color.black).opacity(0.7), radius: 30, x: 0, y: 2)
                             .padding(.bottom, 10)
                         
                         
@@ -49,7 +50,7 @@ struct Ads: View {
                             .cornerRadius(15)
                             .aspectRatio(contentMode: .fit)
                             .frame(width: nil, height: maxHeight, alignment: .center)
-                            .shadow(color: Color.black.opacity(0.7), radius: 30, x: 0, y: 2)
+                            .shadow(color: (colorScheme == .dark ? Color.white : Color.black).opacity(0.7), radius: 30, x: 0, y: 2)
                             .padding(.bottom, 10)
                         
                     }.padding(.horizontal, 30).padding(.top, 10)

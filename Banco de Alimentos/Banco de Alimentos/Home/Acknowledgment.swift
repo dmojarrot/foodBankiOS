@@ -17,7 +17,7 @@ struct Acknowledgment: View {
                 VStack{
                     ZStack {
                         Rectangle()
-                            .foregroundColor(Color.white)
+                            .foregroundColor(Color(UIColor.systemBackground))
                             .cornerRadius(20.0)
                             .shadow(color: .black, radius: 0.4, y: 0.2)
                         

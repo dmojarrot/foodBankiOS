@@ -21,7 +21,7 @@ struct ForgotPassword: View {
             ScrollView{
                 ZStack(alignment: .leading) {
                     Rectangle()
-                        .foregroundColor(Color("squareColors"))
+                        .foregroundColor(Color(UIColor.systemBackground))
                         .cornerRadius(radius: 60.0, corners: [.bottomRight])
                     
                     VStack(alignment : .leading) {
@@ -48,7 +48,7 @@ struct ForgotPassword: View {
                             .fontWeight(.light)
                         TextField("", text: $mail)
                             .padding()
-                            .background(Color("squareColors"))
+                            .background(Color(UIColor.systemBackground))
                             .cornerRadius(20)
                             .shadow(color: .black, radius: 0.4, y: 0.2)
                             .padding(.bottom,20)

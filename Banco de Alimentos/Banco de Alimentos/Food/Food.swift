@@ -12,7 +12,7 @@ import SwiftUI
 struct Food: View {
     @State var other: String = ""
     @State var isFoodActive = false
-    @State var tipoInicioSesion = true
+    @State var foodMethod = true
     
     var body: some View{
         NavigationView {
@@ -25,18 +25,18 @@ struct Food: View {
                         Spacer()
                         
                         Button {
-                            tipoInicioSesion = true
+                            foodMethod = true
                         } label: {
-                            Text("PICK-UP").foregroundColor(tipoInicioSesion ? Color("redColor") : .gray).fontWeight(.bold)
+                            Text("Delivery").foregroundColor(foodMethod ? Color("redColor") : .gray).fontWeight(.bold)
                         }
-
+                        
                         
                         Spacer()
                         
                         Button {
-                            tipoInicioSesion = false
+                            foodMethod = false
                         } label: {
-                            Text("LLEVARLO").foregroundColor(tipoInicioSesion ? .gray : Color("redColor")).fontWeight(.bold)
+                            Text("Pickup").foregroundColor(foodMethod ? .gray : Color("redColor")).fontWeight(.bold)
                         }
                         
                         Spacer()
@@ -46,7 +46,7 @@ struct Food: View {
                     
                     Spacer(minLength:20)
                     
-                    if tipoInicioSesion == true{
+                    if foodMethod == true{
                         Delivery()
                     }else{
                         CollectionCenter()
@@ -64,21 +64,24 @@ struct Delivery: View{
     @State var streetNumber: String =  ""
     @State var city: String =  ""
     @State var section: String =  ""
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    var frameworks = ["UIKit", "Core Data", "CloudKit", "SwiftUI"]
+    @State private var selectedFrameworkIndex = 0
+    
     var body: some View{
         VStack(alignment: .leading){
-            Text("¿Cuanta cantidad de comida quieres donar?")
-                .font(.subheadline)
-                .fontWeight(.bold)
-                .padding(.top, 10)
-                .padding(.bottom, 5)
-            
             VStack(alignment: .leading) {
+                Text("¿Cuanta cantidad de comida quieres donar?")
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+                    .padding(.top, 10)
+                    .padding(.bottom, 5)
                 NavigationLink(
                     destination: MultipleSelectionList(),
                     label: {
                         HStack {
                             
-                            Text("Seleccione la cantidad aproximada").foregroundColor(.black).opacity(0.2)
+                            Text("Seleccione la cantidad aproximada").foregroundColor(colorScheme == .dark ? Color.white : Color.black).opacity(0.25)
                             
                             Spacer()
                             
@@ -87,7 +90,7 @@ struct Delivery: View{
                         }.padding()
                             .frame(maxWidth: .infinity)
                             .background(RoundedRectangle(cornerRadius: 20)
-                                            .fill(Color.white))
+                                            .fill(Color(UIColor.systemBackground)))
                             .cornerRadius(20)
                             .shadow(color: .black, radius: 0.4, y: 0.2)
                             .padding(.bottom, 20)
@@ -109,7 +112,7 @@ struct Delivery: View{
                     label: {
                         HStack {
                             
-                            Text("Seleccione el o los tipos de comida").foregroundColor(.black).opacity(0.2)
+                            Text("Seleccione el o los tipos de comida").foregroundColor(colorScheme == .dark ? Color.white : Color.black).opacity(0.25)
                             
                             
                             
@@ -120,7 +123,7 @@ struct Delivery: View{
                         }.padding()
                             .frame(maxWidth: .infinity)
                             .background(RoundedRectangle(cornerRadius: 20)
-                                            .fill(Color.white))
+                                            .fill(Color(UIColor.systemBackground)))
                             .cornerRadius(20)
                             .shadow(color: .black, radius: 0.4, y: 0.2)
                             .padding(.bottom, 5)
@@ -139,7 +142,7 @@ struct Delivery: View{
                     .padding(.bottom, 5)
                 TextField("Escribe la calle y el numero", text: $streetNumber)
                     .padding()
-                    .background(Color("squareColors"))
+                    .background(Color(UIColor.systemBackground))
                     .cornerRadius(20)
                     .shadow(color: .black, radius: 0.4, y: 0.2)
                 
@@ -151,7 +154,7 @@ struct Delivery: View{
                     .padding(.bottom, 5)
                 TextField("Escribe la ciudad", text: $city)
                     .padding()
-                    .background(Color("squareColors"))
+                    .background(Color(UIColor.systemBackground))
                     .cornerRadius(20)
                     .shadow(color: .black, radius: 0.4, y: 0.2)
                 
@@ -163,7 +166,7 @@ struct Delivery: View{
                     .padding(.bottom, 5)
                 TextField("Escribe la colonia", text: $section)
                     .padding()
-                    .background(Color("squareColors"))
+                    .background(Color(UIColor.systemBackground))
                     .cornerRadius(20)
                     .shadow(color: .black, radius: 0.4, y: 0.2)
                     .padding(.bottom, 20)

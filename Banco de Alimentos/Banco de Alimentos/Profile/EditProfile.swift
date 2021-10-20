@@ -28,7 +28,7 @@ struct EditProfile: View {
                                     .fontWeight(.light)
                                 TextField("", text: $name)
                                     .padding()
-                                    .background(Color("squareColors"))
+                                    .background(Color(UIColor.systemBackground))
                                     .cornerRadius(20)
                                     .shadow(color: .black, radius: 0.4, y: 0.2)
                                     .padding(.bottom,20)
@@ -39,7 +39,7 @@ struct EditProfile: View {
                                     .fontWeight(.light)
                                 TextField("", text: $lastName)
                                     .padding()
-                                    .background(Color("squareColors"))
+                                    .background(Color(UIColor.systemBackground))
                                     .cornerRadius(20)
                                     .shadow(color: .black, radius: 0.4, y: 0.2)
                                     .padding(.bottom,20)
@@ -52,7 +52,7 @@ struct EditProfile: View {
                         
                         TextField("", text: $email)
                             .padding()
-                            .background(Color("squareColors"))
+                            .background(Color(UIColor.systemBackground))
                             .cornerRadius(20)
                             .padding(.bottom,20)
                             .shadow(color: .black, radius: 0.4, y: 0.2)
@@ -65,7 +65,7 @@ struct EditProfile: View {
                         
                         TextField("", text: $cellphone)
                             .padding()
-                            .background(Color("squareColors"))
+                            .background(Color(UIColor.systemBackground))
                             .cornerRadius(20)
                             .padding(.bottom,20)
                             .shadow(color: .black, radius: 0.4, y: 0.2)
@@ -76,7 +76,7 @@ struct EditProfile: View {
                         
                         SecureField("", text: $password)
                             .padding()
-                            .background(Color("squareColors"))
+                            .background(Color(UIColor.systemBackground))
                             .cornerRadius(20)
                             .padding(.bottom,20)
                             .shadow(color: .black, radius: 0.4, y: 0.2)
@@ -87,7 +87,7 @@ struct EditProfile: View {
                         
                         SecureField("", text: $confirmPassword)
                             .padding()
-                            .background(Color("squareColors"))
+                            .background(Color(UIColor.systemBackground))
                             .cornerRadius(20)
                             .padding(.bottom,40)
                             .shadow(color: .black, radius: 0.4, y: 0.2)
