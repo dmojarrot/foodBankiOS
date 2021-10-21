@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import MapKit
+import CoreLocation
 
 
 
@@ -64,9 +66,9 @@ struct Delivery: View{
     @State var streetNumber: String =  ""
     @State var city: String =  ""
     @State var section: String =  ""
+    @State var quantity: String =  ""
     @Environment(\.colorScheme) var colorScheme: ColorScheme
-    var frameworks = ["UIKit", "Core Data", "CloudKit", "SwiftUI"]
-    @State private var selectedFrameworkIndex = 0
+    
     
     var body: some View{
         VStack(alignment: .leading){
@@ -76,7 +78,7 @@ struct Delivery: View{
                     .fontWeight(.bold)
                     .padding(.top, 10)
                     .padding(.bottom, 5)
-                TextField("Escribe la cantidad en gramos", text: $streetNumber)
+                TextField("Escribe la cantidad en gramos", text: $quantity)
                     .padding()
                     .background(Color(UIColor.systemBackground))
                     .cornerRadius(20)
@@ -173,50 +175,179 @@ struct Delivery: View{
 }
 
 struct CollectionCenter: View{
+    @StateObject var locationManager = LocationManager()
     var body: some View{
         
-        VStack(alignment: .leading) {
-            Text("Centros de Acopio")
-                .foregroundColor(.black)
-                .font(.title)
+        VStack(alignment: .center) {
+            Text("Selecciona el centro de acopio mas cercano a ti")
+                .font(.title3)
                 .fontWeight(.bold)
+                .padding(.horizontal, 20)
+                .padding(.vertical, 20)
+                .multilineTextAlignment(.center)
             
-                .padding(.bottom, 30)
-                .padding(.leading, 50)
-            ScrollView(.horizontal, showsIndicators: true){
-                HStack{
-                    Image("galeria-1")
-                        .resizable()
-                        .scaledToFit()
-                        .cornerRadius(40)
-                        .frame(width: 300, height: 300)
+            ScrollView{
+                VStack{
+                    Button {
+                        openMapForPlace(latitude: 20.656160, longitude: -103.355370, name: "Banco Diocesano de Alimentos Guadalajara")
                         
-
-
-                    Image("galeria-2")
-                        .resizable()
-                        .scaledToFit()
-                        .cornerRadius(40)
-                        .frame(width: 300, height: 300)
-
-                    Image("galeria-3")
-                        .resizable()
-                        .scaledToFit()
-                        .cornerRadius(40)
-                        .frame(width: 300, height: 300)
+                    } label: {
+                        Image("collectionCenter-1")
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(40)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .padding(.vertical, 10)
+                            .shadow(color: .black, radius: 0.4, y: 0.2)
+                        
+                        
+                        
+                    }
                     
-                    Image("galeria-4")
-                        .resizable()
-                        .scaledToFit()
-                        .cornerRadius(40)
-                        .frame(width: 300, height: 300)
+                    Text("Banco Diocesano de Alimentos Guadalajara")
+                    Text("\(String(format: "%.2f",distanceTwoPoints(latitudePlace: 20.656160, longitudePlace: -103.355370))) KM de tu ubicación actual")
+                        .foregroundColor(Color("greenBackground"))
+                        .padding(.bottom, 10)
+                }
+                
+                VStack{
                     
-
-                }.padding(.bottom)
-            }
+                    Button {
+                        openMapForPlace(latitude: 20.480020, longitude: -103.454320, name: "Centro de acopio Casa CEM")
+                        
+                    } label: {
+                        Image("collectionCenter-2")
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(40)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .padding(.vertical, 10)
+                            .shadow(color: .black, radius: 0.4, y: 0.2)
+                        
+                        
+                        
+                    }
+                    Text("Centro de acopio Casa CEM")
+                    Text("\(String(format: "%.2f", distanceTwoPoints(latitudePlace: 20.480020, longitudePlace: -103.454320))) KM de tu ubicación actual")
+                        .foregroundColor(Color("greenBackground"))
+                        .padding(.bottom, 10)
+                }
+                
+                VStack{
+                    
+                    Button {
+                        openMapForPlace(latitude: 20.714560, longitude: -103.368240, name: "Albergue Fray Antonio Alcalde")
+                        
+                        
+                        
+                    } label: {
+                        Image("collectionCenter-3")
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(40)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .padding(.vertical, 10)
+                            .shadow(color: .black, radius: 0.4, y: 0.2)
+                        
+                        
+                    }
+                    Text("Albergue Fray Antonio Alcalde")
+                    Text("\(String(format: "%.2f", distanceTwoPoints(latitudePlace: 20.714560, longitudePlace: -103.368240))) KM de tu ubicación actual")
+                        .foregroundColor(Color("greenBackground"))
+                        .padding(.bottom, 10)
+                }
+                
+                
+                VStack{
+                    
+                    Button {
+                        openMapForPlace(latitude: 20.685880, longitude: -103.347800, name: "Banco de Alimentos Nayarit A.C")
+                        
+                    } label: {
+                        Image("collectionCenter-4")
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(40)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .padding(.vertical, 10)
+                            .shadow(color: .black, radius: 0.4, y: 0.2)
+                        
+                        
+                    }
+                    
+                    Text("Banco de Alimentos Nayarit A.C")
+                    Text("\(String(format: "%.2f", distanceTwoPoints(latitudePlace: 20.685880, longitudePlace: -103.347800))) KM de tu ubicación actual")
+                        .foregroundColor(Color("greenBackground"))
+                        .padding(.bottom, 10)
+                }
+                
+                VStack{
+                    
+                    Button {
+                        openMapForPlace(latitude: 20.662460, longitude: -103.341530, name: "Amigos de Juanita y Fernando A.C.")
+                        
+                        
+                    } label: {
+                        Image("collectionCenter-5")
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(40)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .padding(.vertical, 10)
+                            .shadow(color: .black, radius: 0.4, y: 0.2)
+                        
+                        
+                        
+                    }
+                    
+                    Text("Amigos de Juanita y Fernando A.C.")
+                    Text("\(String(format: "%.2f", distanceTwoPoints(latitudePlace: 20.662460, longitudePlace: -103.341530))) KM de tu ubicación actual")
+                        .foregroundColor(Color("greenBackground"))
+                        .padding(.bottom, 30)
+                    
+                }
+                
+                
+                
+            }.padding(.horizontal, 20)
+            
         }
     }
+    func openMapForPlace(latitude: Double, longitude: Double, name: String) {
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = name
+        mapItem.openInMaps(launchOptions: options)
+    }
+    
+    func distanceTwoPoints(latitudePlace: Double, longitudePlace: Double) -> Double{
+        CLLocationManager().requestWhenInUseAuthorization()
+        var latitude: String {
+            return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
+        }
+        
+        var longitude: String {
+            return "\(locationManager.lastLocation?.coordinate.longitude ?? 0)"
+        }
+        
+        let firstLocation = CLLocation(latitude:Double(latitude)!, longitude: Double(longitude)!)
+        
+        let secondLocation = CLLocation(latitude: Double(latitudePlace), longitude: Double(longitudePlace))
+        
+        let distance = firstLocation.distance(from: secondLocation) / 1000
+        
+        return distance
+    }
+    
 }
+
 
 
 
