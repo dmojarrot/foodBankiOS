@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct Profile: View {
     
-    @State var profilePicture:UIImage = UIImage(named: "profileExample")!
     @ObservedObject private var viewModel = UserDataViewModel()
-    
+    @State var name: String = ""
+    @State var lastName: String = ""
+
+    @EnvironmentObject var viewModelFB: FirebaseAuth
+    @State var imagenPerfil: Image? = Image("profileExample")
+    @State var isCameraActive = false
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -20,13 +27,26 @@ struct Profile: View {
                     VStack{
                         VStack{
                             
-                            Image(uiImage: profilePicture)
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 118.0, height: 118.0)
-                                .clipShape(Circle())
+                            Button(action: {isCameraActive = true}, label: {
+                                ZStack {
+                                imagenPerfil!
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 118, height: 118)
+                                    .clipShape(Circle())
+                                    .sheet(isPresented: $isCameraActive, content: {
+                                        SUImagePickerView(sourceType: .photoLibrary, image: self.$imagenPerfil, isPresented: $isCameraActive)
+                                    })
+                                
+                                Image(systemName: "camera")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 30, height: 30)
+                                    .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                                }
+                            })
                             
-                            Text("Ken Bauer Favel")
+                            Text(name + " " + lastName)
                                 .bold()
                                 .foregroundColor(.gray).font(.title2)
                             
@@ -43,12 +63,23 @@ struct Profile: View {
                     
                     
                 }.navigationTitle("Perfil")
-            }//.onAppear(){
-            //self.viewModel.fetchData()
-            //}
+            }.onAppear {
+                let db = Firestore.firestore()
+                db.collection("users").document((viewModelFB.auth.currentUser?.email)!).getDocument { documentSnapshot, error in
+                    if let document = documentSnapshot, error == nil{
+                        if let nameFB = document.get("Name") as? String {
+                            self.name = nameFB
+                        }
+                        if let lastnameFB = document.get("LastName") as? String {
+                            self.lastName = lastnameFB
+                        }
+                    }
+                }
+
+            }
+            
             
         }
-        
     }
 }
 
@@ -142,6 +173,10 @@ struct ModuloAjustes:View{
             }
     }
     
+    func fetchData(){
+        
+    }
+    
     func signOut(){
         viewModel.signOut()
     }
@@ -151,11 +186,11 @@ struct ModuloAjustes:View{
 
 
 
-struct HiUser_Previews: PreviewProvider {
-    static var previews: some View {
-        Profile()
-    }
-}
+//struct HiUser_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Profile()
+//    }
+//}
 
 
 

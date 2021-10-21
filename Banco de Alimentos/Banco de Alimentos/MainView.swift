@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color("greenBackground"))]
-    }
+    
     @State private var selection = 2
     var body: some View {
         TabView(selection: $selection){
@@ -52,8 +50,8 @@ struct MainView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
+//struct MainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//    }
+//}

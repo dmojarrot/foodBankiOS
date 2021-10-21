@@ -41,7 +41,7 @@ struct Register: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading, 40)
-                            .padding(.bottom, 40)
+                            .padding(.bottom, 20)
                     }
                 }.padding(.bottom, 20)
                 VStack(alignment: .leading) {
@@ -87,7 +87,7 @@ struct Register: View {
                             .background(Color("greenBackground"))
                             .cornerRadius(20)
                     }
-                                        
+                    
                     
                 }.padding(.horizontal, 40)
             }
@@ -124,7 +124,7 @@ struct Register: View {
                 errString = "La contraseña debe tener como minimo 6 caracteres"
                 messageAlert = "Error"
             }
-
+            
         }else{
             showAlert = true
             errString = "Correo no valido, intente de nuevo"
@@ -167,6 +167,7 @@ struct Register2: View {
     @State var cellphone = ""
     @State var genre = ""
     @State var birthDate = ""
+    @State var isActive = false
     
     @State var selection: String = "Genero"
     let filterOptions: [String] = ["Masculino", "Femenino", "Otro"]
@@ -195,7 +196,7 @@ struct Register2: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading, 40)
-                            .padding(.bottom, 40)
+                            .padding(.bottom, 20)
                     }
                 }.padding(.bottom, 20)
                 VStack(alignment: .leading){
@@ -289,8 +290,20 @@ struct Register2: View {
                         guard !name.isEmpty, !lastName.isEmpty, !cellphone.isEmpty, !genre.isEmpty, !birthDate.isEmpty else{
                             return
                         }
-                        self.AddInfo(name: self.name, lastName: self.lastName, cellphone: self.cellphone, genre: self.genre, birthDate: self.birthDate)
-                        viewModel.signUp(email: mail, password: password)
+                        self.isActive = true
+                        self.AddInfo(name: self.name, lastName: self.lastName, cellphone: self.cellphone, genre: self.genre, birthDate: self.birthDate, mail: self.mail)
+                        
+                        
+                        
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            viewModel.signUp(email: mail, password: password)
+                        }
+                        
+                        
+                        
+                        
+                        
                         
                     }, label: {
                         Text("Registrarse")
@@ -302,16 +315,21 @@ struct Register2: View {
                             .background(Color("greenBackground"))
                             .cornerRadius(20)
                         
-                    })
+                    }).alert(isPresented: self.$isActive){
+                        Alert(title: Text("Cuenta creada Correctamente"),
+                              message: Text(""), dismissButton: .default(Text("OK")){
+                        })
+                        
+                    }
                     
                 }.padding(.horizontal, 40)
             }.accentColor(Color("greenBackground"))
         }.navigationBarTitle(Text(""), displayMode: .inline)
     }
     
-    func AddInfo(name: String, lastName: String, cellphone: String, genre: String, birthDate: String){
+    func AddInfo(name: String, lastName: String, cellphone: String, genre: String, birthDate: String, mail: String){
         let db = Firestore.firestore()
-        db.collection("users").document().setData(["Name": self.name, "LastName": self.lastName, "Cellphone": self.cellphone, "Genre": self.genre, "Birthdate": self.birthDate])
+        db.collection("users").document(mail.lowercased()).setData(["Name": self.name, "LastName": self.lastName, "Cellphone": self.cellphone, "Genre": self.genre, "Birthdate": self.birthDate])
         
     }
     

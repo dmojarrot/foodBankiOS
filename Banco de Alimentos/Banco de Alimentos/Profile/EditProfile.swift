@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct EditProfile: View {    
     @State var name = ""
@@ -14,6 +15,8 @@ struct EditProfile: View {
     @State var password = ""
     @State var confirmPassword = ""
     @State var email = ""
+
+    @EnvironmentObject var viewModelFB: FirebaseAuth
 
     
     var body: some View{
@@ -45,25 +48,25 @@ struct EditProfile: View {
                                     .padding(.bottom,20)
                             }
                         }.padding(.top, 20)
-                        VStack(alignment: .leading){
-                        Text("Correo electrónico")
-                            .font(.subheadline)
-                            .fontWeight(.light)
-                        
-                        TextField("", text: $email)
-                            .padding()
-                            .background(Color(UIColor.systemBackground))
-                            .cornerRadius(20)
-                            .padding(.bottom,20)
-                            .shadow(color: .black, radius: 0.4, y: 0.2)
-                        }
+//                        VStack(alignment: .leading){
+//                        Text("Correo electrónico")
+//                            .font(.subheadline)
+//                            .fontWeight(.light)
+//                        
+//                        TextField("\(email)", text: $email)
+//                            .padding()
+//                            .background(Color(UIColor.systemBackground))
+//                            .cornerRadius(20)
+//                            .padding(.bottom,20)
+//                            .shadow(color: .black, radius: 0.4, y: 0.2)
+//                        }
                         
                         
                         Text("Celular")
                             .font(.subheadline)
                             .fontWeight(.light)
                         
-                        TextField("", text: $cellphone)
+                        TextField("\(cellphone)", text: $cellphone)
                             .padding()
                             .background(Color(UIColor.systemBackground))
                             .cornerRadius(20)
@@ -106,6 +109,22 @@ struct EditProfile: View {
                         
                     }.padding(.horizontal, 40)
             }.navigationBarTitle("Editar perfil")
+        }.onAppear {
+            let db = Firestore.firestore()
+            db.collection("users").document((viewModelFB.auth.currentUser?.email)!).getDocument { documentSnapshot, error in
+                if let document = documentSnapshot, error == nil{
+                    if let nameFB = document.get("Name") as? String {
+                        self.name = nameFB
+                    }
+                    if let lastnameFB = document.get("LastName") as? String {
+                        self.lastName = lastnameFB
+                    }
+                    if let cellphoneFB = document.get("Cellphone") as? String {
+                        self.cellphone = cellphoneFB
+                    }
+                }
+            }
+
         }
         }
 }

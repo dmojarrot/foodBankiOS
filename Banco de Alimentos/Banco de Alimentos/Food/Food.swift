@@ -76,28 +76,11 @@ struct Delivery: View{
                     .fontWeight(.bold)
                     .padding(.top, 10)
                     .padding(.bottom, 5)
-                NavigationLink(
-                    destination: MultipleSelectionList(),
-                    label: {
-                        HStack {
-                            
-                            Text("Seleccione la cantidad aproximada").foregroundColor(colorScheme == .dark ? Color.white : Color.black).opacity(0.25)
-                            
-                            Spacer()
-                            
-                            Image(systemName: "chevron.right").foregroundColor(Color("greenBackground"))
-                            
-                        }.padding()
-                            .frame(maxWidth: .infinity)
-                            .background(RoundedRectangle(cornerRadius: 20)
-                                            .fill(Color(UIColor.systemBackground)))
-                            .cornerRadius(20)
-                            .shadow(color: .black, radius: 0.4, y: 0.2)
-                            .padding(.bottom, 20)
-                        
-                        
-                        
-                    })
+                TextField("Escribe la cantidad en gramos", text: $streetNumber)
+                    .padding()
+                    .background(Color(UIColor.systemBackground))
+                    .cornerRadius(20)
+                    .shadow(color: .black, radius: 0.4, y: 0.2)
             }
             
             Text("¿Qué tipo de comida es?")
@@ -191,9 +174,51 @@ struct Delivery: View{
 
 struct CollectionCenter: View{
     var body: some View{
-        EmptyView()
+        
+        VStack(alignment: .leading) {
+            Text("Centros de Acopio")
+                .foregroundColor(.black)
+                .font(.title)
+                .fontWeight(.bold)
+            
+                .padding(.bottom, 30)
+                .padding(.leading, 50)
+            ScrollView(.horizontal, showsIndicators: true){
+                HStack{
+                    Image("galeria-1")
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(40)
+                        .frame(width: 300, height: 300)
+                        
+
+
+                    Image("galeria-2")
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(40)
+                        .frame(width: 300, height: 300)
+
+                    Image("galeria-3")
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(40)
+                        .frame(width: 300, height: 300)
+                    
+                    Image("galeria-4")
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(40)
+                        .frame(width: 300, height: 300)
+                    
+
+                }.padding(.bottom)
+            }
+        }
     }
 }
+
+
 
 struct MultipleSelectionList: View {
     @State var items: [String] = ["Frutas","Verduras", "Cereales","Carnes rojas", "Otro tipo"]

@@ -12,6 +12,7 @@ class FirebaseAuth: ObservableObject{
     let auth = Auth.auth()
     
     @Published var signedIn = false
+ 
     
     var isSignedIn: Bool {
         return auth.currentUser != nil
@@ -37,6 +38,7 @@ class FirebaseAuth: ObservableObject{
             
             DispatchQueue.main.async {
                 self?.signedIn = true
+
             }
             
         }
@@ -48,6 +50,12 @@ class FirebaseAuth: ObservableObject{
         
         self.signedIn = false
     }
+    
+//    func updatePassword(password: String, resetCompletion:@escaping (Result<Bool,Error>) -> Void){
+//        auth.currentUser?.updatePassword(to: password, completion: { error in
+//            <#code#>
+//        })
+//    }
     
     func resetPassword(email: String, resetCompletion:@escaping (Result<Bool,Error>) -> Void){
         auth.sendPasswordReset(withEmail: email) { (error) in
